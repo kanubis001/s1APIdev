@@ -1,0 +1,3198 @@
+self.dataArr[i][0]=dataFcont.get("accountName")
+self.dataArr[i][1]=dataFcont.get("siteName")
+self.dataArr[i][2]=dataFcont.get("groupName")
+self.dataArr[i][3]=dataFcont.get("agentDomain")
+self.dataArr[i][4]=dataFcont.get("agentComputerName")
+self.dataArr[i][5]=dataFcont.get("agentOsName")
+self.dataArr[i][6]=dataFcont.get("agentOsType")
+self.dataArr[i][7]=dataFcont.get("agentMachineType")
+self.dataArr[i][8]=dataFcont.get("agentUuid")
+self.dataArr[i][9]=dataFcont.get("agentVersion")
+self.dataArr[i][10]=dataFcont.get("networkInterfaces")
+self.dataArr[i][11]=dataFcont.get("agentNetworkStatus")
+self.dataArr[i][12]=dataFcont.get("agentMitigationMode")
+self.dataArr[i][13]=dataFcont.get("analystVerdict")
+self.dataArr[i][14]=dataFcont.get("classification")
+self.dataArr[i][15]=dataFcont.get("classificationSource")
+self.dataArr[i][16]=dataFcont.get("confidenceLevel")
+self.dataArr[i][17]=dataFcont.get("detectionType")
+self.dataArr[i][18]=dataFcont.get("createdAt")
+self.dataArr[i][19]=dataFcont.get("engines")
+self.dataArr[i][20]=dataFcont.get("incidentStatus")
+self.dataArr[i][21]=dataFcont.get("isFileless")
+self.dataArr[i][22]=dataFcont.get("maliciousProcessArguments")
+self.dataArr[i][23]=dataFcont.get("mitigationStatus")
+self.dataArr[i][24]=dataFcont.get("pendingActions")
+self.dataArr[i][25]=dataFcont.get("filePath")
+self.dataArr[i][26]=dataFcont.get("originatorProcess")
+self.dataArr[i][27]=dataFcont.get("processUser")
+self.dataArr[i][28]=dataFcont.get("publisherName")
+self.dataArr[i][29]=dataFcont.get("updatedAt")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+	"data": [
+		{
+			"agentDetectionInfo": {
+				"accountId": "1042260153621828302",
+				"accountName": "Interpark",
+				"agentDetectionState": null,
+				"agentDomain": "INPARK",
+				"agentIpV4": "10.20.9.183",
+				"agentIpV6": "fe80::81b9:317d:8afc:8847",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "N18050",
+				"agentMitigationMode": "detect",
+				"agentOsName": "Windows 10 Enterprise",
+				"agentOsRevision": "17763",
+				"agentRegisteredAt": "2020-12-24T00:23:49.005821Z",
+				"agentUuid": "ac51a761fe8a4114a58c1bde0bb5b405",
+				"agentVersion": "21.6.2.272",
+				"cloudProviders": {},
+				"externalIp": "180.70.97.9",
+				"groupId": "1128620441090521302",
+				"groupName": "001.Window 10",
+				"siteId": "1042260153638605519",
+				"siteName": "Default site"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "1042260153621828302",
+				"accountName": "Interpark",
+				"activeThreats": 0,
+				"agentComputerName": "N18050-W01",
+				"agentDecommissionedAt": null,
+				"agentDomain": "INPARK",
+				"agentId": "1053111124833751967",
+				"agentInfected": false,
+				"agentIsActive": true,
+				"agentIsDecommissioned": false,
+				"agentMachineType": "desktop",
+				"agentMitigationMode": "detect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Enterprise",
+				"agentOsRevision": "17763",
+				"agentOsType": "windows",
+				"agentUuid": "ac51a761fe8a4114a58c1bde0bb5b405",
+				"agentVersion": "21.7.5.1080",
+				"groupId": "1128620441090521302",
+				"groupName": "001.Window 10",
+				"networkInterfaces": [
+					{
+						"id": "1484697917871954773",
+						"inet": [
+							"10.20.9.183"
+						],
+						"inet6": [
+							"fe80::81b9:317d:8afc:8847"
+						],
+						"name": "이더넷",
+						"physical": "18:60:24:82:2f:c5"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2020-12-24T01:32:12.659931Z",
+				"scanStartedAt": "2020-12-24T00:25:26.168821Z",
+				"scanStatus": "finished",
+				"siteId": "1042260153638605519",
+				"siteName": "01.Interpark",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224282294396871842",
+			"indicators": [
+				{
+					"category": "Infostealer",
+					"description": "Blocked read access to LSASS",
+					"ids": [
+						224
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Anti-VM technique was used",
+					"ids": [
+						98
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Privilege Escalation",
+					"description": "Execution of privileged instruction was identified",
+					"ids": [
+						159
+					],
+					"tactics": [
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Packer",
+					"description": "Process suspicious as packed",
+					"ids": [
+						437
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1027/002/",
+									"name": "T1027.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "General",
+					"description": "Detected by the Static Engine",
+					"ids": [
+						43
+					],
+					"tactics": []
+				}
+			],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [],
+			"threatInfo": {
+				"analystVerdict": "suspicious",
+				"analystVerdictDescription": "Suspicious",
+				"automaticallyResolved": false,
+				"browserType": null,
+				"certificateId": "INCA INTERNET CO.,LTD.",
+				"classification": "Malware",
+				"classificationSource": "Static",
+				"cloudFilesHashVerdict": null,
+				"collectionId": "1189513346820571160",
+				"confidenceLevel": "suspicious",
+				"createdAt": "2021-08-17T04:30:22.523501Z",
+				"detectionEngines": [
+					{
+						"key": "pre_execution_suspicious",
+						"title": "On-Write Static AI - Suspicious"
+					}
+				],
+				"detectionType": "dynamic",
+				"engines": [
+					"On-Write DFI - Suspicious"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": false,
+				"fileExtension": "NPE",
+				"fileExtensionType": "Unknown",
+				"filePath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\INCAInternet\\nProtect Online Security\\nosstarter.npe",
+				"fileSize": 3613864,
+				"fileVerificationType": "SignedVerified",
+				"identifiedAt": "2021-08-17T04:30:22.325000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "agent_policy",
+				"initiatedByDescription": "Agent Policy",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": true,
+				"maliciousProcessArguments": "/SVC",
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "not_mitigated",
+				"mitigationStatusDescription": "Not mitigated",
+				"originatorProcess": "nossvc.exe",
+				"pendingActions": false,
+				"processUser": "NT AUTHORITY\\SYSTEM",
+				"publisherName": "INCA INTERNET CO.,LTD.",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "b873e1f267fc770913fdc07b4b991ebae2cd9d29",
+				"sha256": null,
+				"storyline": "5E85702A1EE4EB8E",
+				"threatId": "1224282294396871842",
+				"threatName": "nosstarter.npe",
+				"updatedAt": "2021-08-23T02:22:23.568039Z"
+			},
+			"whiteningOptions": [
+				"certificate",
+				"hash",
+				"path"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.34.84",
+				"agentIpV6": "fe80::358a:2ae0:b770:4a67",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "22134",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentRegisteredAt": "2020-08-06T01:22:47.773770Z",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"cloudProviders": {},
+				"externalIp": "153.3.73.246",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"activeThreats": 0,
+				"agentComputerName": "LAPTOP-M2IBKRUH",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "951672207806662039",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "laptop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentOsType": "windows",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1355542268132095875",
+						"inet": [
+							"192.168.34.84"
+						],
+						"inet6": [
+							"fe80::358a:2ae0:b770:4a67"
+						],
+						"name": "以太网 2",
+						"physical": "00:e0:4c:36:55:26"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2020-08-06T03:55:07.066850Z",
+				"scanStartedAt": "2020-08-06T01:23:11.364839Z",
+				"scanStatus": "finished",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224284426277709439",
+			"indicators": [
+				{
+					"category": "Injection",
+					"description": "Library was injected to a remote process",
+					"ids": [
+						163
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code was executed in a remote process",
+					"ids": [
+						113
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to other process memory space via Reflection",
+					"ids": [
+						61
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "General",
+					"description": "User logged on",
+					"ids": [
+						266
+					],
+					"tactics": [
+						{
+							"name": "Persistence",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1078/",
+									"name": "T1078"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Exploitation",
+					"description": "Detected suspicious shellcode API call",
+					"ids": [
+						121
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1106/",
+									"name": "T1106"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1059/",
+									"name": "T1059"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Suspicious registry key was created",
+					"ids": [
+						171
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1112/",
+									"name": "T1112"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Reconnaissance",
+					"description": "Suspicious WMI query was identified",
+					"ids": [
+						172
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1047/",
+									"name": "T1047"
+								}
+							]
+						},
+						{
+							"name": "Discovery",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1518/001/",
+									"name": "T1518.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Attempts to read sensitive information from LSASS",
+					"ids": [
+						255
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1555/004/",
+									"name": "T1555.004"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to a remote process",
+					"ids": [
+						154
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Anti-VM technique was used",
+					"ids": [
+						98
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Keylogger Installation",
+					"ids": [
+						342
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						},
+						{
+							"name": "Collection",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Suspicious library loaded into the process memory",
+					"ids": [
+						126
+					],
+					"tactics": []
+				},
+				{
+					"category": "Infostealer",
+					"description": "Blocked read access to LSASS",
+					"ids": [
+						224
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Manipulated code execution flow using the Heaven's Gate technique",
+					"ids": [
+						118
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				}
+			],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 2,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 0,
+						"total": 2
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T05:19:13.071815Z",
+					"latestReport": "/threats/mitigation-report/1224306877615277645",
+					"mitigationEndedAt": "2021-08-17T05:19:08.844000Z",
+					"mitigationStartedAt": "2021-08-17T05:19:08.836000Z",
+					"status": "failed"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 43,
+						"total": 43
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T05:19:12.881648Z",
+					"latestReport": "/threats/mitigation-report/1224306876021442121",
+					"mitigationEndedAt": "2021-08-17T05:19:07.720000Z",
+					"mitigationStartedAt": "2021-08-17T05:19:07.623000Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"classification": "Trojan",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "provider_unknown",
+				"collectionId": "1200976640726598933",
+				"confidenceLevel": "suspicious",
+				"createdAt": "2021-08-17T04:34:36.664397Z",
+				"detectionEngines": [
+					{
+						"key": "executables",
+						"title": "Behavioral AI"
+					}
+				],
+				"detectionType": "dynamic",
+				"engines": [
+					"DBT - Executables"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": true,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\360\\360Safe3580343\\360Safe\\deepscan\\ZhuDongFangYu.exe",
+				"fileSize": 259136,
+				"fileVerificationType": "SignedVerified",
+				"identifiedAt": "2021-08-17T04:33:46.908000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "agent_policy",
+				"initiatedByDescription": "Agent Policy",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": true,
+				"maliciousProcessArguments": "",
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "not_mitigated",
+				"mitigationStatusDescription": "Not mitigated",
+				"originatorProcess": "services.exe",
+				"pendingActions": false,
+				"processUser": "NT AUTHORITY\\SYSTEM",
+				"publisherName": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "cd98e6ef85b131cbe776c682e9cf72b721ecd55e",
+				"sha256": null,
+				"storyline": "F4A405C1382F3B2C",
+				"threatId": "1224284426277709439",
+				"threatName": "ZhuDongFangYu.exe",
+				"updatedAt": "2022-03-31T03:00:36.086877Z"
+			},
+			"whiteningOptions": [
+				"certificate",
+				"hash",
+				"path"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.34.84",
+				"agentIpV6": "fe80::358a:2ae0:b770:4a67",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "22134",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentRegisteredAt": "2020-08-06T01:22:47.773770Z",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"cloudProviders": {},
+				"externalIp": "153.3.73.246",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"activeThreats": 0,
+				"agentComputerName": "LAPTOP-M2IBKRUH",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "951672207806662039",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "laptop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentOsType": "windows",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1355542268132095875",
+						"inet": [
+							"192.168.34.84"
+						],
+						"inet6": [
+							"fe80::358a:2ae0:b770:4a67"
+						],
+						"name": "以太网 2",
+						"physical": "00:e0:4c:36:55:26"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2020-08-06T03:55:07.066850Z",
+				"scanStartedAt": "2020-08-06T01:23:11.364839Z",
+				"scanStatus": "finished",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224285618441513077",
+			"indicators": [
+				{
+					"category": "Injection",
+					"description": "Library was injected to a remote process",
+					"ids": [
+						163
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Exploitation",
+					"description": "Detected suspicious shellcode API call",
+					"ids": [
+						121
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1106/",
+									"name": "T1106"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1059/",
+									"name": "T1059"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code was executed in a remote process",
+					"ids": [
+						113
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to a remote process",
+					"ids": [
+						154
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to other process memory space via Reflection",
+					"ids": [
+						61
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Attempts to read sensitive information from LSASS",
+					"ids": [
+						255
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1555/004/",
+									"name": "T1555.004"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Keylogger Installation",
+					"ids": [
+						342
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						},
+						{
+							"name": "Collection",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Anti-VM technique was used",
+					"ids": [
+						98
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Suspicious library loaded into the process memory",
+					"ids": [
+						126
+					],
+					"tactics": []
+				},
+				{
+					"category": "Infostealer",
+					"description": "Blocked read access to LSASS",
+					"ids": [
+						224
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Manipulated code execution flow using the Heaven's Gate technique",
+					"ids": [
+						118
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				}
+			],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 2,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 0,
+						"total": 2
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:36:59.844800Z",
+					"latestReport": "/threats/mitigation-report/1224285627366991998",
+					"mitigationEndedAt": "2021-08-17T04:35:15.782000Z",
+					"mitigationStartedAt": "2021-08-17T04:35:15.782000Z",
+					"status": "failed"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 9,
+						"total": 9
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:36:58.989632Z",
+					"latestReport": "/threats/mitigation-report/1224285620186343546",
+					"mitigationEndedAt": "2021-08-17T04:35:13.139000Z",
+					"mitigationStartedAt": "2021-08-17T04:35:13.136000Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"classification": "Trojan",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "provider_unknown",
+				"collectionId": "1200976640726598933",
+				"confidenceLevel": "suspicious",
+				"createdAt": "2021-08-17T04:36:58.781257Z",
+				"detectionEngines": [
+					{
+						"key": "executables",
+						"title": "Behavioral AI"
+					}
+				],
+				"detectionType": "dynamic",
+				"engines": [
+					"DBT - Executables"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": true,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\360\\360Safe3580343\\360Safe\\deepscan\\ZhuDongFangYu.exe",
+				"fileSize": 259136,
+				"fileVerificationType": "SignedVerified",
+				"identifiedAt": "2021-08-17T04:35:12.784000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "agent_policy",
+				"initiatedByDescription": "Agent Policy",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": true,
+				"maliciousProcessArguments": "",
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "not_mitigated",
+				"mitigationStatusDescription": "Not mitigated",
+				"originatorProcess": "services.exe",
+				"pendingActions": false,
+				"processUser": "NT AUTHORITY\\SYSTEM",
+				"publisherName": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "cd98e6ef85b131cbe776c682e9cf72b721ecd55e",
+				"sha256": null,
+				"storyline": "07A61C04DBC9C7AB",
+				"threatId": "1224285618441513077",
+				"threatName": "ZhuDongFangYu.exe",
+				"updatedAt": "2022-03-31T03:00:36.072469Z"
+			},
+			"whiteningOptions": [
+				"certificate",
+				"hash",
+				"path"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.34.84",
+				"agentIpV6": "fe80::358a:2ae0:b770:4a67",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "22134",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentRegisteredAt": "2020-08-06T01:22:47.773770Z",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"cloudProviders": {},
+				"externalIp": "153.3.73.246",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"activeThreats": 0,
+				"agentComputerName": "LAPTOP-M2IBKRUH",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "951672207806662039",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "laptop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentOsType": "windows",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1355542268132095875",
+						"inet": [
+							"192.168.34.84"
+						],
+						"inet6": [
+							"fe80::358a:2ae0:b770:4a67"
+						],
+						"name": "以太网 2",
+						"physical": "00:e0:4c:36:55:26"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2020-08-06T03:55:07.066850Z",
+				"scanStartedAt": "2020-08-06T01:23:11.364839Z",
+				"scanStatus": "finished",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224285904509823178",
+			"indicators": [
+				{
+					"category": "Injection",
+					"description": "Library was injected to a remote process",
+					"ids": [
+						163
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Exploitation",
+					"description": "Detected suspicious shellcode API call",
+					"ids": [
+						121
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1106/",
+									"name": "T1106"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1059/",
+									"name": "T1059"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code was executed in a remote process",
+					"ids": [
+						113
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to a remote process",
+					"ids": [
+						154
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to other process memory space via Reflection",
+					"ids": [
+						61
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Reconnaissance",
+					"description": "Suspicious WMI query was identified",
+					"ids": [
+						172
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1047/",
+									"name": "T1047"
+								}
+							]
+						},
+						{
+							"name": "Discovery",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1518/001/",
+									"name": "T1518.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Attempts to read sensitive information from LSASS",
+					"ids": [
+						255
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1555/004/",
+									"name": "T1555.004"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Anti-VM technique was used",
+					"ids": [
+						98
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Keylogger Installation",
+					"ids": [
+						342
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						},
+						{
+							"name": "Collection",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Suspicious library loaded into the process memory",
+					"ids": [
+						126
+					],
+					"tactics": []
+				},
+				{
+					"category": "Infostealer",
+					"description": "Blocked read access to LSASS",
+					"ids": [
+						224
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Manipulated code execution flow using the Heaven's Gate technique",
+					"ids": [
+						118
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				}
+			],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 2,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 0,
+						"total": 2
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:37:42.364889Z",
+					"latestReport": "/threats/mitigation-report/1224285984050604362",
+					"mitigationEndedAt": "2021-08-17T04:37:30.963000Z",
+					"mitigationStartedAt": "2021-08-17T04:37:30.962000Z",
+					"status": "failed"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 11,
+						"total": 11
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:37:33.893404Z",
+					"latestReport": "/threats/mitigation-report/1224285912982317263",
+					"mitigationEndedAt": "2021-08-17T04:37:29.396000Z",
+					"mitigationStartedAt": "2021-08-17T04:37:29.395000Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"classification": "Trojan",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "provider_unknown",
+				"collectionId": "1200976640726598933",
+				"confidenceLevel": "suspicious",
+				"createdAt": "2021-08-17T04:37:32.882374Z",
+				"detectionEngines": [
+					{
+						"key": "executables",
+						"title": "Behavioral AI"
+					}
+				],
+				"detectionType": "dynamic",
+				"engines": [
+					"DBT - Executables"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": true,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\360\\360Safe3580343\\360Safe\\deepscan\\ZhuDongFangYu.exe",
+				"fileSize": 259136,
+				"fileVerificationType": "SignedVerified",
+				"identifiedAt": "2021-08-17T04:37:29.125000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "agent_policy",
+				"initiatedByDescription": "Agent Policy",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": true,
+				"maliciousProcessArguments": "",
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "not_mitigated",
+				"mitigationStatusDescription": "Not mitigated",
+				"originatorProcess": "services.exe",
+				"pendingActions": false,
+				"processUser": "NT AUTHORITY\\SYSTEM",
+				"publisherName": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "cd98e6ef85b131cbe776c682e9cf72b721ecd55e",
+				"sha256": null,
+				"storyline": "19F1956B5C75DBEA",
+				"threatId": "1224285904509823178",
+				"threatName": "ZhuDongFangYu.exe",
+				"updatedAt": "2022-03-31T03:00:36.078145Z"
+			},
+			"whiteningOptions": [
+				"certificate",
+				"hash",
+				"path"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.8.132",
+				"agentIpV6": "fe80::58e5:dd47:618:1528",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "tak",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentRegisteredAt": "2021-06-21T06:51:37.370513Z",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"cloudProviders": {},
+				"externalIp": "218.146.19.11",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"activeThreats": 0,
+				"agentComputerName": "DESKTOP-5JFDS12",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "1183041169901536849",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "desktop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentOsType": "windows",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1183041169909925458",
+						"inet": [
+							"192.168.8.144"
+						],
+						"inet6": [
+							"fe80::58e5:dd47:618:1528"
+						],
+						"name": "Ethernet0",
+						"physical": "00:0c:29:78:e1:0c"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2021-08-19T02:54:29.915276Z",
+				"scanStartedAt": "2021-08-19T09:12:16.250376Z",
+				"scanStatus": "started",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224288513283026081",
+			"indicators": [],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 1,
+						"total": 1
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:42:44.095981Z",
+					"latestReport": "/threats/mitigation-report/1224288515153685676",
+					"mitigationEndedAt": "2021-08-17T04:42:43.447000Z",
+					"mitigationStartedAt": "2021-08-17T04:42:43.447000Z",
+					"status": "success"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": null,
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:42:43.988847Z",
+					"latestReport": null,
+					"mitigationEndedAt": "2021-08-17T04:42:43.983430Z",
+					"mitigationStartedAt": "2021-08-17T04:42:43.983430Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "WZTEAM",
+				"classification": "Hacktool",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "black",
+				"collectionId": "1165462830080988442",
+				"confidenceLevel": "malicious",
+				"createdAt": "2021-08-17T04:42:43.873229Z",
+				"detectionEngines": [
+					{
+						"key": "sentinelone_cloud",
+						"title": "SentinelOne Cloud"
+					}
+				],
+				"detectionType": "static",
+				"engines": [
+					"SentinelOne Cloud"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": false,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume2\\Users\\tak\\Desktop\\Programs\\KMSAuto Lite Portable v1.4.5\\KMSAuto.exe",
+				"fileSize": 4938216,
+				"fileVerificationType": "SignedNotVerified",
+				"identifiedAt": "2021-08-17T04:42:43.400000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "full_disk_scan",
+				"initiatedByDescription": "Full Disk Scan",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": false,
+				"maliciousProcessArguments": null,
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "mitigated",
+				"mitigationStatusDescription": "Mitigated",
+				"originatorProcess": null,
+				"pendingActions": false,
+				"processUser": "",
+				"publisherName": "WZTEAM",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "1d1c3635ba32eb0581dcf7b6c8a842d0384fa066",
+				"sha256": null,
+				"storyline": "FAA9409C19C042E3",
+				"threatId": "1224288513283026081",
+				"threatName": "KMSAuto.exe",
+				"updatedAt": "2021-09-16T05:28:43.846170Z"
+			},
+			"whiteningOptions": [
+				"hash"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.8.132",
+				"agentIpV6": "fe80::58e5:dd47:618:1528",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "tak",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentRegisteredAt": "2021-06-21T06:51:37.370513Z",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"cloudProviders": {},
+				"externalIp": "218.146.19.11",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"activeThreats": 0,
+				"agentComputerName": "DESKTOP-5JFDS12",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "1183041169901536849",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "desktop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentOsType": "windows",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1183041169909925458",
+						"inet": [
+							"192.168.8.144"
+						],
+						"inet6": [
+							"fe80::58e5:dd47:618:1528"
+						],
+						"name": "Ethernet0",
+						"physical": "00:0c:29:78:e1:0c"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2021-08-19T02:54:29.915276Z",
+				"scanStartedAt": "2021-08-19T09:12:16.250376Z",
+				"scanStatus": "started",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224288562792590544",
+			"indicators": [],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 1,
+						"total": 1
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:42:50.034218Z",
+					"latestReport": "/threats/mitigation-report/1224288564965240027",
+					"mitigationEndedAt": "2021-08-17T04:42:49.453000Z",
+					"mitigationStartedAt": "2021-08-17T04:42:49.453000Z",
+					"status": "success"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": null,
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:42:49.933053Z",
+					"latestReport": null,
+					"mitigationEndedAt": "2021-08-17T04:42:49.927196Z",
+					"mitigationStartedAt": "2021-08-17T04:42:49.927195Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "WZTEAM",
+				"classification": "Hacktool",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "black",
+				"collectionId": "1162774474380867406",
+				"confidenceLevel": "malicious",
+				"createdAt": "2021-08-17T04:42:49.774518Z",
+				"detectionEngines": [
+					{
+						"key": "sentinelone_cloud",
+						"title": "SentinelOne Cloud"
+					}
+				],
+				"detectionType": "static",
+				"engines": [
+					"SentinelOne Cloud"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": false,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume2\\Users\\tak\\Desktop\\Programs\\KMSAuto Lite Portable v1.4.5\\KMSAuto x64.exe",
+				"fileSize": 5049848,
+				"fileVerificationType": "SignedNotVerified",
+				"identifiedAt": "2021-08-17T04:42:49.406000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "full_disk_scan",
+				"initiatedByDescription": "Full Disk Scan",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": false,
+				"maliciousProcessArguments": null,
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "mitigated",
+				"mitigationStatusDescription": "Mitigated",
+				"originatorProcess": null,
+				"pendingActions": false,
+				"processUser": "",
+				"publisherName": "WZTEAM",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "e72328fb9a1226c43dacceda0aeadd324f1af41a",
+				"sha256": null,
+				"storyline": "725027C9AD8383E2",
+				"threatId": "1224288562792590544",
+				"threatName": "KMSAuto x64.exe",
+				"updatedAt": "2021-09-16T05:28:43.800034Z"
+			},
+			"whiteningOptions": [
+				"hash"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.8.132",
+				"agentIpV6": "fe80::58e5:dd47:618:1528",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "tak",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentRegisteredAt": "2021-06-21T06:51:37.370513Z",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"cloudProviders": {},
+				"externalIp": "218.146.19.11",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"activeThreats": 0,
+				"agentComputerName": "DESKTOP-5JFDS12",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "1183041169901536849",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "desktop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentOsType": "windows",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1183041169909925458",
+						"inet": [
+							"192.168.8.144"
+						],
+						"inet6": [
+							"fe80::58e5:dd47:618:1528"
+						],
+						"name": "Ethernet0",
+						"physical": "00:0c:29:78:e1:0c"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2021-08-19T02:54:29.915276Z",
+				"scanStartedAt": "2021-08-19T09:12:16.250376Z",
+				"scanStatus": "started",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224289113563426210",
+			"indicators": [],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 1,
+						"total": 1
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:43:55.631877Z",
+					"latestReport": "/threats/mitigation-report/1224289115241147821",
+					"mitigationEndedAt": "2021-08-17T04:43:55.125000Z",
+					"mitigationStartedAt": "2021-08-17T04:43:55.125000Z",
+					"status": "success"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": null,
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:43:55.533354Z",
+					"latestReport": null,
+					"mitigationEndedAt": "2021-08-17T04:43:55.527618Z",
+					"mitigationStartedAt": "2021-08-17T04:43:55.527617Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "WZTEAM",
+				"classification": "Hacktool",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "black",
+				"collectionId": "1162773789476189739",
+				"confidenceLevel": "malicious",
+				"createdAt": "2021-08-17T04:43:55.432084Z",
+				"detectionEngines": [
+					{
+						"key": "sentinelone_cloud",
+						"title": "SentinelOne Cloud"
+					}
+				],
+				"detectionType": "static",
+				"engines": [
+					"SentinelOne Cloud"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": false,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume2\\Users\\tak\\Desktop\\Programs\\Office 2013-2019 C2R Install v6.4.8\\OInstallLite.exe",
+				"fileSize": 5633024,
+				"fileVerificationType": "SignedNotVerified",
+				"identifiedAt": "2021-08-17T04:43:55.078000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "full_disk_scan",
+				"initiatedByDescription": "Full Disk Scan",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": false,
+				"maliciousProcessArguments": null,
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "mitigated",
+				"mitigationStatusDescription": "Mitigated",
+				"originatorProcess": null,
+				"pendingActions": false,
+				"processUser": "",
+				"publisherName": "WZTEAM",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "c99da9c87269f5d03951e44ee2080417b32441a5",
+				"sha256": null,
+				"storyline": "851FE482452095E7",
+				"threatId": "1224289113563426210",
+				"threatName": "OInstallLite.exe",
+				"updatedAt": "2021-09-16T05:28:43.824273Z"
+			},
+			"whiteningOptions": [
+				"hash"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.8.132",
+				"agentIpV6": "fe80::58e5:dd47:618:1528",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "tak",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentRegisteredAt": "2021-06-21T06:51:37.370513Z",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"cloudProviders": {},
+				"externalIp": "218.146.19.11",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "815520265151718893",
+				"accountName": "Comsys",
+				"activeThreats": 0,
+				"agentComputerName": "DESKTOP-5JFDS12",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "1183041169901536849",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "desktop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Pro",
+				"agentOsRevision": "21996",
+				"agentOsType": "windows",
+				"agentUuid": "27ae46500ca74009865ab24ace218f63",
+				"agentVersion": "4.6.14.304",
+				"groupId": "1158448941865432816",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1183041169909925458",
+						"inet": [
+							"192.168.8.144"
+						],
+						"inet6": [
+							"fe80::58e5:dd47:618:1528"
+						],
+						"name": "Ethernet0",
+						"physical": "00:0c:29:78:e1:0c"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2021-08-19T02:54:29.915276Z",
+				"scanStartedAt": "2021-08-19T09:12:16.250376Z",
+				"scanStatus": "started",
+				"siteId": "1158448941848655599",
+				"siteName": "KIWONTECH",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224289130533580214",
+			"indicators": [],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 1,
+						"total": 1
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:43:57.657452Z",
+					"latestReport": "/threats/mitigation-report/1224289132228079040",
+					"mitigationEndedAt": "2021-08-17T04:43:57.184000Z",
+					"mitigationStartedAt": "2021-08-17T04:43:57.184000Z",
+					"status": "success"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": null,
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T04:43:57.559673Z",
+					"latestReport": null,
+					"mitigationEndedAt": "2021-08-17T04:43:57.553402Z",
+					"mitigationStartedAt": "2021-08-17T04:43:57.553401Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "WZTEAM",
+				"classification": "Hacktool",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "black",
+				"collectionId": "1162772237323662394",
+				"confidenceLevel": "malicious",
+				"createdAt": "2021-08-17T04:43:57.455040Z",
+				"detectionEngines": [
+					{
+						"key": "sentinelone_cloud",
+						"title": "SentinelOne Cloud"
+					}
+				],
+				"detectionType": "static",
+				"engines": [
+					"SentinelOne Cloud"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": false,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume2\\Users\\tak\\Desktop\\Programs\\Office 2013-2019 C2R Install v6.4.8\\OInstall.exe",
+				"fileSize": 9350128,
+				"fileVerificationType": "SignedNotVerified",
+				"identifiedAt": "2021-08-17T04:43:57.102000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "full_disk_scan",
+				"initiatedByDescription": "Full Disk Scan",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": false,
+				"maliciousProcessArguments": null,
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "mitigated",
+				"mitigationStatusDescription": "Mitigated",
+				"originatorProcess": null,
+				"pendingActions": false,
+				"processUser": "",
+				"publisherName": "WZTEAM",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "21eec42a72cf18d396aaf2f80ada2b8afbbbe41f",
+				"sha256": null,
+				"storyline": "C65686A7B73E5A6B",
+				"threatId": "1224289130533580214",
+				"threatName": "OInstall.exe",
+				"updatedAt": "2021-09-16T05:28:43.837332Z"
+			},
+			"whiteningOptions": [
+				"hash"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "1042260153621828302",
+				"accountName": "Interpark",
+				"agentDetectionState": null,
+				"agentDomain": "INPARK",
+				"agentIpV4": "10.20.9.183",
+				"agentIpV6": "fe80::81b9:317d:8afc:8847",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "N18050",
+				"agentMitigationMode": "detect",
+				"agentOsName": "Windows 10 Enterprise",
+				"agentOsRevision": "17763",
+				"agentRegisteredAt": "2020-12-24T00:23:49.005821Z",
+				"agentUuid": "ac51a761fe8a4114a58c1bde0bb5b405",
+				"agentVersion": "21.6.2.272",
+				"cloudProviders": {},
+				"externalIp": "180.70.97.9",
+				"groupId": "1128620441090521302",
+				"groupName": "001.Window 10",
+				"siteId": "1042260153638605519",
+				"siteName": "Default site"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "1042260153621828302",
+				"accountName": "Interpark",
+				"activeThreats": 0,
+				"agentComputerName": "N18050-W01",
+				"agentDecommissionedAt": null,
+				"agentDomain": "INPARK",
+				"agentId": "1053111124833751967",
+				"agentInfected": false,
+				"agentIsActive": true,
+				"agentIsDecommissioned": false,
+				"agentMachineType": "desktop",
+				"agentMitigationMode": "detect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Enterprise",
+				"agentOsRevision": "17763",
+				"agentOsType": "windows",
+				"agentUuid": "ac51a761fe8a4114a58c1bde0bb5b405",
+				"agentVersion": "21.7.5.1080",
+				"groupId": "1128620441090521302",
+				"groupName": "001.Window 10",
+				"networkInterfaces": [
+					{
+						"id": "1484697917871954773",
+						"inet": [
+							"10.20.9.183"
+						],
+						"inet6": [
+							"fe80::81b9:317d:8afc:8847"
+						],
+						"name": "이더넷",
+						"physical": "18:60:24:82:2f:c5"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2020-12-24T01:32:12.659931Z",
+				"scanStartedAt": "2020-12-24T00:25:26.168821Z",
+				"scanStatus": "finished",
+				"siteId": "1042260153638605519",
+				"siteName": "01.Interpark",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224295419707881810",
+			"indicators": [
+				{
+					"category": "Infostealer",
+					"description": "Blocked read access to LSASS",
+					"ids": [
+						224
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Anti-VM technique was used",
+					"ids": [
+						98
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Privilege Escalation",
+					"description": "Execution of privileged instruction was identified",
+					"ids": [
+						159
+					],
+					"tactics": [
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Packer",
+					"description": "Process suspicious as packed",
+					"ids": [
+						437
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1027/002/",
+									"name": "T1027.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "General",
+					"description": "Detected by the Static Engine",
+					"ids": [
+						43
+					],
+					"tactics": []
+				}
+			],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [],
+			"threatInfo": {
+				"analystVerdict": "suspicious",
+				"analystVerdictDescription": "Suspicious",
+				"automaticallyResolved": false,
+				"browserType": null,
+				"certificateId": "INCA INTERNET CO.,LTD.",
+				"classification": "Malware",
+				"classificationSource": "Static",
+				"cloudFilesHashVerdict": null,
+				"collectionId": "1189513346820571160",
+				"confidenceLevel": "suspicious",
+				"createdAt": "2021-08-17T04:56:27.183389Z",
+				"detectionEngines": [
+					{
+						"key": "pre_execution_suspicious",
+						"title": "On-Write Static AI - Suspicious"
+					}
+				],
+				"detectionType": "dynamic",
+				"engines": [
+					"On-Write DFI - Suspicious"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": false,
+				"fileExtension": "NPE",
+				"fileExtensionType": "Unknown",
+				"filePath": "\\Device\\HarddiskVolume2\\Program Files (x86)\\INCAInternet\\nProtect Online Security\\nosstarter.npe",
+				"fileSize": 3613864,
+				"fileVerificationType": "SignedVerified",
+				"identifiedAt": "2021-08-17T04:56:25.967000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "agent_policy",
+				"initiatedByDescription": "Agent Policy",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": true,
+				"maliciousProcessArguments": "/SVC",
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "not_mitigated",
+				"mitigationStatusDescription": "Not mitigated",
+				"originatorProcess": "nossvc.exe",
+				"pendingActions": false,
+				"processUser": "NT AUTHORITY\\SYSTEM",
+				"publisherName": "INCA INTERNET CO.,LTD.",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "b873e1f267fc770913fdc07b4b991ebae2cd9d29",
+				"sha256": null,
+				"storyline": "2C6B365D42A36F71",
+				"threatId": "1224295419707881810",
+				"threatName": "nosstarter.npe",
+				"updatedAt": "2021-08-23T02:22:23.550182Z"
+			},
+			"whiteningOptions": [
+				"certificate",
+				"hash",
+				"path"
+			]
+		},
+		{
+			"agentDetectionInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"agentDetectionState": null,
+				"agentDomain": "WORKGROUP",
+				"agentIpV4": "192.168.34.84",
+				"agentIpV6": "fe80::358a:2ae0:b770:4a67",
+				"agentLastLoggedInUpn": null,
+				"agentLastLoggedInUserMail": null,
+				"agentLastLoggedInUserName": "22134",
+				"agentMitigationMode": "protect",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentRegisteredAt": "2020-08-06T01:22:47.773770Z",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"cloudProviders": {},
+				"externalIp": "153.3.73.246",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ"
+			},
+			"agentRealtimeInfo": {
+				"accountId": "926627569543769282",
+				"accountName": "SSDelta",
+				"activeThreats": 0,
+				"agentComputerName": "LAPTOP-M2IBKRUH",
+				"agentDecommissionedAt": true,
+				"agentDomain": "WORKGROUP",
+				"agentId": "951672207806662039",
+				"agentInfected": false,
+				"agentIsActive": false,
+				"agentIsDecommissioned": true,
+				"agentMachineType": "laptop",
+				"agentMitigationMode": "protect",
+				"agentNetworkStatus": "connected",
+				"agentOsName": "Windows 10 Home China",
+				"agentOsRevision": "19042",
+				"agentOsType": "windows",
+				"agentUuid": "9e8fa0e5d08f4b63ba0a1581d0992ce4",
+				"agentVersion": "21.5.3.235",
+				"groupId": "932248167498965551",
+				"groupName": "Default Group",
+				"networkInterfaces": [
+					{
+						"id": "1355542268132095875",
+						"inet": [
+							"192.168.34.84"
+						],
+						"inet6": [
+							"fe80::358a:2ae0:b770:4a67"
+						],
+						"name": "以太网 2",
+						"physical": "00:e0:4c:36:55:26"
+					}
+				],
+				"operationalState": "na",
+				"rebootRequired": false,
+				"scanAbortedAt": null,
+				"scanFinishedAt": "2020-08-06T03:55:07.066850Z",
+				"scanStartedAt": "2020-08-06T01:23:11.364839Z",
+				"scanStatus": "finished",
+				"siteId": "932248167490576942",
+				"siteName": "해외-SDNJ",
+				"storageName": null,
+				"storageType": null,
+				"userActionsNeeded": []
+			},
+			"containerInfo": {
+				"id": null,
+				"image": null,
+				"labels": null,
+				"name": null
+			},
+			"id": "1224306585482003967",
+			"indicators": [
+				{
+					"category": "Infostealer",
+					"description": "Keylogger Installation",
+					"ids": [
+						342
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						},
+						{
+							"name": "Collection",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1056/001/",
+									"name": "T1056.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Library was injected to a remote process",
+					"ids": [
+						163
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code was executed in a remote process",
+					"ids": [
+						113
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to other process memory space via Reflection",
+					"ids": [
+						61
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "General",
+					"description": "User logged on",
+					"ids": [
+						266
+					],
+					"tactics": [
+						{
+							"name": "Persistence",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1078/",
+									"name": "T1078"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Exploitation",
+					"description": "Detected suspicious shellcode API call",
+					"ids": [
+						121
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1106/",
+									"name": "T1106"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1059/",
+									"name": "T1059"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Code injection to a remote process",
+					"ids": [
+						154
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						},
+						{
+							"name": "Privilege Escalation",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/",
+									"name": "T1055"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1055/002/",
+									"name": "T1055.002"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Reconnaissance",
+					"description": "Suspicious WMI query was identified",
+					"ids": [
+						172
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1047/",
+									"name": "T1047"
+								}
+							]
+						},
+						{
+							"name": "Discovery",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1518/001/",
+									"name": "T1518.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Infostealer",
+					"description": "Attempts to read sensitive information from LSASS",
+					"ids": [
+						255
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								},
+								{
+									"link": "https://attack.mitre.org/techniques/T1555/004/",
+									"name": "T1555.004"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Anti-VM technique was used",
+					"ids": [
+						98
+					],
+					"tactics": [
+						{
+							"name": "Defense Evasion",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				},
+				{
+					"category": "Injection",
+					"description": "Suspicious library loaded into the process memory",
+					"ids": [
+						126
+					],
+					"tactics": []
+				},
+				{
+					"category": "Infostealer",
+					"description": "Blocked read access to LSASS",
+					"ids": [
+						224
+					],
+					"tactics": [
+						{
+							"name": "Credential Access",
+							"source": "MITRE",
+							"techniques": [
+								{
+									"link": "https://attack.mitre.org/techniques/T1003/001/",
+									"name": "T1003.001"
+								}
+							]
+						}
+					]
+				},
+				{
+					"category": "Evasion",
+					"description": "Manipulated code execution flow using the Heaven's Gate technique",
+					"ids": [
+						118
+					],
+					"tactics": [
+						{
+							"name": "Execution",
+							"source": "MITRE",
+							"techniques": []
+						}
+					]
+				}
+			],
+			"kubernetesInfo": {
+				"cluster": null,
+				"controllerKind": null,
+				"controllerLabels": null,
+				"controllerName": null,
+				"namespace": null,
+				"namespaceLabels": null,
+				"node": null,
+				"pod": null,
+				"podLabels": null
+			},
+			"mitigationStatus": [
+				{
+					"action": "quarantine",
+					"actionsCounters": {
+						"failed": 2,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 1,
+						"total": 3
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T06:07:28.029509Z",
+					"latestReport": "/threats/mitigation-report/1224331162274735954",
+					"mitigationEndedAt": "2021-08-17T06:06:11.292000Z",
+					"mitigationStartedAt": "2021-08-17T06:06:11.280000Z",
+					"status": "partial"
+				},
+				{
+					"action": "kill",
+					"actionsCounters": {
+						"failed": 0,
+						"notFound": 0,
+						"pendingReboot": 0,
+						"success": 49,
+						"total": 49
+					},
+					"agentSupportsReport": true,
+					"groupNotFound": false,
+					"lastUpdate": "2021-08-17T06:07:27.428161Z",
+					"latestReport": "/threats/mitigation-report/1224331157233182540",
+					"mitigationEndedAt": "2021-08-17T06:06:09.463000Z",
+					"mitigationStartedAt": "2021-08-17T06:06:09.146000Z",
+					"status": "success"
+				}
+			],
+			"threatInfo": {
+				"analystVerdict": "undefined",
+				"analystVerdictDescription": "Undefined",
+				"automaticallyResolved": true,
+				"browserType": null,
+				"certificateId": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"classification": "Trojan",
+				"classificationSource": "Cloud",
+				"cloudFilesHashVerdict": "provider_unknown",
+				"collectionId": "1200976640726598933",
+				"confidenceLevel": "suspicious",
+				"createdAt": "2021-08-17T05:18:38.246903Z",
+				"detectionEngines": [
+					{
+						"key": "executables",
+						"title": "Behavioral AI"
+					}
+				],
+				"detectionType": "dynamic",
+				"engines": [
+					"DBT - Executables"
+				],
+				"externalTicketExists": false,
+				"externalTicketId": null,
+				"failedActions": true,
+				"fileExtension": "EXE",
+				"fileExtensionType": "Executable",
+				"filePath": "\\Device\\HarddiskVolume3\\Program Files (x86)\\360\\360Safe3580343\\360Safe\\deepscan\\ZhuDongFangYu.exe",
+				"fileSize": 259136,
+				"fileVerificationType": "SignedVerified",
+				"identifiedAt": "2021-08-17T05:18:32.749000Z",
+				"incidentStatus": "resolved",
+				"incidentStatusDescription": "Resolved",
+				"initiatedBy": "agent_policy",
+				"initiatedByDescription": "Agent Policy",
+				"initiatingUserId": null,
+				"initiatingUsername": null,
+				"isFileless": false,
+				"isValidCertificate": true,
+				"maliciousProcessArguments": "",
+				"md5": null,
+				"mitigatedPreemptively": false,
+				"mitigationStatus": "mitigated",
+				"mitigationStatusDescription": "Mitigated",
+				"originatorProcess": "services.exe",
+				"pendingActions": false,
+				"processUser": "NT AUTHORITY\\SYSTEM",
+				"publisherName": "BEIJING QIHU TECHNOLOGY CO., LTD.",
+				"reachedEventsLimit": false,
+				"rebootRequired": false,
+				"sha1": "cd98e6ef85b131cbe776c682e9cf72b721ecd55e",
+				"sha256": null,
+				"storyline": "D731A007630673C4",
+				"threatId": "1224306585482003967",
+				"threatName": "ZhuDongFangYu.exe",
+				"updatedAt": "2022-03-31T03:00:38.264850Z"
+			},
+			"whiteningOptions": [
+				"certificate",
+				"hash",
+				"path"
+			]
+		}
+	],
+	"pagination": {
+		"nextCursor": "eyJpZF9jb2x1bW4iOiAiVGhyZWF0Vmlldy5pZCIsICJpZF92YWx1ZSI6IDEyMjQzMDY1ODU0ODIwMDM5NjcsICJzb3J0X2J5X2NvbHVtbiI6ICJUaHJlYXRWaWV3LmlkIiwgInNvcnRfYnlfdmFsdWUiOiAxMjI0MzA2NTg1NDgyMDAzOTY3LCAic29ydF9vcmRlciI6ICJhc2MifQ%3D%3D",
+		"totalItems": 417033
+	}
+}
