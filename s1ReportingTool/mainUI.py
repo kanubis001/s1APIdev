@@ -194,7 +194,7 @@ class WindowClass(QMainWindow, form_class):
             print(self.comboSite.currentText())
             idTxt=self.comboSite.currentText()
             targetArr=self.sites
-        elif self.enablegroupid==True:
+        if self.enablegroupid==True:
             print(self.comboGrp.currentText())
             idTxt = self.comboGrp.currentText()
             targetArr=self.groups

@@ -80,18 +80,23 @@ class controller:
         # print(startday)
         mR = mainReporting.mainReporting(
             self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end))
+        
         datas = mR.get("date", stype, id)
         
         # type은 malicious, suspicious, all
         type = "all"
         # 보고서 생성(전체 리스트)
+        
         res_reForge = mR.reForgeCont(datas, type)
         if res_reForge == 0:
             dir = "데이터가 없습니다."
             return dir+" 범위를 수정해주세요."
         else:
+            mR.getEndpoints(id,stype)
+            mR.getTop20(datas)
             mR.gatherThreatscnt(datas, type)
             mR.gatherByEngine(datas)
+        
             dir = mR.endSave()
             return dir+" 위치에 보고서가 생성되었습니다."
         

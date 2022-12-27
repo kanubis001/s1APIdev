@@ -29,8 +29,21 @@ self.dataArr[i][27]=dataFcont.get("processUser")
 self.dataArr[i][28]=dataFcont.get("publisherName")
 self.dataArr[i][29]=dataFcont.get("updatedAt")
 
-
-
+endpoint info
+0contents.get("data")[i].get("computerName"),
+1contents.get("data")[i].get("accountName"),
+2contents.get("data")[i].get("siteName"),
+3contents.get("data")[i].get("groupName"), 
+4contents.get("data")[i].get("agentVersion"),
+5contents.get("data")[i].get("infected"),
+6contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0],
+7contents.get("data")[i].get("externalIp"),
+8contents.get("data")[i].get("osArch"),
+9contents.get("data")[i].get("osName"),
+10contents.get("data")[i].get("osType"),
+11contents.get("data")[i].get("uuid"),
+12contents.get("data")[i].get("machineType"),
+13contents.get("data")[i].get("activeThreats"),
 
 
 

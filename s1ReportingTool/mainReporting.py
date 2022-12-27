@@ -2,7 +2,7 @@ import connect as conn
 from connect import sess
 import datetime
 import getThreats
-import getAgents
+import getEndpoints
 from multiprocessing import Process, Queue
 import mkReport
 import progressbar
@@ -38,10 +38,54 @@ class mainReporting:
         if menu == "date":
             return self.GT.getfromDate(self.startD, self.endD, sType,id)
         
-    def getEndpoints(self,findid):
-        GA=getAgents.getAgents(self,self.s1Site, sess, self.groupIds, self.token)
+    def getTop20(self,datas):
+        top20=self.GT.getTop20fromThreat(datas)
+        self.makeReport.writeTitle("기간별 Top20 탐지 Endpoints", 2)
+        self.makeReport.mkTop20Table_detail(21, 2)
+        i=0
+        for key in top20.keys():
+            print(top20.get(key))
+            self.makeReport.writeDownTop20Table(key, top20.get(key), i)
+            i+=1
+            if i==20:
+                break
+        self.makeReport.saveDoc()
         
-        pass
+        
+    def getEndpoints(self,findid,sType):
+        mkr=self.makeReport
+        GE=getEndpoints.getEndpoints(self.s1Site, sess, findid, sType, self.token)
+        GE.getAll()
+        #OS별 대수 확인 및 return(dictionary type)
+        osdatas=GE.getbyOS()
+        mkr.writeTitle("OS별 엔드포인트",2)
+        mkr.mktable_getbyos(len(osdatas)+1,2)
+        self.mkdictypetable(osdatas,"getbyos")
+        
+        #버전별 대수 확인 및 return(dictionary type)
+        verdatas=GE.getbyversion()
+        mkr.writeTitle("버전별 엔드포인트",2)
+        mkr.mktable_getbyver(len(verdatas)+1,2)
+        self.mkdictypetable(verdatas,"getbyver")
+        
+        #감염 PC, 안전한 PC(True(감염), False)
+        infdatas=GE.getbyinfected()
+        mkr.writeTitle("보호되고 있는 엔드포인트",2)
+        mkr.mktable_getbyinf(len(infdatas)+1,2)
+        self.mkdictypetable(infdatas,"getbyinf")
+        
+        #감염된 detail 정보 return(감염PC 전체)
+        GE.getbyInfectedDetail()
+        
+    #2열 짜리 테이블 내용 입력    
+    def mkdictypetable(self,datas,cat):    
+        mkr=self.makeReport
+        i=0
+        for key in datas.keys():
+            print(datas.get(key))
+            mkr.writeDownTable_endpoints(key, datas.get(key), i,cat)
+            i+=1
+        mkr.saveDoc()
     
     def reForgeCont(self, datas, type):
         if len(datas) == 0:
@@ -66,9 +110,9 @@ class mainReporting:
                     #         progressper=100
                     # print(round(progressper,1),"%")
                     bar.update(i)
-                    self.makeReport.writeDownTable(data, i)
+                    # self.makeReport.writeDownTable(data, i)
                     i += 1
-                    self.makeReport.saveDoc()
+                    # self.makeReport.saveDoc()
             else:
                 for data in datas:
                     if type in data:
@@ -87,7 +131,7 @@ class mainReporting:
                         pass
                     else: 
                         threatsGubun.append(data[14])
-            print(threatsGubun)
+            # print(threatsGubun)
             column = 2
             row = len(threatsGubun)
             # 위협별 갯수 카운트 리스트
@@ -160,7 +204,7 @@ class mainReporting:
                     pass
                 elif data[19] in engineGubun[i]:
                     engineCnt[i][1] += 1
-        print(engineCnt)
+        # print(engineCnt)
         y=np.arange(len(engineCnt))
         x_axis=[]
         y_axis=[]
@@ -174,8 +218,8 @@ class mainReporting:
             j += 1
             y_axis.insert(j, engineCnt[i][0])
             x_axis.insert(j, engineCnt[i][1])
-        print(x_axis)
-        print(y_axis)
+        # print(x_axis)
+        # print(y_axis)
         plt.barh(y,x_axis)
         plt.yticks(y,y_axis)
         picpath = './saveBarChart.png'

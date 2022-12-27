@@ -1,8 +1,6 @@
 import json
 import pandas as pd
 from connect import sess
-import mkReport
-
 
 class getThreats:
 
@@ -40,8 +38,8 @@ class getThreats:
         self.gfdcolumn = 30
         self.gfdrow = totItems
         self.dataArr = [[0 for _ in range(self.gfdcolumn)] for _ in range(self.gfdrow)]
-        self.makeReport.writeTitle("1.기간별 전체 탐지 내역", 2)
-        self.makeReport.mkTable_detail(self.gfdrow+1, 6)
+        # self.makeReport.writeTitle("기간별 전체 탐지 내역", 2)
+        # self.makeReport.mkTable_detail(self.gfdrow+1, 6)
         self.saveDataArr(contents)
 
         # self.saveThreatInfo(contents)
@@ -59,9 +57,9 @@ class getThreats:
                     print("totItem Done")
                     break
         except:
-            print(type(self.cursor))
+            # print(type(self.cursor))
             print("err")
-        self.makeReport.saveDoc()
+        # self.makeReport.saveDoc()
         # print(self.dataArr)
         return self.dataArr
         # print(self.dataArr)
@@ -78,7 +76,7 @@ class getThreats:
             # print(self.totcnt)
             detectInfo = str(self.totcnt)+" uuid :"+contents.get('data')[i].get('agentDetectionInfo').get('agentUuid')+" / IPv4 :"+contents.get('data')[i].get(
                 'agentDetectionInfo').get('agentIpV4')+" / MitigationMode : "+contents.get('data')[i].get('agentDetectionInfo').get('agentMitigationMode')
-            self.makeReport.writeDown(detectInfo)
+            # self.makeReport.writeDown(detectInfo)
             # print(detectInfo)
         # for i in range(0,self.limit):
         #     detectInfo="uuid :"+contents.get('data')[i].get('agentDetectionInfo').get('agentUuid')+" / IPv4 :"+contents.get('data')[i].get('agentDetectionInfo').get('agentIpV4')+" / MitigationMode : "+contents.get('data')[i].get('agentDetectionInfo').get('agentMitigationMode')
@@ -86,6 +84,19 @@ class getThreats:
         #     print(detectInfo)
         #     print(self.totItems)
 
+    def getTop20fromThreat(self,datas):
+        dic_t20agents={}
+        for data in datas:
+            #감염여부 확인
+            if data[4] in dic_t20agents.keys():
+                a=int(dic_t20agents.get(data[4]))
+                a+=1
+                dic_t20agents[data[4]]=a
+            else:
+                dic_t20agents[data[4]]=1
+        sorted_dic=dict(sorted(dic_t20agents.items(),key=lambda x:x[1],reverse=True))
+        return sorted_dic
+    
     def saveDataArr(self, contents):
         init = self.cnt
         end = self.cnt+len(contents.get('data'))
@@ -135,7 +146,7 @@ class getThreats:
                 self.totcnt += 1
                 # self.makeReport.writeDown(self.dataArr[self.totcnt][4])
                 # print(self.dataArr)
-                print(self.dataArr[i])
+                # print(self.dataArr[i])
                 # self.threatsData[i]
             except IndexError:
                 # print(contents.get('data')[i])

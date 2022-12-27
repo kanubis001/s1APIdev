@@ -12,8 +12,8 @@ class mkReport:
         self.doc = Document()
         style = self.doc.styles['Normal']
         font = style.font
-        font.name = 'Arial'
-        font.size = Pt(8)
+        font.name = '맑은 고딕'
+        font.size = Pt(10)
         title='센티넬원 리포트'
         title2='기간 : ',startday,' ~ ',endday
         self.doc.add_heading(title, level=0)
@@ -30,7 +30,31 @@ class mkReport:
         self.table.rows[0].cells[3].text = "처리 여부"
         self.table.rows[0].cells[4].text = "위협 구분"
         self.table.rows[0].cells[5].text = "account>site>group"
+ 
+    def mkTop20Table_detail(self, row, col):
+        self.top20table = self.doc.add_table(rows=row, cols=col)
+        self.top20table.style = self.doc.styles['Table Grid']
+        self.top20table.rows[0].cells[0].text = "Endpoint"
+        self.top20table.rows[0].cells[1].text = "탐지건수"
+       
+    def mktable_getbyos(self, row, col):
+        self.table_getbyos = self.doc.add_table(rows=row, cols=col)
+        self.table_getbyos.style = self.doc.styles['Table Grid']
+        self.table_getbyos.rows[0].cells[0].text = "OS 유형"
+        self.table_getbyos.rows[0].cells[1].text = "엔드포인트 수량"   
+ 
+    def mktable_getbyver(self, row, col):
+        self.table_getbyver = self.doc.add_table(rows=row, cols=col)
+        self.table_getbyver.style = self.doc.styles['Table Grid']
+        self.table_getbyver.rows[0].cells[0].text = "에이전트 버전"
+        self.table_getbyver.rows[0].cells[1].text = "엔드포인트 수량"         
 
+    def mktable_getbyinf(self, row, col):
+        self.table_getbyinf = self.doc.add_table(rows=row, cols=col)
+        self.table_getbyinf.style = self.doc.styles['Table Grid']
+        self.table_getbyinf.rows[0].cells[0].text = "감염여부"
+        self.table_getbyinf.rows[0].cells[1].text = "엔드포인트 수량"    
+             
     def mkTblthreatpie(self, row, col):
         self.threatTbl = self.doc.add_table(rows=row+1, cols=col)
         self.threatTbl.style = self.doc.styles['Table Grid']
@@ -80,7 +104,23 @@ class mkReport:
                     ">"+datas[1]+">"+datas[2]
             # print(datas)
             # print("err")
-   
+    def writeDownTop20Table(self, endpoint, cnt, num):
+        num += 1
+        self.top20table.rows[num].cells[0].text = str(endpoint)
+        self.top20table.rows[num].cells[1].text = str(cnt)
+    
+    def writeDownTable_endpoints(self,key,val,num,cat):
+        if cat=="getbyos":
+            tbl=self.table_getbyos
+        if cat=="getbyver":
+            tbl=self.table_getbyver
+        if cat=="getbyinf":
+            tbl=self.table_getbyinf
+        num += 1
+        tbl.rows[num].cells[0].text = str(key)
+        tbl.rows[num].cells[1].text = str(val)
+     
+        
     def addPic(self, picpath):
         self.doc.add_picture(picpath,width=Inches(4),height=Inches(4))
 
