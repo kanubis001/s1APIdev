@@ -69,7 +69,7 @@ class controller:
         except ValueError:
             print("value err!")
 
-    def start(self, id, start, end, groupornot):
+    def start(self, id, start, end, groupornot,names):
         if groupornot==False:
             stype="site"
         else:
@@ -79,8 +79,8 @@ class controller:
         endday = str(end)+"T23:59:59.999999Z"
         # print(startday)
         mR = mainReporting.mainReporting(
-            self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end))
-        
+            self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end),stype,names)
+        print(startday,"/",endday)
         datas = mR.get("date", stype, id)
         
         # type은 malicious, suspicious, all
@@ -96,6 +96,7 @@ class controller:
             mR.getTop20(datas)
             mR.gatherThreatscnt(datas, type)
             mR.gatherByEngine(datas)
+            mR.getInfectedDetail(datas)
         
             dir = mR.endSave()
             return dir+" 위치에 보고서가 생성되었습니다."

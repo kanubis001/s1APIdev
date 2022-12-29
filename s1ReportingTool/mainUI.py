@@ -21,7 +21,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-form = resource_path('reporterMain.ui')
+form = resource_path('D:\\원드라이브\\OneDrive\\Develop_private\\Python_git\\s1APIdev\\s1ReportingTool\\reporterMain.ui')
 form_class = uic.loadUiType(form)[0]
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
@@ -87,7 +87,7 @@ class WindowClass(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         #chkgrouporsite False면 그룹 아이디 필요 없음
-        self.enablegroupid=False
+        self.enablegroupid=True
         self.setupUi(self)
         self.percnt=0
         self.btnReporting.setEnabled(False)
@@ -154,7 +154,10 @@ class WindowClass(QMainWindow, form_class):
                 pass
             else:
                 QMessageBox.warning(self, "그룹 오류", "그룹을 선택해주세요")
+                self.enablegroupid=True
                 grperr=False
+        else:
+            self.enablegroupid=True
         if self.comboSite.currentText() == "":
             QMessageBox.warning(self, "사이트 오류", "사이트가 선택되지 않았습니다.")
             siterr=False
@@ -168,8 +171,8 @@ class WindowClass(QMainWindow, form_class):
         if daylong <= 7:
             QMessageBox.warning(self, "날짜 오류", "기간이 너무 짧습니다.")
             daterr=False
-        elif daylong > 365:
-            QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다.")
+        elif daylong > 100:
+            QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 3개월(100일)까지 지정할 수 있습니다.")
             daterr=False
 
         if grperr==False or siterr==False or accerr==False or daterr==False:
@@ -190,21 +193,24 @@ class WindowClass(QMainWindow, form_class):
         self.lineApitk.setEnabled(False)
         
     def setInfo(self):
+        self.btnReporting.setEnabled(False)
         if self.enablegroupid==False:
             print(self.comboSite.currentText())
             idTxt=self.comboSite.currentText()
             targetArr=self.sites
+            self.names=[self.comboAcc.currentText(),self.comboSite.currentText()]
         if self.enablegroupid==True:
             print(self.comboGrp.currentText())
             idTxt = self.comboGrp.currentText()
             targetArr=self.groups
+            self.names=[self.comboAcc.currentText(),self.comboSite.currentText(),self.comboGrp.currentText()]
         
-        print(idTxt)
+        # print(idTxt)
         for i in range(0, len(targetArr)):
             # self.per_update(i)
             if idTxt == targetArr[i][0]:
                 self.finalid = targetArr[i][1]
-                reporDir = controller.start(self, self.finalid, self.startd, self.endd,self.enablegroupid)
+                reporDir = controller.start(self, self.finalid, self.startd, self.endd,self.enablegroupid,self.names)
                 self.labelDirectory.setEnabled(True)
                 self.labelDirectory.setText(reporDir)
                 self.btnReporting.setEnabled(False)

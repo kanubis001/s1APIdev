@@ -28,6 +28,7 @@ self.dataArr[i][26]=dataFcont.get("originatorProcess")
 self.dataArr[i][27]=dataFcont.get("processUser")
 self.dataArr[i][28]=dataFcont.get("publisherName")
 self.dataArr[i][29]=dataFcont.get("updatedAt")
+self.dataArr[i][30] = dataFcont.get("indicators")
 
 endpoint info
 0contents.get("data")[i].get("computerName"),

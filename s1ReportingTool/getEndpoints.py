@@ -31,7 +31,7 @@ class getEndpoints:
             url=self.fulluri+"siteIds="+self.id
         if self.stype=="group":
             url=self.fulluri+"groupIds="+self.id
-        print(url)
+        # print(url)
         while(True):
             # print(self.cursor)
             if self.cursor != 'start':
@@ -51,10 +51,12 @@ class getEndpoints:
                         #     "data")[i].get("networkInterfaces")[0].get("inet")[0])
                         # contents.get("data")[i].get("computerName"),"==>",contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]
                         # endpointInfo에 원하는 내용 삽입.
-                        if contents.get("data")[i].get("networkInterfaces")[0] is None:
+                        if contents.get("data")[i].get("networkInterfaces") ==[]:
                             ip="no ipv4"
+                            print(ip)
                         else:
                             ip=contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]
+                        # print(contents.get("data")[i])
                         self.endpointInfo.append([
                             contents.get("data")[i].get("computerName"),
                             contents.get("data")[i].get("accountName"),
@@ -75,8 +77,7 @@ class getEndpoints:
                             ])
                     except IndexError as e:
                         self.cnt_err_coms += 1
-                        print("Exception log; endPoints IndexError: ", e,
-                              contents.get("data")[i])
+                        print("Exception log; endPoints IndexError: ", e, contents.get("data")[i])
                     self.cnt_coms += 1
             except TypeError as e:
                 print("Exception log; TypeError: ", e)
@@ -126,8 +127,15 @@ class getEndpoints:
                 dic_infected[data[5]]=a
             else:
                 dic_infected[data[5]]=1
-        dic_infected['Infected']=dic_infected.pop(False)
-        dic_infected['Healthy']=dic_infected.pop(True)
+        if True in dic_infected:
+            if False in dic_infected:
+                dic_infected['Healthy']=dic_infected.pop(False)
+                dic_infected['Infected']=dic_infected.pop(True)
+            else:
+                dic_infected['Infected']=dic_infected.pop(True)
+        else:
+            dic_infected['Healthy']=dic_infected.pop(False)
+        # print(dic_infected)
         return dic_infected
 
     def getbyInfectedDetail(self):
