@@ -56,18 +56,37 @@ class controller:
             accurl = self.url+"/web/api/v2.1/accounts"+"?token="+self.token
             response = sess.get(accurl)
             contents = json.loads(response._content)
-            # print(contents)
-            numofSites, cont = len(contents.get("data")), contents.get("data")
-            column, row = 3, numofSites
-            self.accountInfo = [[0 for _ in range(column)] for _ in range(row)]
-            for i in range(0, numofSites):
-                self.accountInfo[i][0] = cont[i].get(
-                    "name")
-                self.accountInfo[i][1] = cont[i].get("numberOfSites")
-                self.accountInfo[i][2] = cont[i].get("id")
-            return self.accountInfo
+            if contents.get('errors'):
+                if contents.get('errors')[0].get("detail")=="Action is not allowed to site users":
+                    siteurl = self.url+"/web/api/v2.1/sites"+"?token="+self.token
+                    response2 = sess.get(siteurl)
+                    contents2 = json.loads(response2._content)
+                    numofSites, cont = len(contents2.get("data").get("sites")), contents2.get("data").get("sites")
+                    # print(numofSites)
+                    column, row = 3, numofSites
+                    # print(cont)
+                    self.accountInfo = [[0 for _ in range(column)] for _ in range(row)]
+                    for i in range(0, numofSites):
+                        # print(cont[i])
+                        self.accountInfo[i][0] = cont[i].get("name")
+                        self.accountInfo[i][1] = 1
+                        self.accountInfo[i][2] = cont[i].get("id")
+                        data=[self.accountInfo, "site",cont[i].get("accountId"),cont[i].get("accountName")]
+                    return data
+            else:
+                numofSites, cont = len(contents.get("data")), contents.get("data")
+                column, row = 3, numofSites
+                self.accountInfo = [[0 for _ in range(column)] for _ in range(row)]
+                for i in range(0, numofSites):
+                    self.accountInfo[i][0] = cont[i].get("name")
+                    self.accountInfo[i][1] = cont[i].get("numberOfSites")
+                    self.accountInfo[i][2] = cont[i].get("id")
+                    data=[self.accountInfo, "account"]
+                return data
         except ValueError:
             print("value err!")
+        except TypeError as e:
+            print("type error!", e)
 
     def start(self, id, start, end, groupornot,names):
         if groupornot==False:

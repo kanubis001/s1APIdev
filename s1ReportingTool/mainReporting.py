@@ -258,6 +258,75 @@ class mainReporting:
         mkr.writeTitle("7. 주요 탐지 내역 세부 사항", 2)
         colname = ["파일명", "분류", "조치여부", "탐지경로",
                    "Originator Process", "엔진", "구조/행위분석"]
+        indicatorData={}
+        indiDetailData={}
+        indicators = ""
+        for data in datas:
+            if data[32] in indicatorData :
+                rowdata = [data[31], data[14], data[23],data[25], data[26], data[19], indicators]
+                indicatorData[data[32]]=data[30]+data[30]
+                indiDetailData[data[32]]=rowdata
+            else:
+                # print(data[32])
+                rowdata = [data[31], data[14], data[23],data[25], data[26], data[19], indicators]
+                indicatorData[data[32]]=data[30]
+                indiDetailData[data[32]]=rowdata
+            if not indicatorData.get(data[32]):
+                pass
+            else:
+                for i in range(len(indicatorData.get(data[32]))):
+                    # print(indicatorData.get(data[32])[i].get("description"))
+                    pass
+                     
+            #data[32] threatid 기준의 indicators 정보 모음 -> indicatorData
+        for iData in indicatorData:
+            print(iData)
+            if not indicatorData.get(iData):
+                pass
+            else:
+                # if data[23]=="not_mitigated":
+                if data[23]:
+                    indicators = ""
+                    if data[19]=="DBT - Executables":
+                        engine_name="Behavioral AI Engine"
+                    else:
+                        engine_name=data[19]
+                    rowdata = [data[31], data[14], data[23],
+                            data[25], data[26], engine_name, indicators]
+                    mkr.mktable_thDetail(7, 2)
+                    k = 0
+                    for col in colname:
+                        mkr.writeDownTable_thDetail(col, k, 0)
+                        if k == 6:
+                            tacData=""
+                            for i in range(len(indicatorData.get(iData))):
+                                tacData += "\n"+indicatorData.get(iData)[i].get("category")+"\n"+indicatorData.get(iData)[i].get("description")+"\n"
+                                for key in indicatorData.get(iData)[i].keys():
+                                    if key == "tactics":  
+                                        if not indicatorData.get(iData)[i].get(key):
+                                            pass
+                                        else:
+                                            # print("---------------------------------")
+                                            # print(data[30][i].get(key))
+                                            # print("---------------------------------")
+                                            for detail in (indicatorData.get(iData)[i].get(key)):
+                                                tactics_detail = detail
+                                                # for key in tactics_detail.keys():
+                                                tacData += "\n" + tactics_detail.get("source")+" : "+tactics_detail.get("name")+" "
+                                                for techData in tactics_detail.get("techniques"):
+                                                    tacData += "[" + techData.get("name")+"]"
+                                    else:
+                                        pass
+                            mkr.writeDownTable_thDetail(tacData, k, 1)        
+                        else:
+                            mkr.writeDownTable_thDetail(rowdata[k], k, 1)
+                        k += 1
+                    mkr.writeDown(" ")      
+                else:
+                    pass   
+                
+                    '''     
+
         for data in datas:
             #indicator 값이 있는 것에 대해서만 보고서 작성
             if data[30]:
@@ -267,36 +336,49 @@ class mainReporting:
                 mkr.mktable_thDetail(7, 2)
                 # mkr.writeDownTable_thDetail("파일명",1,0)
                 # mkr.writeDownTable_thDetail(str(data[31]),1,1)
+                # print(data[30])
                 k = 0
                 for col in colname:
                     mkr.writeDownTable_thDetail(col, k, 0)
                     if k == 6:
+                        tacData=""
                         for i in range(len(data[30])):
+                            # print(data[30][i],"\n")
+                            # print(" ")
+                            tacData += "\n"+data[30][i].get("category")+"\n"+data[30][i].get("description")+"\n"
                             for key in data[30][i].keys():
                                 # print(key,":",data[30][i].get(key))
-                                tacData = data[30][i].get(
-                                    "category")+"\n"+data[30][i].get("description")+"\n"
                                 if key == "tactics":
                                     if not data[30][i].get(key):
                                         pass
                                     else:
-                                        tactics_detail = data[30][i].get(key)[
-                                            0]
-                                        for key in tactics_detail.keys():
-                                            tacData += "\n" + \
-                                                tactics_detail.get(
-                                                    "source")+" : "+tactics_detail.get("name")+" "
+                                        # print("---------------------------------")
+                                        # print(data[30][i].get(key))
+                                        # print("---------------------------------")
+                                        for detail in (data[30][i].get(key)):
+                                            # print(detail)
+                                            tactics_detail = detail
+                                            # for key in tactics_detail.keys():
+                                            tacData += "\n" + tactics_detail.get("source")+" : "+tactics_detail.get("name")+" "
                                             for techData in tactics_detail.get("techniques"):
-                                                tacData += "[" + \
-                                                    techData.get("name")+"]"
-                                                mkr.writeDownTable_thDetail(
-                                                    tacData, k, 1)
-                    else:
-                        mkr.writeDownTable_thDetail(rowdata[k], k, 1)
-                    k += 1
-                mkr.writeDown(" ")
-            else:
-                pass
+                                                tacData += "[" + techData.get("name")+"]"
+                        '''
+                        # mkr.writeDownTable_thDetail(tacData, k, 1)
+                                            
+                                            
+                                            
+                                        # tactics_detail = data[30][i].get(key)[0]
+                                        # print(len(data[30][i].get(key)))
+                                        # for key in tactics_detail.keys():
+                                        #     tacData += "\n" + \
+                                        #         tactics_detail.get(
+                                        #             "source")+" : "+tactics_detail.get("name")+" "
+                                        #     for techData in tactics_detail.get("techniques"):
+                                        #         tacData += "[" + \
+                                        #             techData.get("name")+"]"
+                                        #         mkr.writeDownTable_thDetail(
+                                        #             tacData, k, 1)
+
             
     def endSave(self):
         return self.makeReport.saveDoc()

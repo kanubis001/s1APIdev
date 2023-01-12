@@ -163,13 +163,6 @@
     <property name="timeSpec">
      <enum>Qt::LocalTime</enum>
     </property>
-    <property name="date">
-     <date>
-      <year>2010</year>
-      <month>1</month>
-      <day>1</day>
-     </date>
-    </property>
    </widget>
    <widget class="QDateEdit" name="dateEnd">
     <property name="geometry">

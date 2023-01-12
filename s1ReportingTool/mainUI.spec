@@ -8,7 +8,7 @@ a = Analysis(
     ['mainUI.py'],
     pathex=[],
     binaries=[],
-    datas=[('D:\\원드라이브\\OneDrive\\Develop_private\\Python_git\\s1APIdev\\s1ReportingTool\\reporterMain.ui','.')],
+    datas=[('reporterMain.ui','.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

@@ -27,6 +27,7 @@ def connectAPI(s1Site,loginType,apiToken):
         url=s1Site+'/web/api/v2.1/users/login/by-api-token'
     
     response=sess.post(url,json=loginData)
+    print(json.loads(response._content))
     try :
         token=json.loads(response._content).get("data").get("token")
     except :

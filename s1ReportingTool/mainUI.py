@@ -12,7 +12,20 @@ nowDate = now.strftime('%Y%m%d')
 uYEAR = now.strftime('%Y')
 uMONTH = now.strftime('%m')
 uDAY = now.strftime('%d')
-
+uYEAR_edit=uYEAR
+if int(uMONTH) == 1:
+    uYEAR_edit=int(uYEAR)-1
+    uMONTH_edit=10
+elif int(uMONTH) ==2:
+    uYEAR_edit=int(uYEAR)-1
+    uMONTH_edit=11
+elif int(uMONTH) ==3:
+    uYEAR_edit=int(uYEAR)-1
+    uMONTH_edit=12
+else:
+    uMONTH_edit=int(uMONTH)-3
+# F5tOMpddR1wFy5R5QskXTIhx0VeHFBoVO4LeUmqVHosC7iLIgsnwkvd3uEpxKFpJiLAWwPUsXLcHJjRJ
+#사이트 권한을 가진 사용자의 토큰 - 사이트 권한 사용자 보고서 생성시 사용
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
@@ -21,7 +34,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-form = resource_path('D:\\원드라이브\\OneDrive\\Develop_private\\Python_git\\s1APIdev\\s1ReportingTool\\reporterMain.ui')
+form = resource_path('./reporterMain.ui')
 form_class = uic.loadUiType(form)[0]
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
@@ -98,7 +111,7 @@ class WindowClass(QMainWindow, form_class):
         self.comboSite.currentIndexChanged.connect(self.groupSetFunc)
         self.btnReporting.clicked.connect(self.threadControl)
         self.btnChk.clicked.connect(self.check)
-        self.dateStart.setDate(QDate(int(uYEAR), int(uMONTH)-1, 1))
+        self.dateStart.setDate(QDate(int(uYEAR_edit), int(uMONTH_edit), int(uDAY)))
         self.dateEnd.setDate(QDate(int(uYEAR), int(uMONTH), int(uDAY)))
         # self.setI=reportThread(self)
         self.bar=progressThread(parent=self)
@@ -143,8 +156,10 @@ class WindowClass(QMainWindow, form_class):
     def check(self):
         self.startDate = self.dateStart.date()
         self.endDate = self.dateEnd.date()
+        print(self.startDate)
         self.startd = self.startDate.toString(Qt.ISODate)
         self.endd = self.endDate.toString(Qt.ISODate)
+        print(self.startd)
         grperr,siterr,accerr,daterr=True,True,True,True
         
         if self.comboGrp.currentText() == "":
@@ -251,13 +266,21 @@ class WindowClass(QMainWindow, form_class):
     def siteSetFunc(self):
         acctxt = self.comboAcc.currentText()
         self.comboSite.clear()
-        for i in range(0, len(self.accs)):
-            if acctxt == self.accs[i][0]:
-                self.sites = controller.findSite(self, self.accs[i][2])
-                self.labelSite_2.setFixedWidth(120)
-                self.comboSite.addItem("")
-                for site in self.sites:
-                    self.comboSite.addItem(site[0])
+        acclists=self.accs[0]
+        if self.accs[1]=="site":
+            self.sites = controller.findSite(self, self.accs[2])
+            self.labelSite_2.setFixedWidth(120)
+            self.comboSite.addItem("")
+            for site in self.sites:
+                self.comboSite.addItem(site[0])
+        else:
+            for i in range(0, len(acclists)):
+                if acctxt == acclists[i][0]:
+                    self.sites = controller.findSite(self, acclists[i][2])
+                    self.labelSite_2.setFixedWidth(120)
+                    self.comboSite.addItem("")
+                    for site in self.sites:
+                        self.comboSite.addItem(site[0])
         self.labelAcc_2.setFixedWidth(120)
 
     def urlFunc(self):
@@ -271,11 +294,16 @@ class WindowClass(QMainWindow, form_class):
         self.findAccount()
 
     def findAccount(self):
+        self.comboAcc.clear()
         self.accs = controller.findAccount(self)
+        acclists=self.accs[0]
         self.labelSite_2.setFixedWidth(0)
         self.comboAcc.addItem("")
-        for i in self.accs:
-            self.comboAcc.addItem(i[0])
+        if self.accs[1]=="site":
+            self.comboAcc.addItem(self.accs[3])
+        elif self.accs[1]=="account":
+            for i in acclists:
+                self.comboAcc.addItem(i[0])
 
     def setmain(self, _url, _apiToken):
         controller.setVar(self, _url, _apiToken)
