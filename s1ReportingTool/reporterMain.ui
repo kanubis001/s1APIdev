@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>378</height>
+    <width>596</width>
+    <height>356</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,7 +25,7 @@
   <property name="minimumSize">
    <size>
     <width>0</width>
-    <height>300</height>
+    <height>356</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -39,6 +39,124 @@
     <width>0</width>
     <height>200</height>
    </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>177</red>
+        <green>177</green>
+        <blue>177</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>243</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>215</red>
+        <green>178</green>
+        <blue>179</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
   </property>
   <property name="font">
    <font>
@@ -56,11 +174,13 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normalon>icon/comsys_S1.ico</normalon>
-   </iconset>
+    <normaloff>icon/comsys_S1.ico</normaloff>icon/comsys_S1.ico</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(242, 243, 255);</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -106,6 +226,15 @@
         </property>
         <item row="0" column="0">
          <widget class="QLabel" name="labelConsole">
+          <property name="font">
+           <font>
+            <family>맑은 고딕</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+          </property>
           <property name="text">
            <string>콘솔 주소</string>
           </property>
@@ -113,6 +242,38 @@
         </item>
         <item row="0" column="1">
          <widget class="QComboBox" name="comboConsole">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>맑은 고딕</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox{
+color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QComboBox::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 20px;
+}</string>
+          </property>
           <property name="currentText">
            <string>https://apne1-samsungsds.sentinelone.net</string>
           </property>
@@ -155,6 +316,15 @@
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="labelApitk">
+          <property name="font">
+           <font>
+            <family>맑은 고딕</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+          </property>
           <property name="text">
            <string>API 토큰</string>
           </property>
@@ -162,6 +332,37 @@
         </item>
         <item row="1" column="1">
          <widget class="QLineEdit" name="lineApitk">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>맑은 고딕</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QLineEdit::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 20px;
+}</string>
+          </property>
           <property name="text">
            <string>Nf5fCpaJoA257TGNRdSc3hjVlQSShVeH42mV1BDPTKFKctf2mENoNN82gqLIw6agla2oh9cEDSBXsebR</string>
           </property>
@@ -198,13 +399,100 @@
           </property>
           <item row="0" column="0">
            <widget class="QPushButton" name="btnConfirm">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+color: black;
+background-color: white;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::pressed{
+color: white;
+background-color: black;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}
+</string>
+            </property>
             <property name="text">
              <string>확인</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="btnRepair">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+color: black;
+background-color: white;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::pressed{
+color: white;
+background-color: black;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}
+</string>
+            </property>
             <property name="text">
              <string>수정</string>
             </property>
@@ -222,14 +510,34 @@
             <property name="minimumSize">
              <size>
               <width>108</width>
-              <height>0</height>
+              <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>300</width>
-              <height>16777215</height>
+              <height>30</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{
+color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QComboBox::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 20px;
+}</string>
             </property>
            </widget>
           </item>
@@ -238,14 +546,34 @@
             <property name="minimumSize">
              <size>
               <width>108</width>
-              <height>0</height>
+              <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>300</width>
-              <height>16777215</height>
+              <height>30</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{
+color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QComboBox::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 20px;
+}</string>
             </property>
            </widget>
           </item>
@@ -256,6 +584,15 @@
               <width>100</width>
               <height>150</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
             </property>
             <property name="text">
              <string>Group</string>
@@ -279,6 +616,12 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>
@@ -292,14 +635,34 @@
             <property name="minimumSize">
              <size>
               <width>108</width>
-              <height>0</height>
+              <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>300</width>
-              <height>16777215</height>
+              <height>30</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{
+color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QComboBox::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 20px;
+}</string>
             </property>
            </widget>
           </item>
@@ -310,6 +673,15 @@
               <width>100</width>
               <height>150</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
             </property>
             <property name="text">
              <string>Account</string>
@@ -333,6 +705,12 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Group 선택하세요</string>
             </property>
@@ -345,6 +723,15 @@
               <width>100</width>
               <height>150</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
             </property>
             <property name="text">
              <string>Site</string>
@@ -368,6 +755,12 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Site 선택하세요</string>
             </property>
@@ -382,11 +775,37 @@
           </property>
           <item row="1" column="2">
            <widget class="QDateEdit" name="dateEnd">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>200</width>
-              <height>16777215</height>
+              <height>30</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QDateEdit{
+color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QDateEdit::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}</string>
             </property>
             <property name="maximumDate">
              <date>
@@ -416,11 +835,37 @@
           </item>
           <item row="1" column="1">
            <widget class="QDateEdit" name="dateStart">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>200</width>
-              <height>16777215</height>
+              <height>30</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QDateEdit{
+color: rgb(0,0,0);
+background-color: white;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+}
+QDateEdit::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}</string>
             </property>
             <property name="maximumDate">
              <date>
@@ -446,11 +891,47 @@
           </item>
           <item row="1" column="3">
            <widget class="QPushButton" name="btnChk">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>25</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
-              <width>150</width>
-              <height>16777215</height>
+              <width>70</width>
+              <height>25</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+color: black;
+background-color: white;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::pressed{
+color: white;
+background-color: black;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}
+</string>
             </property>
             <property name="text">
              <string>결정</string>
@@ -464,6 +945,15 @@
               <width>100</width>
               <height>150</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
             </property>
             <property name="text">
              <string>기간</string>
@@ -481,6 +971,12 @@
               <height>150</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>시작 날짜</string>
             </property>
@@ -497,6 +993,12 @@
               <height>150</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>끝 날짜</string>
             </property>
@@ -511,6 +1013,118 @@
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <widget class="QProgressBar" name="prbar">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="palette">
+             <palette>
+              <active>
+               <colorrole role="Button">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Base">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Window">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="Button">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Base">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Window">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="Button">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Base">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Window">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	background-color: white;
+	border: 2px solid rgb(0,0,0);
+	border-radius: 20px;</string>
+            </property>
             <property name="value">
              <number>0</number>
             </property>
@@ -523,15 +1137,45 @@
            <widget class="QPushButton" name="btnReporting">
             <property name="minimumSize">
              <size>
-              <width>150</width>
-              <height>0</height>
+              <width>100</width>
+              <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>150</width>
-              <height>16777215</height>
+              <height>25</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>맑은 고딕</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+color: black;
+background-color: white;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::pressed{
+color: white;
+background-color: black;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}
+</string>
             </property>
             <property name="text">
              <string>보고서 생성</string>
@@ -545,7 +1189,7 @@
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>20</height>
+            <height>10</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -553,6 +1197,12 @@
             <width>16777215</width>
             <height>60</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>맑은 고딕</family>
+            <pointsize>11</pointsize>
+           </font>
           </property>
           <property name="autoFillBackground">
            <bool>false</bool>
@@ -584,6 +1234,19 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>comboConsole</tabstop>
+  <tabstop>lineApitk</tabstop>
+  <tabstop>btnConfirm</tabstop>
+  <tabstop>btnRepair</tabstop>
+  <tabstop>comboAcc</tabstop>
+  <tabstop>comboSite</tabstop>
+  <tabstop>comboGrp</tabstop>
+  <tabstop>dateStart</tabstop>
+  <tabstop>dateEnd</tabstop>
+  <tabstop>btnChk</tabstop>
+  <tabstop>btnReporting</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

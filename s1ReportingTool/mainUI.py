@@ -2,6 +2,7 @@ import sys
 import os
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
+from PyQt5 import QtCore
 from PyQt5 import uic
 from mainControl import controller
 from connect import sess
@@ -99,11 +100,32 @@ class progressThread(QThread):
        
 class WindowClass(QMainWindow, form_class):
     add_per_sig=pyqtSignal()
-    
+    qss = """
+        QWidget {
+            color: #000000;
+            background: #666;
+        }
+        QWidget#windowTitle {
+            color: #FFFFFF;
+            background: #333;
+        }
+        QWidget#windowTitle QLabel {
+            color: #FFFFFF;
+            background: #333;
+        }
+    """
+    disablestyle="""{
+        
+        }"""
     def __init__(self):
+        super().__init__()
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setStyleSheet(self.qss)
+        log_write2(sys,"start report tool")
         log_simple("############program Start")
         super().__init__()
         #chkgrouporsite False면 그룹 아이디 필요 없음
+        self.statusBar().showMessage('1.3.2b')
         self.enablegroupid=True
         self.setupUi(self)
         self.labelAcc_2.setHidden(True)
@@ -124,7 +146,8 @@ class WindowClass(QMainWindow, form_class):
         self.bar=progressThread(parent=self)
         self.set=mkreportInfo(parent=self)
         self.bar.per_changed.connect(self.per_update)
-    
+
+  
     @pyqtSlot(int)
     def per_update(self,per):
         self.prbar.setValue(per)

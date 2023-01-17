@@ -32,3 +32,29 @@
 2023-01-16 15:43:07,851|23|DEBUG:__del__|end setting
 2023-01-17 14:08:16,214|18|DEBUG:############program Start
 2023-01-17 14:28:43,026|18|DEBUG:############program Start
+2023-01-17 14:39:43,699|18|DEBUG:############program Start
+2023-01-17 14:40:13,605|22|DEBUG:connectAPI|connection success. session start
+2023-01-17 14:40:21,869|22|DEBUG:run|run thread
+2023-01-17 14:40:21,869|22|DEBUG:setInfo|site current textDefault site
+2023-01-17 14:40:21,888|22|DEBUG:__init__|for debug
+2023-01-17 14:40:21,888|22|DEBUG:__init__|mainReporting inithttps://apne1-samsungsds.sentinelone.netF5tOMpddR1wFy5R5QskXTIhx0VeHFBoVO4LeUmqVHosC7iLIgsnwkvd3uEpxKFpJiLAWwPUsXLcHJjRJ
+2023-01-17 14:40:21,888|22|DEBUG:get|get func menu date
+2023-01-17 14:40:21,888|22|DEBUG:getfromDate|for debug
+2023-01-17 14:40:23,795|22|DEBUG:getfromDate|for debug
+2023-01-17 14:40:23,795|22|DEBUG:start|start func begin
+2023-01-17 14:40:23,795|22|DEBUG:start|start func reforge completed
+2023-01-17 14:40:24,321|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTUxMjgwODAyNzQ5NDc3MDQ4NCwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTUxMjgwODAyNzQ5NDc3MDQ4NCwgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-01-17 14:40:24,321|22|DEBUG:getAll|Computer : 12´ë
+2023-01-17 14:40:24,321|22|DEBUG:getAll|Error Computer : 0´ë
+2023-01-17 14:40:24,960|22|DEBUG:__del__|end mkreportInfo thread
+2023-01-17 14:49:34,742|18|DEBUG:############program Start
+2023-01-17 16:31:55,027|22|DEBUG:__init__|start report tool
+2023-01-17 16:31:55,028|18|DEBUG:############program Start
+2023-01-17 16:35:06,656|22|DEBUG:__init__|start report tool
+2023-01-17 16:35:06,656|18|DEBUG:############program Start
+2023-01-17 16:35:12,984|22|DEBUG:connectAPI|connection success. session start
+2023-01-17 16:35:15,147|22|DEBUG:connectAPI|connection success. session start
+2023-01-17 16:36:26,744|22|DEBUG:__init__|start report tool
+2023-01-17 16:36:26,744|18|DEBUG:############program Start
+2023-01-17 16:36:38,565|22|DEBUG:__init__|start report tool
+2023-01-17 16:36:38,565|18|DEBUG:############program Start
