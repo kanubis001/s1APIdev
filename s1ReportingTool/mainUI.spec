@@ -8,7 +8,7 @@ a = Analysis(
     ['mainUI.py'],
     pathex=[],
     binaries=[],
-    datas=[('reporterMain.ui','.')],
+    datas=[('C:\\Users\\fireb\\OneDrive\\Develop_private\\Python_git\\s1APIdev\\s1ReportingTool\\reporterMain.ui','.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -41,4 +41,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['icon\\comsys_S1.ico'],
 )

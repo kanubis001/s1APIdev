@@ -1,10 +1,11 @@
 import mainReporting
+import sys
 import json
 import connect as conn
 from connect import sess
 import mkReport
-
-
+from logger import *
+        
 class controller:
     def __init__(self):
         self.url = ""
@@ -12,6 +13,7 @@ class controller:
         self.accountInfo
 
     def setVar(self, url, apiToken):
+        
         self.url = url
         self.apiToken = apiToken
         self.token = conn.connectAPI(self.url, "token", self.apiToken)
@@ -32,7 +34,8 @@ class controller:
                 self.groupInfo[i][1] = cont[i].get("id")
             return self.groupInfo
         except ValueError:
-            print("value err!")
+            log_write2(sys,"value err")
+            # print("value err!")
 
     def findSite(self, account_id):
         try:
@@ -49,7 +52,8 @@ class controller:
                 self.siteInfo[i][1] = cont[i].get("id")
             return self.siteInfo
         except ValueError:
-            print("value err!")
+            log_write2(sys,"value err")
+            # print("value err!")
 
     def findAccount(self):
         try:
@@ -84,9 +88,9 @@ class controller:
                     data=[self.accountInfo, "account"]
                 return data
         except ValueError:
-            print("value err!")
+            log_write2(sys,"value err")
         except TypeError as e:
-            print("type error!", e)
+            log_write2(sys,"type err")
 
     def start(self, id, start, end, groupornot,names):
         if groupornot==False:
@@ -99,26 +103,34 @@ class controller:
         # print(startday)
         mR = mainReporting.mainReporting(
             self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end),stype,names)
-        print(startday,"/",endday)
+        # print(startday,"/",endday)
         datas = mR.get("date", stype, id)
+        log_write2(sys,"for debug")
         
         # type은 malicious, suspicious, all
         type = "all"
         # 보고서 생성(전체 리스트)
         
         res_reForge = mR.reForgeCont(datas, type)
-        if res_reForge == 0:
-            dir = "데이터가 없습니다."
-            return dir+" 범위를 수정해주세요."
-        else:
-            mR.getEndpoints(id,stype)
-            mR.getTop20(datas)
-            mR.gatherThreatscnt(datas, type)
-            mR.gatherByEngine(datas)
-            mR.getInfectedDetail(datas)
+        log_write2(sys,"for debug")
+        try:
+            if res_reForge == 0:
+                dir = "데이터가 없습니다."
+                return dir+" 범위를 수정해주세요."
+            else:
+                mR.getEndpoints(id,stype)
+                mR.getTop20(datas)
+                mR.gatherThreatscnt(datas, type)
+                mR.gatherByEngine(datas)
+                mR.getSolved()
+                mR.getInfectedDetail(datas)
+            
+                dir = mR.endSave()
+                return dir+" 위치에 보고서가 생성되었습니다."
+        except:
+            log_write2(sys,"exception occur")
+            
         
-            dir = mR.endSave()
-            return dir+" 위치에 보고서가 생성되었습니다."
         
 
         # 차트 생성(위협별)

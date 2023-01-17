@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
 import json
+from logger import *
+import sys
 
 matplotlib.use('agg')
 
@@ -29,8 +31,9 @@ class mainReporting:
             self.makeReport = mkReport.mkReport(st, en, names)
         self.GT = getThreats.getThreats(
             self.s1Site, sess, self.groupIds, self.token, self.makeReport)
-
-        print("mainReporting init", self.s1Site, self.apitoken)
+        cont=str(self.s1Site)+str(self.apitoken)
+        log_write2(sys,"mainReporting init"+cont)
+        # print("mainReporting init", self.s1Site, self.apitoken)
         # self.filepath=csv
         # self.logFile=logFile
         # self.log=open(logFile,'a')
@@ -42,6 +45,7 @@ class mainReporting:
         # menu => 날짜로 검색 date
         menu = "date"
         if menu == "date":
+            log_write2(sys,"for debug")
             return self.GT.getfromDate(self.startD, self.endD, sType, id)
 
     def getEndpoints(self, findid, sType):
@@ -75,7 +79,7 @@ class mainReporting:
 
     def getTop20(self, datas):
         top20 = self.GT.getTop20fromThreat(datas)
-        self.makeReport.writeTitle("4. 기간별 Top20 탐지 Endpoints", 2)
+        self.makeReport.writeTitle("4. 기간내 Top20 탐지 Endpoints", 2)
         if len(top20) < 20:
             row = len(top20)+1
         else:
@@ -90,9 +94,6 @@ class mainReporting:
                 break
         self.makeReport.saveDoc()
 
-
-
-
     #2열 짜리 테이블 내용 입력
     def mkdictypetable(self, datas, cat):
         mkr = self.makeReport
@@ -105,14 +106,15 @@ class mainReporting:
 
     def reForgeCont(self, datas, type):
         if len(datas) == 0:
-            print("data is zero")
+            log_write2(sys,"reForgeCont data is zero")
+            # print("data is zero")
             return 0
         else:
             i = 0
             cntper = 0
             per = len(datas)/100
             full = len(datas)
-            bar = progressbar.ProgressBar(maxval=full).start()
+            # bar = progressbar.ProgressBar(maxval=full).start()
             if type == 'all':
                 for data in datas:
                     # if i%4==0:
@@ -125,7 +127,7 @@ class mainReporting:
                     #     if i==full:
                     #         progressper=100
                     # print(round(progressper,1),"%")
-                    bar.update(i)
+                    # bar.update(i)
                     # self.makeReport.writeDownTable(data, i)
                     i += 1
                     # self.makeReport.saveDoc()
@@ -134,7 +136,9 @@ class mainReporting:
                     if type in data:
                         print(data[15], "/", data[10],
                               "/", data[16], "/", data[14])
-            bar.finish()
+                        cont=str(data[15]+"/"+data[10]+"/"+data[16]+"/"+data[14])
+                        log_write2(sys,cont)
+            # bar.finish()
             return 1
 
     def gatherThreatscnt(self, datas, type):
@@ -197,9 +201,11 @@ class mainReporting:
                 self.makeReport.wrTblthreatpie(i+1, 1, str(ratiocnt[i]))
             self.makeReport.saveDoc()
         except ValueError:
-            print("Value err!")
+            # print("Value err!")
+            log_write2(sys,"Value err!")
         except TypeError:
-            print("Type Err!")
+            log_write2(sys,"Type err!")
+            # print("Type Err!")
 
     def gatherByEngine(self, datas):
         engineGubun = []
@@ -251,65 +257,83 @@ class mainReporting:
             self.makeReport.wrTblenginechart(i+1, 0, engineCnt[i][0])
             self.makeReport.wrTblenginechart(i+1, 1, str(engineCnt[i][1]))
         self.makeReport.saveDoc()
+    
+    def getSolved(self):
+        mnmb=self.GT.mnmb_call()
+        # print(mnmb.get("mitigated"))
+        # print(mnmb.get("not_mitigated"))
+        # print(mnmb.get("marked_as_benign"))
+        mkr = self.makeReport
+        mkr.writeDown(" ")
+        mkr.writeTitle("7. 해결된 위협 정보", 2)
+        mkr.mktable_getSolved(3,2)
+        mkr.writeDownTable_getSolved("mitigated",mnmb.get("mitigated"),0)
+        mkr.writeDownTable_getSolved("marked_as_benign",mnmb.get("marked_as_benign"),1)
         
+        
+    
     def getInfectedDetail(self, datas):
         mkr = self.makeReport
         mkr.writeDown(" ")
-        mkr.writeTitle("7. 주요 탐지 내역 세부 사항", 2)
-        colname = ["파일명", "분류", "조치여부", "탐지경로",
-                   "Originator Process", "엔진", "구조/행위분석"]
-        indicatorData={}
-        indiDetailData={}
+        mkr.writeTitle("8. 주요 탐지 내역 세부 사항", 2)
+        colname = ["파일명", "분류", "조치여부", "탐지경로", "Originator Process", "엔진", "탐지 횟수", "구조/행위분석"]
+        indiDetail={}
+        indiData={}
         indicators = ""
+        cnt=1
         for data in datas:
-            if data[32] in indicatorData :
-                rowdata = [data[31], data[14], data[23],data[25], data[26], data[19], indicators]
-                indicatorData[data[32]]=data[30]+data[30]
-                indiDetailData[data[32]]=rowdata
+            if data[19]=="DBT - Executables":
+                engine_name="Behavioral AI Engine"
             else:
-                # print(data[32])
-                rowdata = [data[31], data[14], data[23],data[25], data[26], data[19], indicators]
-                indicatorData[data[32]]=data[30]
-                indiDetailData[data[32]]=rowdata
-            if not indicatorData.get(data[32]):
+                engine_name=data[19]
+            rowdata = [data[31], data[14], data[23],data[25], data[26], engine_name, cnt, indicators]
+            if data[32] in indiDetail :
+                indiDetail[data[32]]=data[30]+data[30]
+                indiData[data[32]]=rowdata
+                indiData[data[32]][6]+=1
+            else:
+                indiDetail[data[32]]=data[30]
+                indiData[data[32]]=rowdata
+            if not indiDetail.get(data[32]):
                 pass
             else:
-                for i in range(len(indicatorData.get(data[32]))):
-                    # print(indicatorData.get(data[32])[i].get("description"))
+                for i in range(len(indiDetail.get(data[32]))):
                     pass
-                     
-            #data[32] threatid 기준의 indicators 정보 모음 -> indicatorData
-        for iData in indicatorData:
-            print(iData)
-            if not indicatorData.get(iData):
+        # indiData가 써야할 일반적인 내용
+        # indiDetail은 행위/탐지 세부 내역임
+        for iData in indiData:
+            # iData는 파일의 sha1값을 불러옴
+            if not indiData.get(iData):
                 pass
             else:
-                # if data[23]=="not_mitigated":
-                if data[23]:
-                    indicators = ""
-                    if data[19]=="DBT - Executables":
-                        engine_name="Behavioral AI Engine"
-                    else:
-                        engine_name=data[19]
-                    rowdata = [data[31], data[14], data[23],
-                            data[25], data[26], engine_name, indicators]
-                    mkr.mktable_thDetail(7, 2)
+                if indiData.get(iData)[2]=="not_mitigated":
+                    # print(iData)
+                    # print(indiData.get(iData)[6])
+                    # print("====================================")
+                # if data[23]:
+                    # if data[19]=="DBT - Executables":
+                    #     engine_name="Behavioral AI Engine"
+                    # else:
+                    #     engine_name=data[19]
+                    # rowdata = [data[31], data[14], data[23],
+                    #         data[25], data[26], engine_name, indicators]
+                    mkr.mktable_thDetail(8, 2)
                     k = 0
                     for col in colname:
                         mkr.writeDownTable_thDetail(col, k, 0)
-                        if k == 6:
+                        if k == 7:
                             tacData=""
-                            for i in range(len(indicatorData.get(iData))):
-                                tacData += "\n"+indicatorData.get(iData)[i].get("category")+"\n"+indicatorData.get(iData)[i].get("description")+"\n"
-                                for key in indicatorData.get(iData)[i].keys():
+                            for i in range(len(indiDetail.get(iData))):
+                                tacData += "\n"+indiDetail.get(iData)[i].get("category")+"\n"+indiDetail.get(iData)[i].get("description")+"\n"
+                                for key in indiDetail.get(iData)[i].keys():
                                     if key == "tactics":  
-                                        if not indicatorData.get(iData)[i].get(key):
+                                        if not indiDetail.get(iData)[i].get(key):
                                             pass
                                         else:
                                             # print("---------------------------------")
                                             # print(data[30][i].get(key))
                                             # print("---------------------------------")
-                                            for detail in (indicatorData.get(iData)[i].get(key)):
+                                            for detail in (indiDetail.get(iData)[i].get(key)):
                                                 tactics_detail = detail
                                                 # for key in tactics_detail.keys():
                                                 tacData += "\n" + tactics_detail.get("source")+" : "+tactics_detail.get("name")+" "
@@ -317,11 +341,15 @@ class mainReporting:
                                                     tacData += "[" + techData.get("name")+"]"
                                     else:
                                         pass
-                            mkr.writeDownTable_thDetail(tacData, k, 1)        
+                            mkr.writeDownTable_thDetail(str(tacData), k, 1)        
+                        elif k==6:
+                            # 총 탐지 횟수
+                            mkr.writeDownTable_thDetail(str(indiData.get(iData)[k])+"회", k, 1)
                         else:
-                            mkr.writeDownTable_thDetail(rowdata[k], k, 1)
+                            # 구조/행위분석 부분을 제외한 나머지 내용 채우는 부분
+                            mkr.writeDownTable_thDetail(indiData.get(iData)[k], k, 1)
                         k += 1
-                    mkr.writeDown(" ")      
+                    mkr.writeDown(" ")    
                 else:
                     pass   
                 

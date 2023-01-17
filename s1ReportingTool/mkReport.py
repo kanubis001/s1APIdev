@@ -37,7 +37,7 @@ class mkReport:
     def mkTable_detail(self, row, col):
         self.table = self.doc.add_table(rows=row, cols=col)
         self.table.style = self.doc.styles['Table Grid']
-        self.table.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.table.rows[0].cells[0].text = "agent 명"
         self.table.rows[0].cells[1].text = "IP 주소"
         self.table.rows[0].cells[2].text = "종류"
@@ -48,12 +48,27 @@ class mkReport:
     def mktable_thDetail(self, row, col):
         self.table_thDetail = self.doc.add_table(rows=row, cols=col)
         self.table_thDetail.style=self.doc.styles['Table Grid']
-        self.table_thDetail.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table_thDetail.alignment=WD_TABLE_ALIGNMENT.LEFT
+        self.table_thDetail.rows[0].cells[0].width=Cm(4)
+        self.table_thDetail.rows[0].cells[1].width=Cm(7)
+    
+    def mktable_getSolved(self, row, col):
+        self.table_getSolved = self.doc.add_table(rows=row, cols=col)
+        self.table_getSolved.style = self.doc.styles['Table Grid']
+        self.table_getSolved.alignment=WD_TABLE_ALIGNMENT.LEFT
+        self.table_getSolved.rows[0].cells[0].width=Cm(4)
+        self.table_getSolved.rows[0].cells[1].width=Cm(4)
+        para=self.table_getSolved.rows[0].cells[0].paragraphs[0]
+        para2=self.table_getSolved.rows[0].cells[1].paragraphs[0]
+        run=para.add_run('해결 상태')
+        run2=para2.add_run("엔드포인트 수량")
+        run.bold=True
+        run2.bold=True   
         
     def mkTop20Table_detail(self, row, col):
         self.top20table = self.doc.add_table(rows=row, cols=col)
         self.top20table.style = self.doc.styles['Table Grid']
-        self.top20table.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.top20table.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.top20table.rows[0].cells[0].width=Cm(1.5)
         self.top20table.rows[0].cells[1].width=Cm(7.5)
         self.top20table.rows[0].cells[2].width=Cm(2.5)
@@ -74,7 +89,7 @@ class mkReport:
     def mktable_getbyos(self, row, col):
         self.table_getbyos = self.doc.add_table(rows=row, cols=col)
         self.table_getbyos.style = self.doc.styles['Table Grid']
-        self.table_getbyos.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table_getbyos.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.table_getbyos.rows[0].cells[0].width=Cm(4)
         self.table_getbyos.rows[0].cells[1].width=Cm(4)
         para=self.table_getbyos.rows[0].cells[0].paragraphs[0]
@@ -90,7 +105,7 @@ class mkReport:
     def mktable_getbyver(self, row, col):
         self.table_getbyver = self.doc.add_table(rows=row, cols=col)
         self.table_getbyver.style = self.doc.styles['Table Grid']
-        self.table_getbyver.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table_getbyver.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.table_getbyver.rows[0].cells[0].width=Cm(4)
         self.table_getbyver.rows[0].cells[1].width=Cm(4)
         para=self.table_getbyver.rows[0].cells[0].paragraphs[0]
@@ -106,7 +121,7 @@ class mkReport:
     def mktable_getbyinf(self, row, col):
         self.table_getbyinf = self.doc.add_table(rows=row, cols=col)
         self.table_getbyinf.style = self.doc.styles['Table Grid']
-        self.table_getbyinf.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table_getbyinf.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.table_getbyinf.rows[0].cells[0].width=Cm(4)
         self.table_getbyinf.rows[0].cells[1].width=Cm(4)
         para=self.table_getbyinf.rows[0].cells[0].paragraphs[0]
@@ -122,7 +137,7 @@ class mkReport:
     def mkTblthreatpie(self, row, col):
         self.table_Tblclasspie = self.doc.add_table(rows=row+1, cols=col)
         self.table_Tblclasspie.style = self.doc.styles['Table Grid']
-        self.table_Tblclasspie.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table_Tblclasspie.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.table_Tblclasspie.rows[0].cells[0].width=Cm(6)
         self.table_Tblclasspie.rows[0].cells[1].width=Cm(3)
         para=self.table_Tblclasspie.rows[0].cells[0].paragraphs[0]
@@ -138,7 +153,7 @@ class mkReport:
     def mkTblenginechart(self, row, col):
         self.table_Tblengine = self.doc.add_table(rows=row+1, cols=col)
         self.table_Tblengine.style = self.doc.styles['Table Grid']
-        self.table_Tblengine.alignment=WD_TABLE_ALIGNMENT.CENTER
+        self.table_Tblengine.alignment=WD_TABLE_ALIGNMENT.LEFT
         self.table_Tblengine.rows[0].cells[0].width=Cm(6)
         self.table_Tblengine.rows[0].cells[1].width=Cm(3)
         para=self.table_Tblengine.rows[0].cells[0].paragraphs[0]
@@ -202,7 +217,6 @@ class mkReport:
 
         
     def writeDownTable_endpoints(self,key,val,num,cat):
-
         if cat=="getbyos":
             tbl=self.table_getbyos
         if cat=="getbyver":
@@ -215,12 +229,20 @@ class mkReport:
         tbl.rows[num].cells[0].text = str(key)
         tbl.rows[num].cells[1].text = str(val)
         
+    def writeDownTable_getSolved(self,key,val,num):
+        tbl=self.table_getSolved
+        num += 1
+        tbl.rows[num].cells[0].width=Cm(4)
+        tbl.rows[num].cells[1].width=Cm(4)
+        tbl.rows[num].cells[0].text = str(key)
+        tbl.rows[num].cells[1].text = str(val)
+    
     def writeDownTable_thDetail(self,cont,num,num2):
         tbl=self.table_thDetail
-        if num2==0:
-            tbl.rows[num].cells[num2].width=Cm(3)
-        else:
-            tbl.rows[num].cells[num2].width=Cm(7.5)
+        # if num2==0:
+        #     tbl.rows[num].cells[num2].width=Cm(3)
+        # else:
+        #     tbl.rows[num].cells[num2].width=Cm(7)
         tbl.rows[num].cells[num2].text=str(cont)
     
     def writeHyperlink_thDetail(self,name,link):

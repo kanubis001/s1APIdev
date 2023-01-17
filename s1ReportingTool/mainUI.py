@@ -5,6 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 from mainControl import controller
 from connect import sess
+from logger import *
 import datetime
 import time
 now = datetime.datetime.now()
@@ -49,11 +50,13 @@ class mkreportInfo(QThread):
         self.working=True
         
     def run(self):
+        log_write2(sys,"run error?")
         self.main.setInfo()
         self.__del__()
         
     def __del__(self):
-        print("end setting")
+        log_write2(sys,"end setting")
+        # print("end setting")
             
 class progressThread(QThread):
     per_changed=pyqtSignal(int)
@@ -66,7 +69,7 @@ class progressThread(QThread):
         self.per=per
         
     def __del__(self):
-        print("end progress bar")
+        log_write2(sys,"end progress bar")
         
     def run(self):
         self.main.prbar.reset()
@@ -98,10 +101,14 @@ class WindowClass(QMainWindow, form_class):
     add_per_sig=pyqtSignal()
     
     def __init__(self):
+        log_simple("############program Start")
         super().__init__()
         #chkgrouporsite False면 그룹 아이디 필요 없음
         self.enablegroupid=True
         self.setupUi(self)
+        self.labelAcc_2.setFixedWidth(0)
+        self.labelSite_2.setFixedWidth(0)
+        self.labelGrp_2.setFixedWidth(0)
         self.percnt=0
         self.btnReporting.setEnabled(False)
         self.comboConsole.currentIndexChanged.connect(self.urlFunc)
@@ -128,7 +135,7 @@ class WindowClass(QMainWindow, form_class):
     
     @pyqtSlot()
     def bar_start(self):
-        print(len(self.groups))
+        log_write2(sys,len(self.groups))
         self.prbar.setRange(0,len(self.groups))
         self.bar.working=True
         self.bar.start()
@@ -156,10 +163,11 @@ class WindowClass(QMainWindow, form_class):
     def check(self):
         self.startDate = self.dateStart.date()
         self.endDate = self.dateEnd.date()
-        print(self.startDate)
+        # print(self.startDate)
+        # log_write(sys._getframe(0).f_code.co_name,sys._getframe(1).f_code.co_name,self.startDate)
         self.startd = self.startDate.toString(Qt.ISODate)
         self.endd = self.endDate.toString(Qt.ISODate)
-        print(self.startd)
+        # print(self.startd)
         grperr,siterr,accerr,daterr=True,True,True,True
         
         if self.comboGrp.currentText() == "":
@@ -208,14 +216,17 @@ class WindowClass(QMainWindow, form_class):
         self.lineApitk.setEnabled(False)
         
     def setInfo(self):
+        self.statusBar().showMessage("hey")
         self.btnReporting.setEnabled(False)
         if self.enablegroupid==False:
-            print(self.comboSite.currentText())
+            # print(self.comboSite.currentText())
+            log_write2(sys,self.comboSite.currentText())
             idTxt=self.comboSite.currentText()
             targetArr=self.sites
             self.names=[self.comboAcc.currentText(),self.comboSite.currentText()]
         if self.enablegroupid==True:
-            print(self.comboGrp.currentText())
+            # print(self.comboGrp.currentText())
+            log_write2(sys,self.comboGrp.currentText())
             idTxt = self.comboGrp.currentText()
             targetArr=self.groups
             self.names=[self.comboAcc.currentText(),self.comboSite.currentText(),self.comboGrp.currentText()]

@@ -1,6 +1,8 @@
 import json
 import pandas as pd
 from connect import sess
+import sys
+from logger import *
 
 class getThreats:
 
@@ -16,7 +18,8 @@ class getThreats:
         self.totcnt = 0
         self.makeReport = mkreport
         self.threatsData = []
-        print("getThreats init")
+        self.mnmb={"mitigated":0,"not_mitigated":0,"marked_as_benign":0}
+        log_write2(sys,"for debug")
 
     def getfromDate(self, startD, endD, searchType,id):
         self.ids=id
@@ -29,7 +32,8 @@ class getThreats:
             getUrl = getUrl+"&accountIds="+self.ids+"&token="+self.token
         elif searchType == "all":
             getUrl = getUrl+"&token="+self.token
-        print("getfromDate")
+        log_write2(sys,"for debug")
+        self.glUrl=getUrl
         response = self.sess.get(getUrl)
         contents = json.loads(response._content)
 
@@ -54,7 +58,7 @@ class getThreats:
                 # self.saveThreatInfo(contents)
                 self.saveDataArr(contents)
                 if totItems == self.totcnt:
-                    print("totItem Done")
+                    log_write2(sys,"for debug")
                     break
         except:
             # print(type(self.cursor))
@@ -98,6 +102,20 @@ class getThreats:
         sorted_dic=dict(sorted(dic_t20agents.items(),key=lambda x:x[1],reverse=True))
         return sorted_dic
     
+    def cntMitiStatus(self,type):
+        if type == "m":
+            _url = self.glUrl+"&mitigationStatuses=mitigated&limit=1000"
+        if type == "nm":
+            _url = self.glUrl+"&mitigationStatuses=not_mitigated&limit=1000"
+        if type == "b":
+            _url = self.glUrl+"&mitigationStatuses=marked_as_benign&limit=1000"
+        response = self.sess.get(_url)
+        contents = json.loads(response._content)
+        log_write2(sys,"for debug")
+    
+    def mnmb_call(self):
+        return self.mnmb
+    
     def saveDataArr(self, contents):
         init = self.cnt
         end = self.cnt+len(contents.get('data'))
@@ -105,10 +123,16 @@ class getThreats:
             end = end-init-1
             init = 0
         # print("init",init,end)
-
+        
         for i in range(init, end):
+            dataFcont = contents.get('data')[i]
+            if dataFcont.get("threatInfo").get("mitigationStatus")=="mitigated":
+                self.mnmb["mitigated"]+=1
+            if dataFcont.get("threatInfo").get("mitigationStatus")=="not_mitigated":
+                self.mnmb["not_mitigated"]+=1
+            if dataFcont.get("threatInfo").get("mitigationStatus")=="marked_as_benign":
+                self.mnmb["marked_as_benign"]+=1
             try:
-                dataFcont = contents.get('data')[i]
                 # print(self.totcnt)
                 # print(dataFcont)
                 self.dataArr[self.totcnt][0] = dataFcont.get("agentRealtimeInfo").get("accountName")
@@ -225,12 +249,7 @@ class getThreats:
             url_fM = url+"&incidentStatuses=resolved,unresolved,in_progress"
         return url_fM
 
-    def mkurlMitigated(self, url, yorn):
-        if yorn == "m":
-            url_fM = url+"&mitigationStatuses=mitigated"
-        elif yorn == "nm":
-            url_fM = url+"&mitigationStatuses=not_mitigated"
-        return url_fM
+
 
     def mkurlResolved(self, url, yorn):
         if yorn == "r":

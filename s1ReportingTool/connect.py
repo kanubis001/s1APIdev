@@ -1,5 +1,7 @@
 import json
 import requests
+import sys
+from logger import *
 sess=requests.Session()
 def connectAPI(s1Site,loginType,apiToken):
     # api 접속가능한 user 정보
@@ -27,7 +29,7 @@ def connectAPI(s1Site,loginType,apiToken):
         url=s1Site+'/web/api/v2.1/users/login/by-api-token'
     
     response=sess.post(url,json=loginData)
-    print(json.loads(response._content))
+    # print(json.loads(response._content))
     try :
         token=json.loads(response._content).get("data").get("token")
     except :
@@ -37,13 +39,17 @@ def connectAPI(s1Site,loginType,apiToken):
     # token=json.loads(response._content).get("data").get("token")
     
     if response.status_code == 200 :
-        print("접속 성공. 세션 유지")
+        log_write2(sys,"connection success. session start")
+        # print("접속 성공. 세션 유지")
     else:
-        print(response.status_code, " 접속 에러")
+        debug=str(response.status_code)+" connection error"
+        log_write2(sys,debug)
+        # print(response.status_code, " 접속 에러")
     return token
 
 def disconnectAPI():
-    print("세션 해제")
+    log_write2(sys,"session close")
+    # print("세션 해제")
     sess.close()
 
 def connectAPItest(s1Site,loginType,apiToken):
@@ -76,7 +82,9 @@ def connectAPItest(s1Site,loginType,apiToken):
     if response.status_code == 200 :
         status=1
     else:
-        print(response.status_code, " 접속 에러")
+        debug=str(response.status_code)+" connection error"
+        log_write2(sys,debug)
+        # print(response.status_code, " 접속 에러")
         status=0
         sess.close()
     return status

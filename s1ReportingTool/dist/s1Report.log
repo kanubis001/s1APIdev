@@ -1,0 +1,32 @@
+2023-01-16 15:39:13,302|23|DEBUG:connectAPI|connection success. session start
+2023-01-16 15:39:17,700|23|DEBUG:run|run error?
+2023-01-16 15:39:17,701|23|DEBUG:setInfo|Default site
+2023-01-16 15:39:17,717|23|DEBUG:__init__|for debug
+2023-01-16 15:39:17,717|23|DEBUG:__init__|mainReporting inithttps://apne1-samsungsds.sentinelone.netIwdlMxqistO4F57BwUQ8Gwkkr4ATPPXXGWYtfbwbI1t5Gx9qiyKBQXsmc9JkSPopdXaH1XwOFawDyDRR
+2023-01-16 15:39:17,717|23|DEBUG:get|for debug
+2023-01-16 15:39:17,718|23|DEBUG:getfromDate|for debug
+2023-01-16 15:39:18,933|23|DEBUG:getfromDate|for debug
+2023-01-16 15:39:18,933|23|DEBUG:start|for debug
+2023-01-16 15:40:10,133|23|DEBUG:connectAPI|connection success. session start
+2023-01-16 15:40:14,516|23|DEBUG:run|run error?
+2023-01-16 15:40:14,516|23|DEBUG:setInfo|Default site
+2023-01-16 15:40:14,536|23|DEBUG:__init__|for debug
+2023-01-16 15:40:14,536|23|DEBUG:__init__|mainReporting inithttps://apne1-samsungsds.sentinelone.netIwdlMxqistO4F57BwUQ8Gwkkr4ATPPXXGWYtfbwbI1t5Gx9qiyKBQXsmc9JkSPopdXaH1XwOFawDyDRR
+2023-01-16 15:40:14,536|23|DEBUG:get|for debug
+2023-01-16 15:40:14,536|23|DEBUG:getfromDate|for debug
+2023-01-16 15:40:15,671|23|DEBUG:getfromDate|for debug
+2023-01-16 15:40:15,671|23|DEBUG:start|for debug
+2023-01-16 15:43:00,359|23|DEBUG:connectAPI|connection success. session start
+2023-01-16 15:43:05,423|23|DEBUG:run|run error?
+2023-01-16 15:43:05,423|23|DEBUG:setInfo|Default site
+2023-01-16 15:43:05,442|23|DEBUG:__init__|for debug
+2023-01-16 15:43:05,442|23|DEBUG:__init__|mainReporting inithttps://apne1-samsungsds.sentinelone.netIwdlMxqistO4F57BwUQ8Gwkkr4ATPPXXGWYtfbwbI1t5Gx9qiyKBQXsmc9JkSPopdXaH1XwOFawDyDRR
+2023-01-16 15:43:05,443|23|DEBUG:get|for debug
+2023-01-16 15:43:05,443|23|DEBUG:getfromDate|for debug
+2023-01-16 15:43:06,661|23|DEBUG:getfromDate|for debug
+2023-01-16 15:43:06,661|23|DEBUG:start|for debug
+2023-01-16 15:43:06,661|23|DEBUG:start|for debug
+2023-01-16 15:43:07,473|23|DEBUG:getAll|for debuglog; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTUxMjgwODAyNzQ5NDc3MDQ4NCwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTUxMjgwODAyNzQ5NDc3MDQ4NCwgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-01-16 15:43:07,473|23|DEBUG:getAll|for debugComputer °¹¼ö : 12´ë
+2023-01-16 15:43:07,473|23|DEBUG:getAll|for debugError Computer °¹¼ö : 0´ë
+2023-01-16 15:43:07,851|23|DEBUG:__del__|end setting

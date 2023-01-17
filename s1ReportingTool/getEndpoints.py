@@ -1,5 +1,7 @@
 import json
 # import pandas as pd
+import sys
+from logger import *
 from connect import sess
 
 
@@ -53,7 +55,6 @@ class getEndpoints:
                         # endpointInfo에 원하는 내용 삽입.
                         if contents.get("data")[i].get("networkInterfaces") ==[]:
                             ip="no ipv4"
-                            print(ip)
                         else:
                             ip=contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]
                         # print(contents.get("data")[i])
@@ -76,22 +77,29 @@ class getEndpoints:
                             True
                             ])
                     except IndexError as e:
+                        debug=str("Exception log; endPoints IndexError: ", e, contents.get("data")[i])
                         self.cnt_err_coms += 1
-                        print("Exception log; endPoints IndexError: ", e, contents.get("data")[i])
+                        log_write2(sys,"for debug"+debug)
+                        
                     self.cnt_coms += 1
             except TypeError as e:
-                print("Exception log; TypeError: ", e)
+                debug=str("Exception log; TypeError: ", e, contents.get("data")[i])
+                log_write2(sys,"for debug"+debug)
+                # print("Exception log; TypeError: ", e)
                 break
 
             if str(contents.get("pagination").get("nextCursor")) == 'None':
-                print("log; noneCursor: "+self.cursor)
+                debug=str("log; noneCursor: "+self.cursor)
+                log_write2(sys,"for debug"+debug)
+                # print("log; noneCursor: "+self.cursor)
                 break
             else:
                 self.cursor = str(contents.get("pagination").get("nextCursor"))
                 # print(cursor)
-
-        print("Computer 갯수 : "+str(self.cnt_coms)+"대")
-        print("Error Computer 갯수 : "+str(self.cnt_err_coms)+"대")
+        debug="Computer 갯수 : "+str(self.cnt_coms)+"대"
+        debug2="Error Computer 갯수 : "+str(self.cnt_err_coms)+"대"
+        log_write2(sys,"for debug"+debug)
+        log_write2(sys,"for debug"+debug2)
         # conn.disconnectAPI()
         return self.endpointInfo
 
@@ -200,7 +208,8 @@ class getEndpoints:
         #     return contents.get("data")[0].get("uuid"), contents.get("data")[0].get("computerName")
 
     def getCustomerid(self, uuids):
-        print(uuids)
+        # print(uuids)
+        log_write2(sys,"for debug"+str(uuids))
         if uuids == None:
             return "No_uuid"
         url = self.fulluri+"&uuids="+uuids
@@ -209,7 +218,9 @@ class getEndpoints:
         if contents.get("data")[0].get("externalId") == "":
             return "empty"
         else:
-            print("externalId:", contents.get("data")[0].get("externalId"))
+            debug=str("externalId:", contents.get("data")[0].get("externalId"))
+            log_write2(sys,"for debug"+debug)
+            # print("externalId:", contents.get("data")[0].get("externalId"))
             return contents.get("data")[0].get("externalId")
 
     def countAgent(self, groupIds):
@@ -228,7 +239,9 @@ class getEndpoints:
         response = self.sess.get(url)
         response2 = self.sess.get(url2)
         contents2 = json.loads(response2._content)
-        print(contents2.get("data"))
+        # print(contents2.get("data"))
+        debug=str(contents2.get("data"))
+        log_write2(sys,"for debug"+debug)
         contents = json.loads(response._content)
         return contents.get("data")
 
