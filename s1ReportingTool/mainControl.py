@@ -89,8 +89,10 @@ class controller:
                 return data
         except ValueError:
             log_write2(sys,"value err")
+            return "err"
         except TypeError as e:
             log_write2(sys,"type err")
+            return "err"
 
     def start(self, id, start, end, groupornot,names):
         if groupornot==False:
@@ -105,14 +107,14 @@ class controller:
             self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end),stype,names)
         # print(startday,"/",endday)
         datas = mR.get("date", stype, id)
-        log_write2(sys,"for debug")
+        log_write2(sys,"start func begin")
         
         # type은 malicious, suspicious, all
         type = "all"
         # 보고서 생성(전체 리스트)
         
         res_reForge = mR.reForgeCont(datas, type)
-        log_write2(sys,"for debug")
+        log_write2(sys,"start func reforge completed")
         try:
             if res_reForge == 0:
                 dir = "데이터가 없습니다."
@@ -127,7 +129,7 @@ class controller:
             
                 dir = mR.endSave()
                 return dir+" 위치에 보고서가 생성되었습니다."
-        except:
+        except :
             log_write2(sys,"exception occur")
             
         

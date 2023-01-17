@@ -79,27 +79,27 @@ class getEndpoints:
                     except IndexError as e:
                         debug=str("Exception log; endPoints IndexError: ", e, contents.get("data")[i])
                         self.cnt_err_coms += 1
-                        log_write2(sys,"for debug"+debug)
+                        log_write2(sys, debug)
                         
                     self.cnt_coms += 1
             except TypeError as e:
                 debug=str("Exception log; TypeError: ", e, contents.get("data")[i])
-                log_write2(sys,"for debug"+debug)
+                log_write2(sys,debug)
                 # print("Exception log; TypeError: ", e)
                 break
 
             if str(contents.get("pagination").get("nextCursor")) == 'None':
                 debug=str("log; noneCursor: "+self.cursor)
-                log_write2(sys,"for debug"+debug)
+                log_write2(sys,debug)
                 # print("log; noneCursor: "+self.cursor)
                 break
             else:
                 self.cursor = str(contents.get("pagination").get("nextCursor"))
                 # print(cursor)
-        debug="Computer 갯수 : "+str(self.cnt_coms)+"대"
-        debug2="Error Computer 갯수 : "+str(self.cnt_err_coms)+"대"
-        log_write2(sys,"for debug"+debug)
-        log_write2(sys,"for debug"+debug2)
+        debug="Computer : "+str(self.cnt_coms)+"대"
+        debug2="Error Computer : "+str(self.cnt_err_coms)+"대"
+        log_write2(sys,debug)
+        log_write2(sys,debug2)
         # conn.disconnectAPI()
         return self.endpointInfo
 
@@ -209,7 +209,7 @@ class getEndpoints:
 
     def getCustomerid(self, uuids):
         # print(uuids)
-        log_write2(sys,"for debug"+str(uuids))
+        log_write2(sys,"uuid : "+str(uuids))
         if uuids == None:
             return "No_uuid"
         url = self.fulluri+"&uuids="+uuids
@@ -219,7 +219,7 @@ class getEndpoints:
             return "empty"
         else:
             debug=str("externalId:", contents.get("data")[0].get("externalId"))
-            log_write2(sys,"for debug"+debug)
+            log_write2(sys,debug)
             # print("externalId:", contents.get("data")[0].get("externalId"))
             return contents.get("data")[0].get("externalId")
 
@@ -241,7 +241,7 @@ class getEndpoints:
         contents2 = json.loads(response2._content)
         # print(contents2.get("data"))
         debug=str(contents2.get("data"))
-        log_write2(sys,"for debug"+debug)
+        log_write2(sys,""+debug)
         contents = json.loads(response._content)
         return contents.get("data")
 

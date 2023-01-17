@@ -50,12 +50,12 @@ class mkreportInfo(QThread):
         self.working=True
         
     def run(self):
-        log_write2(sys,"run error?")
+        log_write2(sys,"run thread")
         self.main.setInfo()
         self.__del__()
         
     def __del__(self):
-        log_write2(sys,"end setting")
+        log_write2(sys,"end mkreportInfo thread")
         # print("end setting")
             
 class progressThread(QThread):
@@ -106,9 +106,9 @@ class WindowClass(QMainWindow, form_class):
         #chkgrouporsite False면 그룹 아이디 필요 없음
         self.enablegroupid=True
         self.setupUi(self)
-        self.labelAcc_2.setFixedWidth(0)
-        self.labelSite_2.setFixedWidth(0)
-        self.labelGrp_2.setFixedWidth(0)
+        self.labelAcc_2.setHidden(True)
+        self.labelSite_2.setHidden(True)
+        self.labelGrp_2.setHidden(True)
         self.percnt=0
         self.btnReporting.setEnabled(False)
         self.comboConsole.currentIndexChanged.connect(self.urlFunc)
@@ -135,7 +135,7 @@ class WindowClass(QMainWindow, form_class):
     
     @pyqtSlot()
     def bar_start(self):
-        log_write2(sys,len(self.groups))
+        log_write2(sys,str(len(self.groups))+"bar start")
         self.prbar.setRange(0,len(self.groups))
         self.bar.working=True
         self.bar.start()
@@ -195,7 +195,7 @@ class WindowClass(QMainWindow, form_class):
             QMessageBox.warning(self, "날짜 오류", "기간이 너무 짧습니다.")
             daterr=False
         elif daylong > 100:
-            QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 3개월(100일)까지 지정할 수 있습니다.")
+            QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 6개월(200일)까지 지정할 수 있습니다.")
             daterr=False
 
         if grperr==False or siterr==False or accerr==False or daterr==False:
@@ -216,17 +216,16 @@ class WindowClass(QMainWindow, form_class):
         self.lineApitk.setEnabled(False)
         
     def setInfo(self):
-        self.statusBar().showMessage("hey")
         self.btnReporting.setEnabled(False)
         if self.enablegroupid==False:
             # print(self.comboSite.currentText())
-            log_write2(sys,self.comboSite.currentText())
+            log_write2(sys,"site current text"+str(self.comboSite.currentText()))
             idTxt=self.comboSite.currentText()
             targetArr=self.sites
             self.names=[self.comboAcc.currentText(),self.comboSite.currentText()]
         if self.enablegroupid==True:
             # print(self.comboGrp.currentText())
-            log_write2(sys,self.comboGrp.currentText())
+            log_write2(sys,"group current text"+str(self.comboGrp.currentText()))
             idTxt = self.comboGrp.currentText()
             targetArr=self.groups
             self.names=[self.comboAcc.currentText(),self.comboSite.currentText(),self.comboGrp.currentText()]
@@ -256,9 +255,12 @@ class WindowClass(QMainWindow, form_class):
         self.comboGrp.setEnabled(True)
         self.btnChk.setEnabled(True)
         self.labelDirectory.setEnabled(False)
-        self.labelAcc_2.setFixedWidth(0)
-        self.labelSite_2.setFixedWidth(0)
-        self.labelGrp_2.setFixedWidth(0)
+        self.labelAcc_2.setHidden(True)
+        self.labelSite_2.setHidden(True)
+        self.labelGrp_2.setHidden(True)
+        self.comboAcc.clear()
+        self.comboSite.clear()
+        self.comboGrp.clear()
         self.prbar.reset()
         # self.set_stop()
         
@@ -269,7 +271,7 @@ class WindowClass(QMainWindow, form_class):
         for i in range(0, len(self.sites)):
             if sitetxt == self.sites[i][0]:
                 self.groups = controller.findGroup(self, self.sites[i][1])
-                self.labelGrp_2.setFixedWidth(120)
+                self.labelGrp_2.setHidden(False)
                 self.comboGrp.addItem("")
                 for group in self.groups:
                     self.comboGrp.addItem(group[0])
@@ -280,7 +282,7 @@ class WindowClass(QMainWindow, form_class):
         acclists=self.accs[0]
         if self.accs[1]=="site":
             self.sites = controller.findSite(self, self.accs[2])
-            self.labelSite_2.setFixedWidth(120)
+            self.labelSite_2.setHidden(False)
             self.comboSite.addItem("")
             for site in self.sites:
                 self.comboSite.addItem(site[0])
@@ -288,11 +290,11 @@ class WindowClass(QMainWindow, form_class):
             for i in range(0, len(acclists)):
                 if acctxt == acclists[i][0]:
                     self.sites = controller.findSite(self, acclists[i][2])
-                    self.labelSite_2.setFixedWidth(120)
+                    self.labelSite_2.setHidden(False)
                     self.comboSite.addItem("")
                     for site in self.sites:
                         self.comboSite.addItem(site[0])
-        self.labelAcc_2.setFixedWidth(120)
+        self.labelAcc_2.setHidden(False)
 
     def urlFunc(self):
         print(self.comboConsole.currentText())
@@ -307,14 +309,21 @@ class WindowClass(QMainWindow, form_class):
     def findAccount(self):
         self.comboAcc.clear()
         self.accs = controller.findAccount(self)
-        acclists=self.accs[0]
-        self.labelSite_2.setFixedWidth(0)
-        self.comboAcc.addItem("")
-        if self.accs[1]=="site":
-            self.comboAcc.addItem(self.accs[3])
-        elif self.accs[1]=="account":
-            for i in acclists:
-                self.comboAcc.addItem(i[0])
+        if self.accs=="err":
+            self.btnConfirm.setDisabled(False)
+            self.comboConsole.setDisabled(False)
+            self.lineApitk.setDisabled(False)
+            QMessageBox.warning(self, "로그인 실패","API token 값과 콘솔 주소를 확인하세요")
+            log_write2(sys,"console url or APItoken error")
+        else:
+            acclists=self.accs[0]
+            self.labelSite_2.setHidden(True)
+            self.comboAcc.addItem("")
+            if self.accs[1]=="site":
+                self.comboAcc.addItem(self.accs[3])
+            elif self.accs[1]=="account":
+                for i in acclists:
+                    self.comboAcc.addItem(i[0])
 
     def setmain(self, _url, _apiToken):
         controller.setVar(self, _url, _apiToken)

@@ -45,7 +45,7 @@ class mainReporting:
         # menu => 날짜로 검색 date
         menu = "date"
         if menu == "date":
-            log_write2(sys,"for debug")
+            log_write2(sys,"get func menu date")
             return self.GT.getfromDate(self.startD, self.endD, sType, id)
 
     def getEndpoints(self, findid, sType):
@@ -137,7 +137,7 @@ class mainReporting:
                         print(data[15], "/", data[10],
                               "/", data[16], "/", data[14])
                         cont=str(data[15]+"/"+data[10]+"/"+data[16]+"/"+data[14])
-                        log_write2(sys,cont)
+                        log_write2(sys, "type not all : "+cont)
             # bar.finish()
             return 1
 
@@ -172,7 +172,7 @@ class mainReporting:
                         gubunCnt[i][1] += 1
             #표를 위한 자료 정제
             for i in range(len(gubunCnt)):
-                if gubunCnt[i][1] < 3:
+                if gubunCnt[i][1] < 10:
                     etclabel = etclabel+gubunCnt[i][0]+", "
                     ratiocnt[0] = ratiocnt[0]+gubunCnt[i][1]
                 else:
@@ -182,16 +182,16 @@ class mainReporting:
             etclabel += ")"
             ratio = ratiocnt
             labels = labelcnt
-            wedgeprops = {'width': 0.7, 'edgecolor': 'w', 'linewidth': 5}
-            plt.pie(ratio, labels=labels, autopct="%.1f%%",
-                    counterclock=False, wedgeprops=wedgeprops)
+            wedgeprops = {'width': 0.7, 'edgecolor': 'w', 'linewidth': 3}
+            pie=plt.pie(ratio, autopct="%.1f%%",counterclock=False, wedgeprops=wedgeprops)
+            plt.legend(pie[0],labels,fontsize=8,loc="best",bbox_to_anchor=(0.85,1.025))
             # plt.show()
             picpath = './savePieChart.png'
             plt.savefig(picpath, facecolor='#FFFFFF', bbox_inches='tight')
             plt.clf()
             self.makeReport.writeDown("")
             self.makeReport.writeTitle("5. 위협별 탐지", 2)
-            self.makeReport.addPic(picpath)
+            self.makeReport.addPic2(picpath)
             self.makeReport.mkTblthreatpie(len(labelcnt), 2)
             for i in range(0, len(labelcnt)):
                 if i == 0:
@@ -243,7 +243,7 @@ class mainReporting:
             x_axis.insert(j, engineCnt[i][1])
         # print(x_axis)
         # print(y_axis)
-        plt.barh(y, x_axis)
+        plt.barh(y, x_axis,color=['r','g','b'])
         plt.yticks(y, y_axis)
         picpath = './saveBarChart.png'
         plt.savefig(picpath, facecolor='#FFFFFF', bbox_inches='tight')

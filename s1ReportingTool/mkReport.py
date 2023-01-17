@@ -240,7 +240,7 @@ class mkReport:
     def writeDownTable_thDetail(self,cont,num,num2):
         tbl=self.table_thDetail
         # if num2==0:
-        #     tbl.rows[num].cells[num2].width=Cm(3)
+        #     tbl.rows[num].cells[num2].width=Cm(4)
         # else:
         #     tbl.rows[num].cells[num2].width=Cm(7)
         tbl.rows[num].cells[num2].text=str(cont)
@@ -254,7 +254,8 @@ class mkReport:
     
     def addPic(self, picpath):
         self.doc.add_picture(picpath,width=Inches(5),height=Inches(4))
-
+    def addPic2(self, picpath):
+        self.doc.add_picture(picpath,width=Inches(4),height=Inches(4))
     def saveDoc(self):
         # self.doc.save('D:\\원드라이브\\OneDrive\\Develop_private\\Python\\s1ReportingTool\\reporter\\testReport.docx')
         directory = os.path.expanduser('~\\S1Report')

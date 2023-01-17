@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -9,20 +12,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>461</width>
-    <height>398</height>
+    <width>613</width>
+    <height>378</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>300</height>
+   </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>16777215</width>
     <height>450</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>200</height>
    </size>
   </property>
   <property name="font">
@@ -32,6 +47,9 @@
     <weight>50</weight>
     <bold>false</bold>
    </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>콤시스 센티넬원 리포트</string>
@@ -48,17 +66,38 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>300</height>
+    </size>
+   </property>
    <property name="maximumSize">
     <size>
      <width>16777215</width>
-     <height>16777215</height>
+     <height>450</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>200</height>
     </size>
    </property>
    <layout class="QGridLayout" name="gridLayout_4">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMinimumSize</enum>
+    </property>
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
       <item>
        <layout class="QFormLayout" name="formLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
         <property name="fieldGrowthPolicy">
          <enum>QFormLayout::ExpandingFieldsGrow</enum>
         </property>
@@ -175,11 +214,14 @@
         </item>
         <item row="4" column="0" colspan="2">
          <layout class="QGridLayout" name="gridLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
           <item row="0" column="1">
            <widget class="QComboBox" name="comboAcc">
             <property name="minimumSize">
              <size>
-              <width>0</width>
+              <width>108</width>
               <height>0</height>
              </size>
             </property>
@@ -193,6 +235,12 @@
           </item>
           <item row="1" column="1">
            <widget class="QComboBox" name="comboSite">
+            <property name="minimumSize">
+             <size>
+              <width>108</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>300</width>
@@ -219,6 +267,21 @@
           </item>
           <item row="0" column="2">
            <widget class="QLabel" name="labelAcc_2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
             <property name="text">
              <string>Account 선택하세요</string>
             </property>
@@ -226,6 +289,12 @@
           </item>
           <item row="2" column="1">
            <widget class="QComboBox" name="comboGrp">
+            <property name="minimumSize">
+             <size>
+              <width>108</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>300</width>
@@ -252,6 +321,18 @@
           </item>
           <item row="2" column="2">
            <widget class="QLabel" name="labelGrp_2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="text">
              <string>Group 선택하세요</string>
             </property>
@@ -275,6 +356,18 @@
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="labelSite_2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="text">
              <string>Site 선택하세요</string>
             </property>
@@ -461,11 +554,14 @@
             <height>60</height>
            </size>
           </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Plain</enum>
+           <enum>QFrame::Sunken</enum>
           </property>
           <property name="lineWidth">
            <number>2</number>
