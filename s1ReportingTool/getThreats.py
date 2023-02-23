@@ -40,7 +40,7 @@ class getThreats:
         totItems = contents.get('pagination').get('totalItems')
         self.cursor = contents.get('pagination').get('nextCursor')
         self.gfdcolumn = 33
-        self.gfdrow = totItems
+        self.gfdrow = totItems+1
         self.dataArr = [[0 for _ in range(self.gfdcolumn)] for _ in range(self.gfdrow)]
         # self.makeReport.writeTitle("기간별 전체 탐지 내역", 2)
         # self.makeReport.mkTable_detail(self.gfdrow+1, 6)
@@ -123,7 +123,7 @@ class getThreats:
             end = end-init-1
             init = 0
         # print("init",init,end)
-        
+        # print(contents.get('data'))
         for i in range(init, end):
             dataFcont = contents.get('data')[i]
             if dataFcont.get("threatInfo").get("mitigationStatus")=="mitigated":
@@ -135,47 +135,46 @@ class getThreats:
             try:
                 # print(self.totcnt)
                 # print(dataFcont)
-                self.dataArr[self.totcnt][0] = dataFcont.get("agentRealtimeInfo").get("accountName")
-                self.dataArr[self.totcnt][1] = dataFcont.get("agentRealtimeInfo").get("siteName")
-                self.dataArr[self.totcnt][2] = dataFcont.get("agentRealtimeInfo").get("groupName")
-                self.dataArr[self.totcnt][3] = dataFcont.get("agentRealtimeInfo").get("agentDomain")
-                self.dataArr[self.totcnt][4] = dataFcont.get("agentRealtimeInfo").get("agentComputerName")
-                self.dataArr[self.totcnt][5] = dataFcont.get("agentRealtimeInfo").get("agentOsName")
-                self.dataArr[self.totcnt][6] = dataFcont.get("agentRealtimeInfo").get("agentOsType")
-                self.dataArr[self.totcnt][7] = dataFcont.get("agentRealtimeInfo").get("agentMachineType")
-                self.dataArr[self.totcnt][8] = dataFcont.get("agentRealtimeInfo").get("agentUuid")
-                self.dataArr[self.totcnt][9] = dataFcont.get("agentRealtimeInfo").get("agentVersion")
-                self.dataArr[self.totcnt][10] = dataFcont.get("agentRealtimeInfo").get(
+                self.dataArr[i][0] = dataFcont.get("agentRealtimeInfo").get("accountName")
+                self.dataArr[i][1] = dataFcont.get("agentRealtimeInfo").get("siteName")
+                self.dataArr[i][2] = dataFcont.get("agentRealtimeInfo").get("groupName")
+                self.dataArr[i][3] = dataFcont.get("agentRealtimeInfo").get("agentDomain")
+                self.dataArr[i][4] = dataFcont.get("agentRealtimeInfo").get("agentComputerName")
+                self.dataArr[i][5] = dataFcont.get("agentRealtimeInfo").get("agentOsName")
+                self.dataArr[i][6] = dataFcont.get("agentRealtimeInfo").get("agentOsType")
+                self.dataArr[i][7] = dataFcont.get("agentRealtimeInfo").get("agentMachineType")
+                self.dataArr[i][8] = dataFcont.get("agentRealtimeInfo").get("agentUuid")
+                self.dataArr[i][9] = dataFcont.get("agentRealtimeInfo").get("agentVersion")
+                self.dataArr[i][10] = dataFcont.get("agentRealtimeInfo").get(
                     "networkInterfaces")[0].get("inet")[0]
-                self.dataArr[self.totcnt][11] = dataFcont.get("agentRealtimeInfo").get("agentNetworkStatus")
-                self.dataArr[self.totcnt][12] = dataFcont.get("agentRealtimeInfo").get("agentMitigationMode")
-                self.dataArr[self.totcnt][13] = dataFcont.get("threatInfo").get("analystVerdict")
-                self.dataArr[self.totcnt][14] = dataFcont.get("threatInfo").get("classification")
-                self.dataArr[self.totcnt][15] = dataFcont.get("threatInfo").get("classificationSource")
-                self.dataArr[self.totcnt][16] = dataFcont.get("threatInfo").get("confidenceLevel")
-                self.dataArr[self.totcnt][17] = dataFcont.get("threatInfo").get("detectionType")
-                self.dataArr[self.totcnt][18] = dataFcont.get("threatInfo").get("createdAt")
-                self.dataArr[self.totcnt][19] = dataFcont.get("threatInfo").get("engines")[0]
-                self.dataArr[self.totcnt][20] = dataFcont.get("threatInfo").get("incidentStatus")
-                self.dataArr[self.totcnt][21] = dataFcont.get("threatInfo").get("isFileless")
-                self.dataArr[self.totcnt][22] = dataFcont.get("threatInfo").get("maliciousProcessArguments")
-                self.dataArr[self.totcnt][23] = dataFcont.get("threatInfo").get("mitigationStatus")
-                self.dataArr[self.totcnt][24] = dataFcont.get("threatInfo").get("pendingActions")
-                self.dataArr[self.totcnt][25] = dataFcont.get("threatInfo").get("filePath")
-                self.dataArr[self.totcnt][26] = dataFcont.get("threatInfo").get("originatorProcess")
-                self.dataArr[self.totcnt][27] = dataFcont.get("threatInfo").get("processUser")
-                self.dataArr[self.totcnt][28] = dataFcont.get("threatInfo").get("publisherName")
-                self.dataArr[self.totcnt][29] = dataFcont.get("threatInfo").get("updatedAt")
-                self.dataArr[self.totcnt][30] = dataFcont.get("indicators")
-                self.dataArr[self.totcnt][31] = dataFcont.get("threatInfo").get("threatName")
-                self.dataArr[self.totcnt][32] = dataFcont.get("threatInfo").get("sha1")
+                self.dataArr[i][11] = dataFcont.get("agentRealtimeInfo").get("agentNetworkStatus")
+                self.dataArr[i][12] = dataFcont.get("agentRealtimeInfo").get("agentMitigationMode")
+                self.dataArr[i][13] = dataFcont.get("threatInfo").get("analystVerdict")
+                self.dataArr[i][14] = dataFcont.get("threatInfo").get("classification")
+                self.dataArr[i][15] = dataFcont.get("threatInfo").get("classificationSource")
+                self.dataArr[i][16] = dataFcont.get("threatInfo").get("confidenceLevel")
+                self.dataArr[i][17] = dataFcont.get("threatInfo").get("detectionType")
+                self.dataArr[i][18] = dataFcont.get("threatInfo").get("createdAt")
+                self.dataArr[i][19] = dataFcont.get("threatInfo").get("engines")[0]
+                self.dataArr[i][20] = dataFcont.get("threatInfo").get("incidentStatus")
+                self.dataArr[i][21] = dataFcont.get("threatInfo").get("isFileless")
+                self.dataArr[i][22] = dataFcont.get("threatInfo").get("maliciousProcessArguments")
+                self.dataArr[i][23] = dataFcont.get("threatInfo").get("mitigationStatus")
+                self.dataArr[i][24] = dataFcont.get("threatInfo").get("pendingActions")
+                self.dataArr[i][25] = dataFcont.get("threatInfo").get("filePath")
+                self.dataArr[i][26] = dataFcont.get("threatInfo").get("originatorProcess")
+                self.dataArr[i][27] = dataFcont.get("threatInfo").get("processUser")
+                self.dataArr[i][28] = dataFcont.get("threatInfo").get("publisherName")
+                self.dataArr[i][29] = dataFcont.get("threatInfo").get("updatedAt")
+                self.dataArr[i][30] = dataFcont.get("indicators")
+                self.dataArr[i][31] = dataFcont.get("threatInfo").get("threatName")
+                self.dataArr[i][32] = dataFcont.get("threatInfo").get("sha1")
                 self.totcnt += 1
-                # self.makeReport.writeDown(self.dataArr[self.totcnt][4])
+                # self.makeReport.writeDown(self.dataArr[i][4])
                 # print(self.dataArr)
                 # print(self.dataArr[i])
                 # self.threatsData[i]
             except IndexError:
-                # print(contents.get('data')[i])
                 if dataFcont.get("indicators")==" ":
                     indicatorinfo="nothing"
                 else:
@@ -184,39 +183,39 @@ class getThreats:
                     inet4="삭제된 PC"
                 else:
                     inet4 = dataFcont.get("agentRealtimeInfo").get("networkInterfaces")
-                self.dataArr[self.totcnt][0] = dataFcont.get("agentRealtimeInfo").get("accountName")
-                self.dataArr[self.totcnt][1] = dataFcont.get("agentRealtimeInfo").get("siteName")
-                self.dataArr[self.totcnt][2] = dataFcont.get("agentRealtimeInfo").get("groupName")
-                self.dataArr[self.totcnt][3] = dataFcont.get("agentRealtimeInfo").get("agentDomain")
-                self.dataArr[self.totcnt][4] = dataFcont.get("agentRealtimeInfo").get("agentComputerName")
-                self.dataArr[self.totcnt][5] = dataFcont.get("agentRealtimeInfo").get("agentOsName")
-                self.dataArr[self.totcnt][6] = dataFcont.get("agentRealtimeInfo").get("agentOsType")
-                self.dataArr[self.totcnt][7] = dataFcont.get("agentRealtimeInfo").get("agentMachineType")
-                self.dataArr[self.totcnt][8] = dataFcont.get("agentRealtimeInfo").get("agentUuid")
-                self.dataArr[self.totcnt][9] = dataFcont.get("agentRealtimeInfo").get("agentVersion")
-                self.dataArr[self.totcnt][10] = inet4
-                self.dataArr[self.totcnt][11] = dataFcont.get("agentRealtimeInfo").get("agentNetworkStatus")
-                self.dataArr[self.totcnt][12] = dataFcont.get("agentRealtimeInfo").get("agentMitigationMode")
-                self.dataArr[self.totcnt][13] = dataFcont.get("threatInfo").get("analystVerdict")
-                self.dataArr[self.totcnt][14] = dataFcont.get("threatInfo").get("classification")
-                self.dataArr[self.totcnt][15] = dataFcont.get("threatInfo").get("classificationSource")
-                self.dataArr[self.totcnt][16] = dataFcont.get("threatInfo").get("confidenceLevel")
-                self.dataArr[self.totcnt][17] = dataFcont.get("threatInfo").get("detectionType")
-                self.dataArr[self.totcnt][18] = dataFcont.get("threatInfo").get("createdAt")
-                self.dataArr[self.totcnt][19] = dataFcont.get("threatInfo").get("engines")[0]
-                self.dataArr[self.totcnt][20] = dataFcont.get("threatInfo").get("incidentStatus")
-                self.dataArr[self.totcnt][21] = dataFcont.get("threatInfo").get("isFileless")
-                self.dataArr[self.totcnt][22] = dataFcont.get("threatInfo").get("maliciousProcessArguments")
-                self.dataArr[self.totcnt][23] = dataFcont.get("threatInfo").get("mitigationStatus")
-                self.dataArr[self.totcnt][24] = dataFcont.get("threatInfo").get("pendingActions")
-                self.dataArr[self.totcnt][25] = dataFcont.get("threatInfo").get("filePath")
-                self.dataArr[self.totcnt][26] = dataFcont.get("threatInfo").get("originatorProcess")
-                self.dataArr[self.totcnt][27] = dataFcont.get("threatInfo").get("processUser")
-                self.dataArr[self.totcnt][28] = dataFcont.get("threatInfo").get("publisherName")
-                self.dataArr[self.totcnt][29] = dataFcont.get("threatInfo").get("updatedAt")
-                self.dataArr[self.totcnt][30] = indicatorinfo
-                self.dataArr[self.totcnt][31] = dataFcont.get("threatInfo").get("threatName")
-                self.dataArr[self.totcnt][32] = dataFcont.get("threatInfo").get("sha1")
+                self.dataArr[i][0] = dataFcont.get("agentRealtimeInfo").get("accountName")
+                self.dataArr[i][1] = dataFcont.get("agentRealtimeInfo").get("siteName")
+                self.dataArr[i][2] = dataFcont.get("agentRealtimeInfo").get("groupName")
+                self.dataArr[i][3] = dataFcont.get("agentRealtimeInfo").get("agentDomain")
+                self.dataArr[i][4] = dataFcont.get("agentRealtimeInfo").get("agentComputerName")
+                self.dataArr[i][5] = dataFcont.get("agentRealtimeInfo").get("agentOsName")
+                self.dataArr[i][6] = dataFcont.get("agentRealtimeInfo").get("agentOsType")
+                self.dataArr[i][7] = dataFcont.get("agentRealtimeInfo").get("agentMachineType")
+                self.dataArr[i][8] = dataFcont.get("agentRealtimeInfo").get("agentUuid")
+                self.dataArr[i][9] = dataFcont.get("agentRealtimeInfo").get("agentVersion")
+                self.dataArr[i][10] = inet4
+                self.dataArr[i][11] = dataFcont.get("agentRealtimeInfo").get("agentNetworkStatus")
+                self.dataArr[i][12] = dataFcont.get("agentRealtimeInfo").get("agentMitigationMode")
+                self.dataArr[i][13] = dataFcont.get("threatInfo").get("analystVerdict")
+                self.dataArr[i][14] = dataFcont.get("threatInfo").get("classification")
+                self.dataArr[i][15] = dataFcont.get("threatInfo").get("classificationSource")
+                self.dataArr[i][16] = dataFcont.get("threatInfo").get("confidenceLevel")
+                self.dataArr[i][17] = dataFcont.get("threatInfo").get("detectionType")
+                self.dataArr[i][18] = dataFcont.get("threatInfo").get("createdAt")
+                self.dataArr[i][19] = dataFcont.get("threatInfo").get("engines")[0]
+                self.dataArr[i][20] = dataFcont.get("threatInfo").get("incidentStatus")
+                self.dataArr[i][21] = dataFcont.get("threatInfo").get("isFileless")
+                self.dataArr[i][22] = dataFcont.get("threatInfo").get("maliciousProcessArguments")
+                self.dataArr[i][23] = dataFcont.get("threatInfo").get("mitigationStatus")
+                self.dataArr[i][24] = dataFcont.get("threatInfo").get("pendingActions")
+                self.dataArr[i][25] = dataFcont.get("threatInfo").get("filePath")
+                self.dataArr[i][26] = dataFcont.get("threatInfo").get("originatorProcess")
+                self.dataArr[i][27] = dataFcont.get("threatInfo").get("processUser")
+                self.dataArr[i][28] = dataFcont.get("threatInfo").get("publisherName")
+                self.dataArr[i][29] = dataFcont.get("threatInfo").get("updatedAt")
+                self.dataArr[i][30] = indicatorinfo
+                self.dataArr[i][31] = dataFcont.get("threatInfo").get("threatName")
+                self.dataArr[i][32] = dataFcont.get("threatInfo").get("sha1")
                 # print(contents.get('data')[i].get("agentRealtimeInfo"))
 
 

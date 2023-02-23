@@ -45,7 +45,7 @@ class mainReporting:
         # menu => 날짜로 검색 date
         menu = "date"
         if menu == "date":
-            log_write2(sys,"get func menu date")
+            log_write2(sys,"get func menu date"+sType)
             return self.GT.getfromDate(self.startD, self.endD, sType, id)
 
     def getEndpoints(self, findid, sType):
@@ -59,6 +59,7 @@ class mainReporting:
         mkr.writeTitle("1. OS별 엔드포인트", 2)
         mkr.mktable_getbyos(len(osdatas)+1, 2)
         self.mkdictypetable(osdatas, "getbyos")
+        log_write2(sys,"1. OS별 엔드포인트 생성")
 
         #버전별 대수 확인 및 return(dictionary type)
         verdatas = GE.getbyversion()
@@ -66,6 +67,7 @@ class mainReporting:
         mkr.writeTitle("2. 버전별 엔드포인트", 2)
         mkr.mktable_getbyver(len(verdatas)+1, 2)
         self.mkdictypetable(verdatas, "getbyver")
+        log_write2(sys,"2. 버전별 엔드포인트 생성")
 
         #감염 PC, 안전한 PC(True(감염), False)
         infdatas = GE.getbyinfected()
@@ -73,7 +75,7 @@ class mainReporting:
         mkr.writeTitle("3. 보호되고 있는 엔드포인트", 2)
         mkr.mktable_getbyinf(len(infdatas)+1, 2)
         self.mkdictypetable(infdatas, "getbyinf")
-
+        log_write2(sys,"3. 보호되고 있는 엔드포인트 생성")
         #감염된 detail 정보 return(감염PC 전체)
         # GE.getbyInfectedDetail()
 
@@ -93,6 +95,7 @@ class mainReporting:
             if i == 20:
                 break
         self.makeReport.saveDoc()
+        log_write2(sys,"4. 기간내 Top20 탐지 Endpoints 생성")
 
     #2열 짜리 테이블 내용 입력
     def mkdictypetable(self, datas, cat):
@@ -191,6 +194,7 @@ class mainReporting:
             plt.clf()
             self.makeReport.writeDown("")
             self.makeReport.writeTitle("5. 위협별 탐지", 2)
+            log_write2(sys,"5. 위협별 탐지")
             self.makeReport.addPic2(picpath)
             self.makeReport.mkTblthreatpie(len(labelcnt), 2)
             for i in range(0, len(labelcnt)):
@@ -202,9 +206,9 @@ class mainReporting:
             self.makeReport.saveDoc()
         except ValueError:
             # print("Value err!")
-            log_write2(sys,"Value err!")
+            log_write2(sys,"5. 위협별 탐지 Value err!")
         except TypeError:
-            log_write2(sys,"Type err!")
+            log_write2(sys,"5. 위협별 탐지 Type err!")
             # print("Type Err!")
 
     def gatherByEngine(self, datas):
@@ -251,6 +255,7 @@ class mainReporting:
         # print(datas)
         self.makeReport.writeDown("")
         self.makeReport.writeTitle("6. 엔진별 탐지", 2)
+        log_write2(sys,"6. 엔진별 탐지")
         self.makeReport.addPic(picpath)
         self.makeReport.mkTblenginechart(len(engineCnt), 2)
         for i in range(0, len(engineCnt)):
@@ -266,6 +271,7 @@ class mainReporting:
         mkr = self.makeReport
         mkr.writeDown(" ")
         mkr.writeTitle("7. 해결된 위협 정보", 2)
+        log_write2(sys,"7. 해결된 위협")
         mkr.mktable_getSolved(3,2)
         mkr.writeDownTable_getSolved("mitigated",mnmb.get("mitigated"),0)
         mkr.writeDownTable_getSolved("marked_as_benign",mnmb.get("marked_as_benign"),1)
@@ -349,6 +355,7 @@ class mainReporting:
                             # 구조/행위분석 부분을 제외한 나머지 내용 채우는 부분
                             mkr.writeDownTable_thDetail(indiData.get(iData)[k], k, 1)
                         k += 1
+                    log_write2(sys,"상세내역 ")
                     mkr.writeDown(" ")    
                 else:
                     pass   

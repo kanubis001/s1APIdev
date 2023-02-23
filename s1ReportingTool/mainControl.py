@@ -13,7 +13,6 @@ class controller:
         self.accountInfo
 
     def setVar(self, url, apiToken):
-        
         self.url = url
         self.apiToken = apiToken
         self.token = conn.connectAPI(self.url, "token", self.apiToken)
@@ -93,7 +92,23 @@ class controller:
         except TypeError as e:
             log_write2(sys,"type err")
             return "err"
-
+        
+    def setPrbar(self,id,start,end,groupornot,names):
+        if groupornot==False:
+            stype="site"
+        else:
+            stype="group"
+        id = id
+        startday = str(start)+"T00:00:00.000000Z"
+        endday = str(end)+"T23:59:59.999999Z"
+        log_write2(sys,"set prbar maximum")
+        self.mR = mainReporting.mainReporting(
+            self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end),stype,names)
+        datas = self.mR.get("date", stype, id)
+        return len(datas)
+        # print(startday)
+        
+        
     def start(self, id, start, end, groupornot,names):
         if groupornot==False:
             stype="site"
@@ -105,32 +120,32 @@ class controller:
         # print(startday)
         mR = mainReporting.mainReporting(
             self.url, self.apiToken, id, self.token, startday, endday,str(start),str(end),stype,names)
-        # print(startday,"/",endday)
+        print(startday,"/",endday)
         datas = mR.get("date", stype, id)
         log_write2(sys,"start func begin")
         
         # type은 malicious, suspicious, all
         type = "all"
         # 보고서 생성(전체 리스트)
-        
         res_reForge = mR.reForgeCont(datas, type)
         log_write2(sys,"start func reforge completed")
-        try:
-            if res_reForge == 0:
-                dir = "데이터가 없습니다."
-                return dir+" 범위를 수정해주세요."
-            else:
-                mR.getEndpoints(id,stype)
-                mR.getTop20(datas)
-                mR.gatherThreatscnt(datas, type)
-                mR.gatherByEngine(datas)
-                mR.getSolved()
-                mR.getInfectedDetail(datas)
-            
-                dir = mR.endSave()
-                return dir+" 위치에 보고서가 생성되었습니다."
-        except :
-            log_write2(sys,"exception occur")
+        # try:
+        if res_reForge == 0:
+            dir = "데이터가 없습니다."
+            return dir+" 범위를 수정해주세요."
+        else:
+            mR.getEndpoints(id,stype)
+            mR.getTop20(datas)
+            mR.gatherThreatscnt(datas, type)
+            mR.gatherByEngine(datas)
+            mR.getSolved()
+            mR.getInfectedDetail(datas)
+        
+            dir = mR.endSave()
+            return dir+" 위치에 보고서가 생성되었습니다."
+        # except :
+        #     print(res_reForge)
+        #     log_write2(sys,"exception occur")
             
         
         

@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>596</width>
-    <height>356</height>
+    <width>511</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,13 +25,13 @@
   <property name="minimumSize">
    <size>
     <width>0</width>
-    <height>356</height>
+    <height>400</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>16777215</width>
-    <height>450</height>
+    <height>500</height>
    </size>
   </property>
   <property name="baseSize">
@@ -46,8 +46,8 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -55,8 +55,8 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -64,8 +64,8 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -84,8 +84,8 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -93,8 +93,8 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -102,8 +102,8 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -122,8 +122,8 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -131,8 +131,8 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -140,8 +140,8 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>242</red>
-        <green>243</green>
+        <red>255</red>
+        <green>255</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -180,7 +180,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(242, 243, 255);</string>
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -261,17 +261,26 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">QComboBox{
-color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
+           <string notr="true">QComboBox {
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;
 }
-QComboBox::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 20px;
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                 stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
 }</string>
           </property>
           <property name="currentText">
@@ -328,6 +337,9 @@ border-radius: 20px;
           <property name="text">
            <string>API 토큰</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
          </widget>
         </item>
         <item row="1" column="1">
@@ -351,17 +363,10 @@ border-radius: 20px;
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">QLineEdit{color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
-}
-QLineEdit::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 20px;
-}</string>
+           <string notr="true">
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;</string>
           </property>
           <property name="text">
            <string>Nf5fCpaJoA257TGNRdSc3hjVlQSShVeH42mV1BDPTKFKctf2mENoNN82gqLIw6agla2oh9cEDSBXsebR</string>
@@ -402,34 +407,42 @@ border-radius: 20px;
             <property name="minimumSize">
              <size>
               <width>70</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>100</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="font">
              <font>
               <family>맑은 고딕</family>
-              <pointsize>11</pointsize>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: black;
-background-color: white;
+color: white;
+background-color: black;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
 QPushButton::pressed{
-color: white;
-background-color: black;
+color: black;
+background-color: white;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
@@ -454,34 +467,42 @@ border-radius: 5px;
             <property name="minimumSize">
              <size>
               <width>70</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>70</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="font">
              <font>
               <family>맑은 고딕</family>
-              <pointsize>11</pointsize>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: black;
-background-color: white;
+color: white;
+background-color: black;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
 QPushButton::pressed{
-color: white;
-background-color: black;
+color: black;
+background-color: white;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
@@ -507,16 +528,28 @@ border-radius: 5px;
           </property>
           <item row="0" column="1">
            <widget class="QComboBox" name="comboAcc">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>108</width>
+              <width>175</width>
               <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>300</width>
+              <width>175</width>
               <height>30</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>169</width>
+              <height>0</height>
              </size>
             </property>
             <property name="font">
@@ -526,33 +559,54 @@ border-radius: 5px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QComboBox{
-color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
+             <string notr="true">QComboBox {
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;
 }
-QComboBox::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 20px;
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                 stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
 }</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
            <widget class="QComboBox" name="comboSite">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>108</width>
+              <width>175</width>
               <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>300</width>
+              <width>175</width>
               <height>30</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>169</width>
+              <height>0</height>
              </size>
             </property>
             <property name="font">
@@ -562,17 +616,26 @@ border-radius: 20px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QComboBox{
-color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
+             <string notr="true">QComboBox {
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;
 }
-QComboBox::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 20px;
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                 stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
 }</string>
             </property>
            </widget>
@@ -582,7 +645,7 @@ border-radius: 20px;
             <property name="maximumSize">
              <size>
               <width>100</width>
-              <height>150</height>
+              <height>30</height>
              </size>
             </property>
             <property name="font">
@@ -604,9 +667,15 @@ border-radius: 20px;
           </item>
           <item row="0" column="2">
            <widget class="QLabel" name="labelAcc_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>150</width>
+              <width>200</width>
               <height>0</height>
              </size>
             </property>
@@ -632,16 +701,28 @@ border-radius: 20px;
           </item>
           <item row="2" column="1">
            <widget class="QComboBox" name="comboGrp">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>108</width>
+              <width>175</width>
               <height>25</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>300</width>
+              <width>175</width>
               <height>30</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>169</width>
+              <height>0</height>
              </size>
             </property>
             <property name="font">
@@ -651,17 +732,26 @@ border-radius: 20px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QComboBox{
-color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
+             <string notr="true">QComboBox {
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;
 }
-QComboBox::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 20px;
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                 stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
 }</string>
             </property>
            </widget>
@@ -693,9 +783,15 @@ border-radius: 20px;
           </item>
           <item row="2" column="2">
            <widget class="QLabel" name="labelGrp_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>150</width>
+              <width>200</width>
               <height>0</height>
              </size>
             </property>
@@ -743,9 +839,15 @@ border-radius: 20px;
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="labelSite_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>150</width>
+              <width>200</width>
               <height>0</height>
              </size>
             </property>
@@ -794,17 +896,58 @@ border-radius: 20px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QDateEdit{
-color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
+             <string notr="true">
+QCalendarWidget QToolButton {
+  	height: 20px;
+  	width: 60px;
+  	color: white;
+  	font-size: 12px;
+  	icon-size: 20px, 20px;
+  	background-color: black;
+  }
+  QCalendarWidget QMenu {
+  	width: 60px;
+    left: 20px;
+  	color: white;
+  	font-size: 12px;
+  	background-color: rgb(100, 100, 100);
+  }
+  QCalendarWidget QSpinBox { 
+  	width: 60px; 
+  	font-size:12px; 
+  	color: white; 
+  	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); 
+  	selection-background-color: rgb(136, 136, 136);
+  	selection-color: rgb(255, 255, 255);
+  }
+  QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:20px; }
+  QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:20px;}
+  QCalendarWidget QSpinBox::up-arrow { width:20px;  height:20px; }
+  QCalendarWidget QSpinBox::down-arrow { width:20px;  height:20px; }
+   
+  /* header row */
+  QCalendarWidget QWidget { alternate-background-color: rgb(128, 128, 128); }
+   
+  /* normal days */
+  QCalendarWidget QAbstractItemView:enabled 
+  {
+  	font-size:12px;  
+  	color: rgb(180, 180, 180);  
+  	background-color: black;  
+  	selection-background-color: rgb(64, 64, 64); 
+  	selection-color: rgb(0, 255, 0); 
+  }
+   
+  /* days in other months */
+  /* navigation bar */
+QCalendarWidget QWidget#qt_calendar_navigationbar
+{ 
+  background-color: black; 
 }
-QDateEdit::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 5px;
+
+QCalendarWidget QAbstractItemView:disabled 
+{ 
+color: rgb(64, 64, 64); 
 }</string>
             </property>
             <property name="maximumDate">
@@ -854,17 +997,58 @@ border-radius: 5px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QDateEdit{
-color: rgb(0,0,0);
-background-color: white;
-border: 2px solid rgb(0,0,0);
-border-radius: 20px;
+             <string notr="true">
+QCalendarWidget QToolButton {
+  	height: 20px;
+  	width: 60px;
+  	color: white;
+  	font-size: 12px;
+  	icon-size: 20px, 20px;
+  	background-color: black;
+  }
+  QCalendarWidget QMenu {
+  	width: 60px;
+    left: 20px;
+  	color: white;
+  	font-size: 12px;
+  	background-color: rgb(100, 100, 100);
+  }
+  QCalendarWidget QSpinBox { 
+  	width: 60px; 
+  	font-size:12px; 
+  	color: white; 
+  	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); 
+  	selection-background-color: rgb(136, 136, 136);
+  	selection-color: rgb(255, 255, 255);
+  }
+  QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:20px; }
+  QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:20px;}
+  QCalendarWidget QSpinBox::up-arrow { width:20px;  height:20px; }
+  QCalendarWidget QSpinBox::down-arrow { width:20px;  height:20px; }
+   
+  /* header row */
+  QCalendarWidget QWidget { alternate-background-color: rgb(128, 128, 128); }
+   
+  /* normal days */
+  QCalendarWidget QAbstractItemView:enabled 
+  {
+  	font-size:12px;  
+  	color: rgb(180, 180, 180);  
+  	background-color: black;  
+  	selection-background-color: rgb(64, 64, 64); 
+  	selection-color: rgb(0, 255, 0); 
+  }
+   
+  /* days in other months */
+  /* navigation bar */
+QCalendarWidget QWidget#qt_calendar_navigationbar
+{ 
+  background-color: black; 
 }
-QDateEdit::disabled{
-color: rgb(229, 229, 229);
-background-color: rgb(204, 204, 204);
-border: 2px solid rgb(204, 204, 204);
-border-radius: 5px;
+
+QCalendarWidget QAbstractItemView:disabled 
+{ 
+color: rgb(64, 64, 64); 
 }</string>
             </property>
             <property name="maximumDate">
@@ -894,34 +1078,42 @@ border-radius: 5px;
             <property name="minimumSize">
              <size>
               <width>50</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>70</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="font">
              <font>
               <family>맑은 고딕</family>
-              <pointsize>11</pointsize>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: black;
-background-color: white;
+color: white;
+background-color: black;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
 QPushButton::pressed{
-color: white;
-background-color: black;
+color: black;
+background-color: white;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
@@ -1009,163 +1201,176 @@ border-radius: 5px;
           </item>
          </layout>
         </item>
+        <item row="6" column="0" colspan="2">
+         <widget class="QProgressBar" name="prbar">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="font">
+           <font>
+            <family>맑은 고딕</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">	background-color: white;
+	border: 0px solid rgb(0,0,0);
+	border-radius: 20px;</string>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
         <item row="7" column="0" colspan="2">
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <widget class="QProgressBar" name="prbar">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="palette">
-             <palette>
-              <active>
-               <colorrole role="Button">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="Base">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="Window">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-              </active>
-              <inactive>
-               <colorrole role="Button">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="Base">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="Window">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-              </inactive>
-              <disabled>
-               <colorrole role="Button">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="Base">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="Window">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                 </color>
-                </brush>
-               </colorrole>
-              </disabled>
-             </palette>
-            </property>
-            <property name="font">
-             <font>
-              <family>맑은 고딕</family>
-              <pointsize>11</pointsize>
-             </font>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">
-	background-color: white;
-	border: 2px solid rgb(0,0,0);
-	border-radius: 20px;</string>
-            </property>
-            <property name="value">
-             <number>0</number>
-            </property>
-            <property name="textVisible">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
+          <item row="0" column="1" alignment="Qt::AlignRight">
            <widget class="QPushButton" name="btnReporting">
             <property name="minimumSize">
              <size>
               <width>100</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>150</width>
-              <height>25</height>
+              <height>30</height>
              </size>
             </property>
             <property name="font">
              <font>
               <family>맑은 고딕</family>
-              <pointsize>11</pointsize>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: black;
-background-color: white;
+color: white;
+background-color: black;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }
 QPushButton::pressed{
-color: white;
-background-color: black;
+color: black;
+background-color: white;
 border: 2px solid rgb(0, 0, 0);
 border-radius: 5px;
 }

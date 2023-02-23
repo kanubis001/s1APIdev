@@ -45,6 +45,7 @@ class getEndpoints:
             contents = json.loads(response._content)
             # print(contents)
             try:
+                # print(len(contents.get("data")))
                 for i in range(0, len(contents.get("data"))):
                     try:
                         #################### debug용 출력
@@ -55,8 +56,13 @@ class getEndpoints:
                         # endpointInfo에 원하는 내용 삽입.
                         if contents.get("data")[i].get("networkInterfaces") ==[]:
                             ip="no ipv4"
+                        elif contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]==[]:
+                            ip="no ipv4"
                         else:
-                            ip=contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]
+                            if contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]==[]:
+                                ip="no ipv4"
+                            else:
+                                ip=contents.get("data")[i].get("networkInterfaces")[0].get("inet")[0]
                         # print(contents.get("data")[i])
                         self.endpointInfo.append([
                             contents.get("data")[i].get("computerName"),
@@ -77,14 +83,16 @@ class getEndpoints:
                             True
                             ])
                     except IndexError as e:
-                        debug=str("Exception log; endPoints IndexError: ", e, contents.get("data")[i])
+                        # debug=str("Exception log; endPoints IndexError: "+ contents.get("data")[i])
                         self.cnt_err_coms += 1
-                        log_write2(sys, debug)
+                        print("indexerr",contents.get("data")[i],i)
+                        # log_write2(sys, contents.get("data")[i])
                         
                     self.cnt_coms += 1
             except TypeError as e:
-                debug=str("Exception log; TypeError: ", e, contents.get("data")[i])
-                log_write2(sys,debug)
+                print(contents.get("data")[i])
+                # debug=str("Exception log; TypeError: "+ contents.get("data")[i])
+                # log_write2(sys,contents.get("data")[i])
                 # print("Exception log; TypeError: ", e)
                 break
 

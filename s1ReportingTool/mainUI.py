@@ -9,6 +9,8 @@ from connect import sess
 from logger import *
 import datetime
 import time
+from threading import *
+
 now = datetime.datetime.now()
 nowDate = now.strftime('%Y%m%d')
 uYEAR = now.strftime('%Y')
@@ -61,37 +63,58 @@ class mkreportInfo(QThread):
             
 class progressThread(QThread):
     per_changed=pyqtSignal(int)
+    # prbar_test=pyqtSignal(int)
     
     def __init__(self,per=0,parent=None):
         super().__init__()
         self.main=parent
         self.working=True
-        self.main.prbar.setValue(0)
-        self.per=per
+        # self.main.prbar.setValue(0)
+        # self.per=per
+        # self.i=0
         
     def __del__(self):
+        self.main.prbar.setRange(0,100)
+        self.per_changed.emit(100)
         log_write2(sys,"end progress bar")
+        pass
+        
         
     def run(self):
+
+        log_write2(sys,"start progress bar")
+        # print(self.prbar_test)
+        # setTotal=self.main.settotal
+        # print(self.main.settotal)
         self.main.prbar.reset()
-        # self.main.prbar.setRange(0,len(self.main.groups))
         self.main.prbar.setRange(0,0)
-        total=len(self.main.groups)
+        # setTotal=self.main.totalCnt_prb
+        # self.main.prbar.setRange(0,setTotal)
+
+        # self.main.prbar.setRange(0,0)
+        # total=len(self.main.groups)
         # i=int(100/total)
-        
+            # self.per_changed.emit(self.per)
+        if self.working==False:
+            self.main.prbar.setRange(0,100)
+            self.per_changed.emit(100)
+            self.__del__()
+        '''
         while self.working:
+            print(self.working, self.per)
             if self.per==total:
                 self.main.prbar.setRange(0,100)
                 self.per_changed.emit(100)
                 self.__del__()
             else:
                 self.per_changed.emit(self.per)
-            # self.per+=1
+        '''
+                # self.per+=1
             # self.sleep(1)
         # self.per_changed.emit(total)
-        self.main.prbar.setRange(0,100)
-        self.per_changed.emit(100)
-        self.__del__()
+        # self.main.prbar.setRange(0,100)
+        # self.per_changed.emit(100)
+        # self.__del__()
     
     def add_per(self):
         self.per+=1
@@ -125,7 +148,7 @@ class WindowClass(QMainWindow, form_class):
         log_simple("############program Start")
         super().__init__()
         #chkgrouporsite False면 그룹 아이디 필요 없음
-        self.statusBar().showMessage('1.3.2b')
+        self.statusBar().showMessage('1.4.0b')
         self.enablegroupid=True
         self.setupUi(self)
         self.labelAcc_2.setHidden(True)
@@ -146,20 +169,27 @@ class WindowClass(QMainWindow, form_class):
         self.bar=progressThread(parent=self)
         self.set=mkreportInfo(parent=self)
         self.bar.per_changed.connect(self.per_update)
+        # self.bar.prbar_test.connect(self.maxValueset)
+        self.prbarchk="group"
+        self.settotal=100
 
-  
+
+    @pyqtSlot(int)
+    def maxValueset(self,val):
+        self.prbar.setRange(0,val)
+
     @pyqtSlot(int)
     def per_update(self,per):
         self.prbar.setValue(per)
         
     @pyqtSlot(int)
     def per_add(self,per):
-        self.prbar.setValue(per)    
+        self.prbar.setValue(per)
     
-    @pyqtSlot()
+    @pyqtSlot(int)
     def bar_start(self):
         log_write2(sys,str(len(self.groups))+"bar start")
-        self.prbar.setRange(0,len(self.groups))
+        # self.prbar.setRange(0,self.prbartot)
         self.bar.working=True
         self.bar.start()
         
@@ -179,9 +209,10 @@ class WindowClass(QMainWindow, form_class):
         
 
     def threadControl(self):
-        # self.bar_start()
         self.set_start()
+        self.bar_start()
         # self.setInfo()
+    
     
     def check(self):
         self.startDate = self.dateStart.date()
@@ -217,7 +248,7 @@ class WindowClass(QMainWindow, form_class):
         if daylong <= 7:
             QMessageBox.warning(self, "날짜 오류", "기간이 너무 짧습니다.")
             daterr=False
-        elif daylong > 100:
+        elif daylong > 200:
             QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 6개월(200일)까지 지정할 수 있습니다.")
             daterr=False
 
@@ -237,9 +268,10 @@ class WindowClass(QMainWindow, form_class):
         self.btnConfirm.setEnabled(False)
         self.comboConsole.setEnabled(False)
         self.lineApitk.setEnabled(False)
-        
+    
     def setInfo(self):
         self.btnReporting.setEnabled(False)
+        self.btnRepair.setDisabled(True)
         if self.enablegroupid==False:
             # print(self.comboSite.currentText())
             log_write2(sys,"site current text"+str(self.comboSite.currentText()))
@@ -254,15 +286,20 @@ class WindowClass(QMainWindow, form_class):
             self.names=[self.comboAcc.currentText(),self.comboSite.currentText(),self.comboGrp.currentText()]
         
         # print(idTxt)
+        # self.totalCnt_prb=len(targetArr)
+        # print(self.totalCnt_prb)
         for i in range(0, len(targetArr)):
             # self.per_update(i)
+            # self.prbar.setValue(i)
+            
             if idTxt == targetArr[i][0]:
                 self.finalid = targetArr[i][1]
                 reporDir = controller.start(self, self.finalid, self.startd, self.endd,self.enablegroupid,self.names)
+                self.bar.working=False
                 self.labelDirectory.setEnabled(True)
                 self.labelDirectory.setText(reporDir)
                 self.btnReporting.setEnabled(False)
-                self.bar.working=False
+                self.btnRepair.setDisabled(False)
                 break
         # self.setI.stop()
 
@@ -326,6 +363,7 @@ class WindowClass(QMainWindow, form_class):
         self.btnConfirm.setDisabled(True)
         self.comboConsole.setDisabled(True)
         self.lineApitk.setDisabled(True)
+        
         self.setmain(self.comboConsole.currentText(), self.lineApitk.text())
         self.findAccount()
 
