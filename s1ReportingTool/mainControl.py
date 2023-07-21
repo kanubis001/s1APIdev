@@ -56,9 +56,10 @@ class controller:
 
     def findAccount(self):
         try:
-            accurl = self.url+"/web/api/v2.1/accounts"+"?token="+self.token
+            accurl = self.url+"/web/api/v2.1/accounts"+"?limit=100&token="+self.token
             response = sess.get(accurl)
             contents = json.loads(response._content)
+            print(contents)
             if contents.get('errors'):
                 if contents.get('errors')[0].get("detail")=="Action is not allowed to site users":
                     siteurl = self.url+"/web/api/v2.1/sites"+"?token="+self.token

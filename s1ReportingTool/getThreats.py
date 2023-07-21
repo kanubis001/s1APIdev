@@ -90,16 +90,22 @@ class getThreats:
 
     def getTop20fromThreat(self,datas):
         dic_t20agents={}
+        cnt=0;
         for data in datas:
             #감염여부 확인
             # print(data)
-            if data[4] in dic_t20agents.keys():
-                a=int(dic_t20agents.get(data[4]))
-                a+=1
-                dic_t20agents[data[4]]=a
-            else:
-                dic_t20agents[data[4]]=1
+            if data[4]!=0:
+                if data[4] in dic_t20agents.keys():
+                    a=int(dic_t20agents.get(data[4]))
+                    a+=1
+                    dic_t20agents[data[4]]=a
+                else:
+                    dic_t20agents[data[4]]=1
+            else : 
+                cnt+=1
+        print(cnt)
         sorted_dic=dict(sorted(dic_t20agents.items(),key=lambda x:x[1],reverse=True))
+        # print (sorted_dic)
         return sorted_dic
     
     def cntMitiStatus(self,type):

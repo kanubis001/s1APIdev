@@ -1,0 +1,7 @@
+2023-03-22 10:58:16,456|22|DEBUG:__init__|start report tool
+2023-03-22 10:58:16,456|18|DEBUG:############program Start
+2023-03-22 10:58:23,625|22|DEBUG:connectAPI|connection success. session start
+2023-03-22 10:58:32,435|22|DEBUG:bar_start|3bar start
+2023-03-22 10:58:32,436|22|DEBUG:run|run thread
+2023-03-22 10:58:32,437|22|DEBUG:setInfo|group current textDefault Group
+2023-03-22 10:58:32,437|22|DEBUG:run|start progress bar

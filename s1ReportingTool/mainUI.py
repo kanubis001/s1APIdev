@@ -1,9 +1,15 @@
 import sys
 import os
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5 import QtCore
-from PyQt5 import uic
+from PyQt6.QtWidgets import *
+from PyQt6.QtCore import *
+from PyQt6 import QtCore
+from PyQt6 import uic
+from PyQt6.QtGui import *
+# from PyQt5.QtWidgets import *
+# from PyQt5.QtCore import *
+# from PyQt5 import QtCore
+# from PyQt5 import uic
+# from PyQt5.QtGui import *
 from mainControl import controller
 from connect import sess
 from logger import *
@@ -37,9 +43,11 @@ def resource_path(relative_path):
         os.path.abspath(__file__)))
     return os.path.join(base_path, relative_path)
 
-
-form = resource_path('./reporterMain.ui')
+# form = resource_path('./reporterMain.ui')
+form = resource_path('./reportwidget.ui')
 form_class = uic.loadUiType(form)[0]
+formindex = resource_path('./index.ui')
+index_form_class = uic.loadUiType(formindex)[0]
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
 # form_class = uic.loadUiType('main.ui')[0]
@@ -86,8 +94,9 @@ class progressThread(QThread):
         # print(self.prbar_test)
         # setTotal=self.main.settotal
         # print(self.main.settotal)
-        self.main.prbar.reset()
-        self.main.prbar.setRange(0,0)
+        # self.main.prbar.reset()
+        # log_write2(sys,"prbar reset()")
+        # self.main.prbar.setRange(0,0)
         # setTotal=self.main.totalCnt_prb
         # self.main.prbar.setRange(0,setTotal)
 
@@ -118,10 +127,21 @@ class progressThread(QThread):
     
     def add_per(self):
         self.per+=1
-        
-    
        
-class WindowClass(QMainWindow, form_class):
+class indexWin(QMainWindow, index_form_class):
+    def __init__(self):
+        super().__init__();
+        self.setupUi(self);
+        self.btnReportIntro.clicked.connect(self.gotoReport)
+        self.statusBar().showMessage('2.0.1b')
+        
+    def gotoReport(self):
+        self.hide() #해당 윈도우 숨김
+        self.repowin=mainWinClass()
+        self.repowin.exec()  # 두번째 창 닫을 때까지 기다림
+        self.show()  # 두번째 창 닫으면 첫번째 창 다시 보임
+        
+class mainWinClass( QDialog, QWidget, form_class):
     add_per_sig=pyqtSignal()
     qss = """
         QWidget {
@@ -141,21 +161,28 @@ class WindowClass(QMainWindow, form_class):
         
         }"""
     def __init__(self):
-        super().__init__()
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        super(mainWinClass,self).__init__()
+        # self.setWindowFlags(Qt.FramelessWindowHint)
+        # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setStyleSheet(self.qss)
         log_write2(sys,"start report tool")
         log_simple("############program Start")
-        super().__init__()
         #chkgrouporsite False면 그룹 아이디 필요 없음
-        self.statusBar().showMessage('1.4.0b')
+        
         self.enablegroupid=True
-        self.setupUi(self)
+        self.setupUi(self);
+        self.show();
+        qPixmapVar=QPixmap()
+        qPixmapVar.load("icon\콤시스 로고3.png")
+        qPixmapVar=qPixmapVar.scaledToWidth(100)
+        self.logolabel.setPixmap(qPixmapVar)
+        # self.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint)
         self.labelAcc_2.setHidden(True)
         self.labelSite_2.setHidden(True)
         self.labelGrp_2.setHidden(True)
         self.percnt=0
         self.btnReporting.setEnabled(False)
+        # self.btnBack.clicked.connect(self.gotoback)
         self.comboConsole.currentIndexChanged.connect(self.urlFunc)
         self.btnConfirm.clicked.connect(self.confirmFunc)
         self.btnRepair.clicked.connect(self.repairFunc)
@@ -172,7 +199,6 @@ class WindowClass(QMainWindow, form_class):
         # self.bar.prbar_test.connect(self.maxValueset)
         self.prbarchk="group"
         self.settotal=100
-
 
     @pyqtSlot(int)
     def maxValueset(self,val):
@@ -192,7 +218,6 @@ class WindowClass(QMainWindow, form_class):
         # self.prbar.setRange(0,self.prbartot)
         self.bar.working=True
         self.bar.start()
-        
     
     @pyqtSlot()
     def bar_stop(self):
@@ -206,27 +231,30 @@ class WindowClass(QMainWindow, form_class):
     @pyqtSlot()
     def set_stop(self):
         self.set.working = False   
-        
 
     def threadControl(self):
         self.set_start()
         self.bar_start()
         # self.setInfo()
     
-    
+    def gotoback(self):
+        self.close()
+        
     def check(self):
         self.startDate = self.dateStart.date()
         self.endDate = self.dateEnd.date()
         # print(self.startDate)
         # log_write(sys._getframe(0).f_code.co_name,sys._getframe(1).f_code.co_name,self.startDate)
-        self.startd = self.startDate.toString(Qt.ISODate)
-        self.endd = self.endDate.toString(Qt.ISODate)
+        
+        self.startd = self.startDate.toString(Qt.DateFormat.ISODate)
+        # print(self.startd);
+        self.endd = self.endDate.toString(Qt.DateFormat.ISODate)
         # print(self.startd)
         grperr,siterr,accerr,daterr=True,True,True,True
         
         if self.comboGrp.currentText() == "":
-            reply=QMessageBox.question(self, "그룹 없음", "그룹이 선택되지 않았습니다. 사이트 단위로 보고서를 생성하시겠습니까?",QMessageBox.Yes|QMessageBox.No)
-            if reply==QMessageBox.Yes:
+            reply=QMessageBox.question(self, "그룹 없음", "그룹이 선택되지 않았습니다. 사이트 단위로 보고서를 생성하시겠습니까?",QMessageBox.StandardButton.Yes|QMessageBox.StandardButton.No)
+            if reply==QMessageBox.StandardButton.Yes:
                 self.enablegroupid=False
                 pass
             else:
@@ -276,7 +304,9 @@ class WindowClass(QMainWindow, form_class):
             # print(self.comboSite.currentText())
             log_write2(sys,"site current text"+str(self.comboSite.currentText()))
             idTxt=self.comboSite.currentText()
+            log_write2(sys,"idTxt")
             targetArr=self.sites
+            log_write2(sys,"idTxt")
             self.names=[self.comboAcc.currentText(),self.comboSite.currentText()]
         if self.enablegroupid==True:
             # print(self.comboGrp.currentText())
@@ -394,11 +424,11 @@ if __name__ == "__main__":
     # QApplication : 프로그램을 실행시켜주는 클래스
     app = QApplication(sys.argv)
 
-    # WindowClass의 인스턴스 생성
-    myWindow = WindowClass()
+    # mainWinClass의 인스턴스 생성
+    myWindow = indexWin()
 
     # 프로그램 화면을 보여주는 코드
     myWindow.show()
 
     # 프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
-    app.exec_()
+    app.exec()

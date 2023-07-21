@@ -1,0 +1,139 @@
+2023-03-21 17:13:26,002|22|DEBUG:__init__|start report tool
+2023-03-21 17:13:26,002|18|DEBUG:############program Start
+2023-03-21 17:24:52,717|22|DEBUG:__init__|start report tool
+2023-03-21 17:24:52,718|18|DEBUG:############program Start
+2023-03-21 17:24:54,797|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:25:03,612|22|DEBUG:bar_start|10bar start
+2023-03-21 17:25:03,612|22|DEBUG:run|run thread
+2023-03-21 17:25:03,612|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:25:03,613|22|DEBUG:run|start progress bar
+2023-03-21 17:25:38,388|22|DEBUG:__init__|start report tool
+2023-03-21 17:25:38,388|18|DEBUG:############program Start
+2023-03-21 17:25:47,172|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:25:54,043|22|DEBUG:bar_start|10bar start
+2023-03-21 17:25:54,045|22|DEBUG:run|run thread
+2023-03-21 17:25:54,045|22|DEBUG:run|start progress bar
+2023-03-21 17:26:53,752|22|DEBUG:__init__|start report tool
+2023-03-21 17:26:53,752|18|DEBUG:############program Start
+2023-03-21 17:27:00,927|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:27:08,336|22|DEBUG:bar_start|10bar start
+2023-03-21 17:27:08,337|22|DEBUG:run|run thread
+2023-03-21 17:27:08,338|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:27:08,338|22|DEBUG:run|start progress bar
+2023-03-21 17:28:09,159|22|DEBUG:__init__|start report tool
+2023-03-21 17:28:09,160|18|DEBUG:############program Start
+2023-03-21 17:28:18,689|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:28:25,594|22|DEBUG:bar_start|3bar start
+2023-03-21 17:28:25,594|22|DEBUG:run|run thread
+2023-03-21 17:28:25,595|22|DEBUG:run|start progress bar
+2023-03-21 17:29:00,508|22|DEBUG:__init__|start report tool
+2023-03-21 17:29:00,508|18|DEBUG:############program Start
+2023-03-21 17:29:06,312|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:29:13,293|22|DEBUG:bar_start|10bar start
+2023-03-21 17:29:13,294|22|DEBUG:run|run thread
+2023-03-21 17:29:13,295|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:29:13,295|22|DEBUG:run|start progress bar
+2023-03-21 17:29:59,626|22|DEBUG:__init__|start report tool
+2023-03-21 17:29:59,627|18|DEBUG:############program Start
+2023-03-21 17:30:05,277|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:30:13,464|22|DEBUG:bar_start|3bar start
+2023-03-21 17:30:13,465|22|DEBUG:run|run thread
+2023-03-21 17:30:13,466|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:30:13,466|22|DEBUG:setInfo|idTxt
+2023-03-21 17:30:13,466|22|DEBUG:run|start progress bar
+2023-03-21 17:30:43,061|22|DEBUG:__init__|start report tool
+2023-03-21 17:30:43,062|18|DEBUG:############program Start
+2023-03-21 17:30:50,985|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:30:58,806|22|DEBUG:bar_start|3bar start
+2023-03-21 17:30:58,807|22|DEBUG:run|run thread
+2023-03-21 17:30:58,807|22|DEBUG:run|start progress bar
+2023-03-21 17:32:29,125|22|DEBUG:__init__|start report tool
+2023-03-21 17:32:29,126|18|DEBUG:############program Start
+2023-03-21 17:32:32,090|22|DEBUG:connectAPI|401 connection error
+2023-03-21 17:32:32,090|22|DEBUG:findAccount|type err
+2023-03-21 17:32:33,217|22|DEBUG:findAccount|console url or APItoken error
+2023-03-21 17:32:37,300|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:32:44,791|22|DEBUG:bar_start|3bar start
+2023-03-21 17:32:44,792|22|DEBUG:run|run thread
+2023-03-21 17:32:44,792|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:32:44,793|22|DEBUG:run|start progress bar
+2023-03-21 17:34:20,534|22|DEBUG:__init__|start report tool
+2023-03-21 17:34:20,535|18|DEBUG:############program Start
+2023-03-21 17:34:29,448|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:34:37,730|22|DEBUG:bar_start|3bar start
+2023-03-21 17:34:37,731|22|DEBUG:run|run thread
+2023-03-21 17:34:37,731|22|DEBUG:setInfo|site current text국내 법인
+2023-03-21 17:34:37,731|22|DEBUG:run|start progress bar
+2023-03-21 17:34:37,732|22|DEBUG:setInfo|idTxt
+2023-03-21 17:34:37,732|22|DEBUG:run|prbar reset()
+2023-03-21 17:34:37,732|22|DEBUG:setInfo|targetArr
+2023-03-21 17:34:37,758|22|DEBUG:__init__|for debug
+2023-03-21 17:34:37,759|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netNa94hzxLEmpiYLkjTwEjfixWOdcQfaKJ6COLLTnGIjHxiwAobMCWbloJIsGeAxbuS5lu6Rj1Tx4Uiw37
+2023-03-21 17:34:37,760|22|DEBUG:get|get func menu datesite
+2023-03-21 17:34:37,761|22|DEBUG:getfromDate|for debug
+2023-03-21 17:37:58,084|22|DEBUG:__init__|start report tool
+2023-03-21 17:37:58,085|18|DEBUG:############program Start
+2023-03-21 17:38:06,392|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:38:19,262|22|DEBUG:bar_start|3bar start
+2023-03-21 17:38:19,263|22|DEBUG:run|run thread
+2023-03-21 17:38:19,263|22|DEBUG:run|start progress bar
+2023-03-21 17:39:26,858|22|DEBUG:__init__|start report tool
+2023-03-21 17:39:26,858|18|DEBUG:############program Start
+2023-03-21 17:39:33,519|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:39:41,811|22|DEBUG:bar_start|3bar start
+2023-03-21 17:39:41,811|22|DEBUG:run|run thread
+2023-03-21 17:39:41,812|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:39:41,812|22|DEBUG:run|start progress bar
+2023-03-21 17:39:41,813|22|DEBUG:setInfo|idTxt
+2023-03-21 17:39:41,813|22|DEBUG:run|prbar reset()
+2023-03-21 17:39:41,813|22|DEBUG:setInfo|idTxt
+2023-03-21 17:39:41,840|22|DEBUG:__init__|for debug
+2023-03-21 17:39:41,841|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netNa94hzxLEmpiYLkjTwEjfixWOdcQfaKJ6COLLTnGIjHxiwAobMCWbloJIsGeAxbuS5lu6Rj1Tx4Uiw37
+2023-03-21 17:39:41,841|22|DEBUG:get|get func menu datesite
+2023-03-21 17:39:41,841|22|DEBUG:getfromDate|for debug
+2023-03-21 17:40:03,954|22|DEBUG:__init__|start report tool
+2023-03-21 17:40:03,955|18|DEBUG:############program Start
+2023-03-21 17:40:08,170|22|DEBUG:connectAPI|connection success. session start
+2023-03-21 17:40:11,134|22|DEBUG:getfromDate|for debug
+2023-03-21 17:40:11,135|22|DEBUG:start|start func begin
+2023-03-21 17:40:11,135|22|DEBUG:start|start func reforge completed
+2023-03-21 17:40:18,291|22|DEBUG:bar_start|10bar start
+2023-03-21 17:40:18,292|22|DEBUG:run|run thread
+2023-03-21 17:40:18,293|22|DEBUG:setInfo|site current textDefault site
+2023-03-21 17:40:18,293|22|DEBUG:run|start progress bar
+2023-03-21 17:40:18,293|22|DEBUG:setInfo|idTxt
+2023-03-21 17:40:18,296|22|DEBUG:run|prbar reset()
+2023-03-21 17:40:18,296|22|DEBUG:setInfo|idTxt
+2023-03-21 17:40:18,320|22|DEBUG:__init__|for debug
+2023-03-21 17:40:18,321|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netNa94hzxLEmpiYLkjTwEjfixWOdcQfaKJ6COLLTnGIjHxiwAobMCWbloJIsGeAxbuS5lu6Rj1Tx4Uiw37
+2023-03-21 17:40:18,321|22|DEBUG:get|get func menu datesite
+2023-03-21 17:40:18,322|22|DEBUG:getfromDate|for debug
+2023-03-21 17:40:21,268|22|DEBUG:start|start func begin
+2023-03-21 17:40:21,268|22|DEBUG:start|start func reforge completed
+2023-03-22 10:54:58,996|22|DEBUG:__init__|start report tool
+2023-03-22 10:54:58,998|18|DEBUG:############program Start
+2023-03-22 10:55:37,223|22|DEBUG:__init__|start report tool
+2023-03-22 10:55:37,224|18|DEBUG:############program Start
+2023-03-22 10:55:46,060|22|DEBUG:connectAPI|connection success. session start
+2023-03-22 10:55:53,530|22|DEBUG:bar_start|3bar start
+2023-03-22 10:55:53,530|22|DEBUG:run|run thread
+2023-03-22 10:55:53,531|22|DEBUG:setInfo|group current textDefault Group
+2023-03-22 10:55:53,531|22|DEBUG:run|start progress bar
+2023-03-22 10:55:53,532|22|DEBUG:run|prbar reset()
+2023-03-22 10:55:53,573|22|DEBUG:__init__|for debug
+2023-03-22 10:55:53,575|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netNa94hzxLEmpiYLkjTwEjfixWOdcQfaKJ6COLLTnGIjHxiwAobMCWbloJIsGeAxbuS5lu6Rj1Tx4Uiw37
+2023-03-22 10:55:53,575|22|DEBUG:get|get func menu dategroup
+2023-03-22 10:55:53,576|22|DEBUG:getfromDate|for debug
+2023-03-22 10:55:55,073|22|DEBUG:start|start func begin
+2023-03-22 10:55:55,073|22|DEBUG:start|start func reforge completed
+2023-03-22 10:55:55,820|22|DEBUG:getAll|log; noneCursor: start
+2023-03-22 10:55:55,822|22|DEBUG:getAll|Computer : 1대
+2023-03-22 10:55:55,834|22|DEBUG:getAll|Error Computer : 0대
+2023-03-22 10:55:55,858|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-03-22 10:55:55,880|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-03-22 10:55:55,900|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-03-22 10:55:55,929|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-03-22 10:55:56,137|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-03-22 10:55:56,248|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-03-22 10:55:56,277|22|DEBUG:getSolved|7. 해결된 위협
+2023-03-22 10:55:56,301|22|DEBUG:__del__|end mkreportInfo thread

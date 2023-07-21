@@ -80,6 +80,7 @@ class mainReporting:
         # GE.getbyInfectedDetail()
 
     def getTop20(self, datas):
+        # print(datas)
         top20 = self.GT.getTop20fromThreat(datas)
         self.makeReport.writeTitle("4. 기간내 Top20 탐지 Endpoints", 2)
         if len(top20) < 20:

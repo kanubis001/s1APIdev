@@ -84,7 +84,7 @@ def connectAPItest(s1Site,loginType,apiToken):
     else:
         debug=str(response.status_code)+" connection error"
         log_write2(sys,debug)
-        # print(response.status_code, " 접속 에러")
+        print(response.status_code, " 접속 에러")
         status=0
         sess.close()
     return status
