@@ -3,7 +3,7 @@
 # version : 1.1.1
 # author : Jaeho Kim
 # company : Comsys
-# name : preInstallChecker_py2
+# name : preInstallChecker
 # description : 센티넬원 설치 전 사전 점검 툴
 # history : 2023.7.18 1.0.0 first release
 #           2023.7.21 1.0.1 윈도우11 일부에서 나타나는 문제점 fix 
