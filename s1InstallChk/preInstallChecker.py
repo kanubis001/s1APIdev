@@ -148,7 +148,7 @@ def start():
             except Exception as e:
                 pass
             
-        diplayVer=osversion[8:]
+        diplayVer=osversion[8:].lower()
         relver=str(platform.release())
         if int(osbuildver)>=22000:
             osversion=osversion.replace("10","11")
@@ -239,7 +239,7 @@ def get_windows_updates_info():
         return updates_info
 
     except Exception as e:
-        print("오류 발생:", e)
+        print("Err occur:", e)
         return None
 
 class window:
@@ -344,6 +344,10 @@ class window:
         with open(reportpath,"a", encoding="utf-8") as f:
             f.write("\n=======================설치된 hotfix 버전 확인=======================\n")
             try:
+                # offline용#####################
+                kbinfos = os.popen('wmic qfe list full /format:table').read()
+                updates_info=re.findall(r'KB[0-9]{7}',kbinfos)
+                ###################################
                 updateKBarr=None
                 dispVer=displayVer.lower()
                 # 2012 r2 버전 확인할때 사용함. True -> 2012r2
@@ -382,32 +386,33 @@ class window:
                 # 남아 있는 업데이트 목록이 반드시 업데이트 되어야하는 목록.
                 mustupdate=updateKBarr
                 
-                update_info=get_windows_updates_info()
-                for update in update_info:
-                    if update["IsInstalled"]==True:
-                        cnt+=1
-                        name_KB=update["Title"][-10:-1]
-                        if(name_KB==None):
-                            pass
+                # updates_info=get_windows_updates_info()
+                for update in updates_info:
+                    # if update["IsInstalled"]==True:
+                    #     cnt+=1
+                    #     name_KB=update["Title"][-10:-1]
+                    #     if(name_KB==None):
+                    #         pass
+                    #     else:
+                    if chkr2:
+                        if update in win2012r2only:
+                            f.write(update+" : 해당 업데이트 버전은 하위 업데이트 버전을 포함합니다.\n")
+                            mustupdate=[]
+                            break
                         else:
-                            if chkr2:
-                                if name_KB in win2012r2only:
-                                    f.write(name_KB," : 해당 업데이트 버전은 하위 업데이트 버전을 포함합니다.\n")
-                                    break
-                                else:
-                                    if name_KB in updateKBarr:
-                                        mustupdate.remove(name_KB)
-                                    else:
-                                        update_done.append(name_KB)
+                            if update in updateKBarr:
+                                mustupdate.remove(update)
                             else:
-                                if name_KB in updateKBarr:
-                                    mustupdate.remove(name_KB)
-                                    # f.write(u"[ " + update + u" ] 설치됨\n")
-                                    # updatecnt += 1
-                                else:
-                                    update_done.append(name_KB)
+                                update_done.append(update)
                     else:
-                        pass
+                        if update in updateKBarr:
+                            mustupdate.remove(update)
+                            # f.write(u"[ " + update + u" ] 설치됨\n")
+                            # updatecnt += 1
+                        else:
+                            update_done.append(update)
+                    # else:
+                    #     pass
                 if len(mustupdate)==0:
                     if srv2008sp != "Service Pack 1":
                         pass
