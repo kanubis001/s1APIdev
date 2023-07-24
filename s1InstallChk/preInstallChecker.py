@@ -1,12 +1,15 @@
 # -*- coding:utf-8 -*-
 #################################################
-# version : 1.0.1
+# version : 1.1.1
 # author : Jaeho Kim
 # company : Comsys
-# name : preInstallChecker
+# name : preInstallChecker_py2
 # description : 센티넬원 설치 전 사전 점검 툴
 # history : 2023.7.18 1.0.0 first release
 #           2023.7.21 1.0.1 윈도우11 일부에서 나타나는 문제점 fix 
+#           2023.7.21 1.0.2 Cipher Suites 검색로직 수정 
+#           2023.7.24 1.1.0 윈도우8버전 핫픽스 목록 업데이트, hotfix 검색 로직 수정 
+#           2023.7.24 1.1.1 win2008, win11 구분 로직 및 출력내용 변경
 #################################################
 import platform
 import psutil
@@ -48,15 +51,18 @@ win2012=["KB3003729","KB3042058","KB3140245","KB3140245"]
 # 윈도우 서버 2012r2. KB2919355 hotfix는 하위 hotfix를 포함해서 해당 버전이 있을 경우 win2012r2 목록은 검사하지 않음
 win2012r2only=["KB2919355"]
 # 윈도우 서버 2012r2
-win2012r2=["KB3021910","KB3042058","KB3172614","KB3197875","KB2919442","KB2932046","KB2959977","KB2937592","KB2938439","KB2934018"]
-# 윈도우 8,8.1,10,11 등
-winclientOther=["KB2919355","KB2932046","KB2959977","KB2937592","KB2938439","KB2934018"]
+win2012r2 = ["KB3021910", "KB3042058", "KB3172614", "KB3197875", "KB2919442", "KB2932046", "KB2959977", "KB2937592",
+              "KB2938439", "KB2934018"]
+# 윈도우 8,8.1
+win8win81=["KB2919355", "KB2932046", "KB2959977", "KB2937592", "KB2938439", "KB2934018"]
+winclientOther = []
 # 기타 다른 윈도우 서버
-winserverOther=["KB2919355","KB2932046","KB2959977","KB2937592","KB2938439","KB2934018"]
+winserverOther = ["KB2919355", "KB2932046", "KB2959977", "KB2937592", "KB2938439", "KB2934018"]
+
 
 # 검사할 ciphersuites 목록 새로 추가시 unsupportedCiphersuites와 unsupportedCiphersuites2는 _와 -를 맞춰서 작성
 # supportedCiphersuites와 supportedCiphersuites2는 TLS_ 유무
-unsupportedCiphersuites=[
+unsupportedCiphersuites = [
     "ECDHE_RSA_WITH_AES_256_CBC_SHA384",
     "ECDHE_RSA_WITH_AES_128_CBC_SHA",
     "RSA_WITH_AES_256_GCM_SHA384",
@@ -67,20 +73,9 @@ unsupportedCiphersuites=[
     "RSA_WITH_AES_128_GCM_SHA256",
     "ECDHE_RSA_WITH_AES_256_CBC_SHA",
     "RSA_WITH_CAMELLIA_128_CBC_SHA",
-    "RSA_WITH_CAMELLIA_256_CBC_SHA"]
-unsupportedCiphersuites2=[
-    "ECDHE-RSA-WITH-AES-256-CBC-SHA384",
-    "ECDHE-RSA-WITH-AES-128-CBC-SHA",
-    "RSA-WITH-AES-256-GCM-SHA384",
-    "RSA-WITH-AES-128-CBC-SHA256",
-    "ECDHE-RSA-WITH-AES-128-CBC-SHA256",
-    "RSA-WITH-AES-256-CBC-SHA",
-    "RSA-WITH-AES-256-CBC-SHA256",
-    "RSA-WITH-AES-128-GCM-SHA256",
-    "ECDHE-RSA-WITH-AES-256-CBC-SHA",
-    "RSA-WITH-CAMELLIA-128-CBC-SHA",
-    "RSA-WITH-CAMELLIA-256-CBC-SHA"]
-supportedCiphersuites=[
+    "RSA_WITH_CAMELLIA_256_CBC_SHA"
+]
+supportedCiphersuites = [
     "TLS_AES_256_GCM_SHA384",
     "TLS_CHACHA20_POLY1305_SHA256",
     "TLS_AES_128_GCM_SHA256",
@@ -107,35 +102,15 @@ supportedCiphersuites=[
     "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA",
     "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA",
     "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256",
-    "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256"]
-supportedCiphersuites2=[
-    "AES-256-GCM-SHA384",
-    "CHACHA20-POLY1305-SHA256",
-    "AES-128-GCM-SHA256",
-    "ECDHE-RSA-WITH-AES-128-GCM-SHA256",
-    "ECDHE-RSA-WITH-AES-256-GCM-SHA384",
-    "DHE-RSA-WITH-AES-128-GCM-SHA256",
-    "DHE-RSA-WITH-AES-256-GCM-SHA384",
-    "DHE-RSA-WITH-AES-128-CBC-SHA256",
-    "DHE-RSA-WITH-AES-128-CBC-SHA",
-    "DHE-RSA-WITH-AES-256-CBC-SHA256",
-    "DHE-RSA-WITH-AES-256-CBC-SHA",
-    "DHE-RSA-WITH-AES-256-CCM-8",
-    "DHE-RSA-WITH-AES-256-CCM",
-    "DHE-RSA-WITH-AES-128-CCM-8",
-    "DHE-RSA-WITH-AES-128-CCM",
-    "RSA-WITH-AES-256-CCM-8",
-    "RSA-WITH-AES-256-CCM",
-    "RSA-WITH-AES-128-CCM-8",
-    "RSA-WITH-AES-128-CCM",
-    "ECDHE-RSA-WITH-CAMELLIA-256-CBC-SHA384",
-    "DHE-RSA-WITH-CAMELLIA-256-CBC-SHA256",
-    "ECDHE-RSA-WITH-CAMELLIA-128-CBC-SHA256",
-    "DHE-RSA-WITH-CAMELLIA-128-CBC-SHA256",
-    "DHE-RSA-WITH-CAMELLIA-256-CBC-SHA",
-    "DHE-RSA-WITH-CAMELLIA-128-CBC-SHA",
-    "RSA-WITH-CAMELLIA-256-CBC-SHA256",
-    "RSA-WITH-CAMELLIA-128-CBC-SHA256"]
+    "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256"
+]
+
+mustCiphersuites=[
+    "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+    "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+    "TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
+    ]
 # 리눅스, 맥os는 보류
 # 리눅스
 aclprocLinux=["s1-agent","s1-scanner","s1-network","s1-orchestrator","s1-firewall"]
@@ -155,36 +130,35 @@ def start():
         srv2008sp=""
         path_product=r"SOFTWARE\Microsoft\Windows NT\CurrentVersion"
         key=reg.OpenKey(reg.HKEY_LOCAL_MACHINE,path_product,0)
-        cnt=0
-        while True:
+        # cnt=0
+        for cnt in range(0,30):
             try:
                 name, data , kind = reg.EnumValue(key,cnt)  
-                cnt += 1
+                # cnt += 1
                 if name=="CSDVersion":
                     srv2008sp=data
-                if name=="InstallationType":
+                elif name=="InstallationType":
                     ostype=data
-                if name=="CurrentBuild":
+                elif name=="CurrentBuild":
                     osbuildver=data
-                if name=="ProductName":
+                elif name=="ProductName":
                     osversion=data
-                    break
-            except OSError:
-                f.write('기본공유 설정을 찾을 수 없습니다.\n')
+                else:
+                    continue
+            except Exception as e:
+                pass
+            
         diplayVer=osversion[8:]
-        
-        # if ostype=="Server":
-        #     diplayVer=osversion[8:]
-        # elif ostype=="Client":
-        #     diplayVer=osversion[8:]
-        
+        relver=str(platform.release())
+        if int(osbuildver)>=22000:
+            osversion=osversion.replace("10","11")
+            relver="11"
+        else:
+            pass
+
         with open(reportpath, "a", encoding="utf-8") as f:
-            # f.write("* 윈도우 서버의 경우 일반 윈도우 버전으로 표기될 수 있습니다\n")
-            # f.write("[ OS : "+platform.system()+" ] \n")
-            # print(ostype)
-            # sys.getwindowsversion.build()
             f.write("[ OS : "+osversion+" ] \n")
-            f.write("[ release : "+str(platform.release())+" ] \n")
+            f.write("[ release : "+relver+" ] \n")
             f.write("[ build version : "+osbuildver+" ] \n")
             f.write("[ 호스트명 : "+ str(uname.node)+" ] \n")
             f.write("[ machine : "+ str(uname.machine)+" ] \n")
@@ -242,7 +216,31 @@ def chkbyos(arch,ostype,displayVer,srv2008sp):
     win.chkReg(regACLs)
     win.chkCipherSuite()
 
-    
+def get_windows_updates_info():
+    import win32com.client
+    try:
+        update_session = win32com.client.Dispatch("Microsoft.Update.Session")
+        update_searcher = update_session.CreateUpdateSearcher()
+        search_result = update_searcher.Search("IsInstalled=1")
+        updates_info = []
+
+        for update in search_result.Updates:
+            update_info = {}
+            update_info["Title"] = update.Title
+            update_info["Description"] = update.Description
+            update_info["SupportUrl"] = update.SupportUrl
+            update_info["MoreInfoUrls"] = [url for url in update.MoreInfoUrls]
+            update_info["IsMandatory"] = update.IsMandatory
+            update_info["IsInstalled"] = update.IsInstalled
+            update_info["LastDeploymentChangeTime"] = update.LastDeploymentChangeTime
+            # 필요한 추가 정보를 가져올 수 있습니다.
+            updates_info.append(update_info)
+
+        return updates_info
+
+    except Exception as e:
+        print("오류 발생:", e)
+        return None
 
 class window:
     def __init__(self):
@@ -298,7 +296,7 @@ class window:
             
             for sw in self.rchkval:
                 if re.search(regACLs,sw.lower()):
-                    f.write(sw)
+                    f.write(sw+"\n")
     
     def get_subkeys(self,key_path, root_key_path):
         try:
@@ -345,8 +343,6 @@ class window:
     def chkSystem(self,ostype,displayVer,srv2008sp):
         with open(reportpath,"a", encoding="utf-8") as f:
             f.write("\n=======================설치된 hotfix 버전 확인=======================\n")
-            f.write("아래 출력된 목록은 반드시 설치 되어야하는 hotfix 버전입니다.\n")
-            f.write("*해당 목록이 존재하면 설치에 문제가 있을 수 있습니다\n")
             try:
                 updateKBarr=None
                 dispVer=displayVer.lower()
@@ -373,58 +369,150 @@ class window:
                 elif ostype=="Client":
                     if dispVer.find("7")!=-1:
                         updateKBarr=win7win2008r2sp1
+                    elif dispVer.find("8")!=-1 | dispVer.find("8.1")!=-1:
+                        updateKBarr=win8win81
                     else:
                         updateKBarr=winclientOther
                 else:
                     f.write("OS 버전이 검색되지 않습니다.")
                 cnt=0
                 updatecnt=0
-                for update in get_windows_updates(filter_duplicates=True, include_all_states=False):
-                    if(update.get("result")=='succeeded'):
+                update_done=[]
+                # 반드시 업데이트 되어야 하는 목록. 업데이트 되어 있으면 해당 목록에서 하나씩 지움.
+                # 남아 있는 업데이트 목록이 반드시 업데이트 되어야하는 목록.
+                mustupdate=updateKBarr
+                
+                update_info=get_windows_updates_info()
+                for update in update_info:
+                    if update["IsInstalled"]==True:
                         cnt+=1
-                        if(update.get("kb")==None):
+                        name_KB=update["Title"][-10:-1]
+                        if(name_KB==None):
                             pass
                         else:
                             if chkr2:
-                                if update.get("kb") in win2012r2only:
-                                    print(update.get("kb")," : 해당 업데이트 버전은 하위 업데이트 버전을 포함합니다.\n")
+                                if name_KB in win2012r2only:
+                                    f.write(name_KB," : 해당 업데이트 버전은 하위 업데이트 버전을 포함합니다.\n")
                                     break
                                 else:
-                                    if update.get("kb") in updateKBarr:
-                                        f.write("[ "+update.get("kb")+" ] hotfix가 설치되어야 합니다.\n")
-                                        updatecnt+1
+                                    if name_KB in updateKBarr:
+                                        mustupdate.remove(name_KB)
+                                    else:
+                                        update_done.append(name_KB)
                             else:
-                                if update.get("kb") in updateKBarr:
-                                    f.write("[ "+update.get("kb")+" ] hotfix가 설치되어야 합니다.\n")
-                                    updatecnt+1
+                                if name_KB in updateKBarr:
+                                    mustupdate.remove(name_KB)
+                                    # f.write(u"[ " + update + u" ] 설치됨\n")
+                                    # updatecnt += 1
+                                else:
+                                    update_done.append(name_KB)
                     else:
-                        f.write("검색되는 hotfix가 없습니다.")
+                        pass
+                if len(mustupdate)==0:
+                    if srv2008sp != "Service Pack 1":
+                        pass
+                    f.write("필요한 hotfix가 모두 있습니다.\n")
+                else:
+                    f.write("아래 업데이트 목록은 반드시 설치 되어야 합니다.\n")
+                for mup in mustupdate:
+                    f.write("[ "+mup+" ]\n")
+                    
             except Exception as e:
                 f.write("에러가 발생했습니다. 에러코드 : "+e+"\n")
                 pass
                 # errmsg=traceback.format_exc()
                 # f.write(str(errmsg)+"\n")
+    
     def chkCipherSuite(self):
-        with open(reportpath,"a", encoding="utf-8") as f:
-            f.write("\n=======================Cipher Suites 확인=======================\n")
-            ctx=ssl.SSLContext(ssl.PROTOCOL_TLS)
-            ciphers=ctx.get_ciphers()
-            i=0
+        with open(reportpath, "a", encoding="utf-8") as f:
+            key_path = r"SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002"
+            root_key = reg.HKEY_LOCAL_MACHINE
+
+            # 레지스트리 키 열기
+            key = reg.OpenKey(root_key, key_path,0)
+            cnt = 0
+            while True:
+                try:
+                    name, data, kind = reg.EnumValue(key, cnt)
+                    if name=="Functions":
+                        ciphers=data
+                        break
+                    cnt += 1
+                except Exception:
+                    f.write(u'Cipher suites Error\n')
+                    break
+            f.write(u"\n=======================Cipher Suites 확인=======================\n")
             scs=supportedCiphersuites
             uscs=unsupportedCiphersuites
-            for i in (0,1):
-                if i==1:
-                    scs=supportedCiphersuites2
-                    uscs=unsupportedCiphersuites2
-
-                for cipher in ciphers:
-                    if cipher.get("name") in scs:
-                        f.write("지원되는 cipher suite : [ "+cipher.get("name")+" ]\n")
-                    if cipher.get("name") in uscs:
-                        f.write("[ "+cipher.get("name")+"] : 해당 cipher suites는 지원되지 않습니다.")
-            
+            mcs=mustCiphersuites
+            mcnt=0
+            for cipher in ciphers:
+                if cipher in scs:
+                    if cipher not in mcs:
+                        f.write("cipher suite : [ "+cipher+" ]\n")
+                    elif cipher in mcs:
+                        f.write("센티넬원 필수 cipher suite : [ "+cipher+" ]\n")
+                        mcnt=mcnt+1
+                    else:
+                        pass
+                if cipher in uscs:
+                    f.write("[ "+cipher+"] : 해당 cipher suites는 지원되지 않습니다.\n")
+            if mcnt==0:
+                f.write("필수 cipher suite가 없습니다.\n")
+                f.write(mcs)
+            else:
+                pass
 if __name__ == '__main__':
     win=window()
     start()
     if platform.system()=="Windows":
         os.system("pause")
+        
+        
+#########################################################함수 쓰레기통
+# def chkCipherSuite(self):
+#     with open(reportpath,"a", encoding="utf-8") as f:
+#         f.write("\n=======================Cipher Suites 확인=======================\n")
+#         ctx=ssl.SSLContext(ssl.PROTOCOL_TLS)
+#         ciphers=ctx.get_ciphers()
+#         i=0
+#         scs=supportedCiphersuites+supportedCiphersuites2
+#         uscs=unsupportedCiphersuites
+#         mcs=mustCiphersuites
+#         for cipher in ciphers:
+#             cp=cipher.get("name").replace("-","")
+#             cpname=cp.replace("_","")
+#             print(cpname)
+#             if cpname in scs:
+#                 if cpname not in mcs:
+#                     f.write("cipher suite : [ "+cipher.get("name")+" ]\n")
+#                 elif cpname in mcs:
+#                     f.write("센티넬원 필수 cipher suite : [ "+cipher.get("name")+" ]\n")
+#                 else:
+#                     pass
+#             if cpname in uscs:
+#                 f.write("[ "+cipher.get("name")+"] : 해당 cipher suites는 지원되지 않습니다.")
+#         self.chkCipherSuite2()
+
+
+#  구 버전 library 이용하는 kb 검색 로직
+# for update in get_windows_updates(filter_duplicates=True, include_all_states=False):
+#     if(update.get("result")=='succeeded'):
+#         cnt+=1
+#         if(update.get("kb")==None):
+#             pass
+#         else:
+#             if chkr2:
+#                 if update.get("kb") in win2012r2only:
+#                     print(update.get("kb")," : 해당 업데이트 버전은 하위 업데이트 버전을 포함합니다.\n")
+#                     break
+#                 else:
+#                     if update.get("kb") in updateKBarr:
+#                         f.write("[ "+update.get("kb")+" ] hotfix가 설치되어야 합니다.\n")
+#                         updatecnt+1
+#             else:
+#                 if update.get("kb") in updateKBarr:
+#                     f.write("[ "+update.get("kb")+" ] hotfix가 설치되어야 합니다.\n")
+#                     updatecnt+1
+#     else:
+#         pass
