@@ -393,3 +393,5 @@
 2023-05-29 22:43:08,494|22|DEBUG:getInfectedDetail|惑技郴开 
 2023-05-29 22:43:08,510|22|DEBUG:getInfectedDetail|惑技郴开 
 2023-05-29 22:43:08,533|22|DEBUG:__del__|end mkreportInfo thread
+2023-08-15 08:44:37,303|22|DEBUG:__init__|start report tool
+2023-08-15 08:44:37,304|18|DEBUG:############program Start
