@@ -137,3 +137,196 @@
 2023-03-22 10:55:56,248|22|DEBUG:gatherByEngine|6. 엔진별 탐지
 2023-03-22 10:55:56,277|22|DEBUG:getSolved|7. 해결된 위협
 2023-03-22 10:55:56,301|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 00:14:57,107|22|DEBUG:__init__|start report tool
+2023-10-11 00:14:57,110|18|DEBUG:############program Start
+2023-10-11 00:15:13,630|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 00:15:30,507|22|DEBUG:bar_start|4bar start
+2023-10-11 00:15:30,508|22|DEBUG:run|run thread
+2023-10-11 00:15:30,509|22|DEBUG:setInfo|site current text1. User
+2023-10-11 00:15:30,509|22|DEBUG:run|start progress bar
+2023-10-11 00:15:30,510|22|DEBUG:setInfo|idTxt
+2023-10-11 00:15:30,511|22|DEBUG:setInfo|idTxt
+2023-10-11 00:15:30,536|22|DEBUG:__init__|for debug
+2023-10-11 00:15:30,537|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netjQFqEoBlqBmGjMsi6ICofZGqzbQKGCI2dfOU3eOd5z3WpnjI6ibHmqWNO8GJrSrIN0p0KYgSuyrcldMr
+2023-10-11 00:15:30,538|22|DEBUG:get|get func menu datesite
+2023-10-11 00:15:30,539|22|DEBUG:getfromDate|for debug
+2023-10-11 00:15:59,140|22|DEBUG:start|start func begin
+2023-10-11 00:15:59,140|22|DEBUG:start|start func reforge completed
+2023-10-11 00:16:26,791|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 00:16:26,792|22|DEBUG:getAll|Computer : 689대
+2023-10-11 00:16:26,794|22|DEBUG:getAll|Error Computer : 0대
+2023-10-11 00:16:26,825|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 00:16:26,852|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 00:16:26,874|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 00:16:27,049|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 00:16:27,379|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 00:16:27,509|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 00:16:27,532|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 00:16:27,547|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 00:16:27,564|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 00:17:37,124|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 00:17:45,620|22|DEBUG:bar_start|1bar start
+2023-10-11 00:17:45,621|22|DEBUG:run|run thread
+2023-10-11 00:17:45,622|22|DEBUG:setInfo|site current text2. Server
+2023-10-11 00:17:45,622|22|DEBUG:run|start progress bar
+2023-10-11 00:17:45,623|22|DEBUG:setInfo|idTxt
+2023-10-11 00:17:45,623|22|DEBUG:setInfo|idTxt
+2023-10-11 00:17:45,653|22|DEBUG:__init__|for debug
+2023-10-11 00:17:45,654|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netjQFqEoBlqBmGjMsi6ICofZGqzbQKGCI2dfOU3eOd5z3WpnjI6ibHmqWNO8GJrSrIN0p0KYgSuyrcldMr
+2023-10-11 00:17:45,655|22|DEBUG:get|get func menu datesite
+2023-10-11 00:17:45,656|22|DEBUG:getfromDate|for debug
+2023-10-11 00:17:55,046|22|DEBUG:start|start func begin
+2023-10-11 00:17:55,047|22|DEBUG:start|start func reforge completed
+2023-10-11 00:17:57,540|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTY4NTg5ODEzOTc2NDcyMTQ4NiwgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTY4NTg5ODEzOTc2NDcyMTQ4NiwgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 00:17:57,541|22|DEBUG:getAll|Computer : 60대
+2023-10-11 00:17:57,542|22|DEBUG:getAll|Error Computer : 0대
+2023-10-11 00:17:57,576|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 00:17:57,596|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 00:17:57,616|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 00:17:57,648|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 00:17:57,878|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 00:17:58,001|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 00:17:58,023|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 00:17:58,036|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 00:17:58,050|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 20:21:42,737|22|DEBUG:__init__|start report tool
+2023-10-11 20:21:42,739|18|DEBUG:############program Start
+2023-10-11 20:23:02,298|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 20:23:14,783|22|DEBUG:bar_start|4bar start
+2023-10-11 20:23:14,785|22|DEBUG:run|run thread
+2023-10-11 20:23:14,785|22|DEBUG:run|start progress bar
+2023-10-11 20:23:14,786|22|DEBUG:setInfo|site current text1. User
+2023-10-11 20:23:14,786|22|DEBUG:setInfo|idTxt
+2023-10-11 20:23:14,786|22|DEBUG:setInfo|idTxt
+2023-10-11 20:23:14,819|22|DEBUG:__init__|for debug
+2023-10-11 20:23:14,820|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netq4hZMic95AJF3z16kLdFfU9vkrJXH5ZsoHmtXfvYkEQjYpPukp2NujWsDIurr0NzGSsXpzImRonJQI4J
+2023-10-11 20:23:14,821|22|DEBUG:get|get func menu datesite
+2023-10-11 20:23:14,822|22|DEBUG:getfromDate|for debug
+2023-10-11 20:23:49,583|22|DEBUG:start|start func begin
+2023-10-11 20:23:49,583|22|DEBUG:start|start func reforge completed
+2023-10-11 20:24:18,845|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 20:24:18,846|22|DEBUG:getAll|Computer : 689대
+2023-10-11 20:24:18,859|22|DEBUG:getAll|Error Computer : 1대
+2023-10-11 20:24:18,885|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 20:24:18,912|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 20:24:18,934|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 20:24:19,120|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 20:24:19,410|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 20:24:19,561|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 20:24:19,595|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 20:24:19,622|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 20:27:01,947|22|DEBUG:__init__|start report tool
+2023-10-11 20:27:01,949|18|DEBUG:############program Start
+2023-10-11 20:27:04,261|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 20:27:15,008|22|DEBUG:bar_start|4bar start
+2023-10-11 20:27:15,009|22|DEBUG:run|run thread
+2023-10-11 20:27:15,010|22|DEBUG:setInfo|site current text1. User
+2023-10-11 20:27:15,010|22|DEBUG:run|start progress bar
+2023-10-11 20:27:15,011|22|DEBUG:setInfo|idTxt
+2023-10-11 20:27:15,011|22|DEBUG:setInfo|idTxt
+2023-10-11 20:27:15,031|22|DEBUG:__init__|for debug
+2023-10-11 20:27:15,032|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netq4hZMic95AJF3z16kLdFfU9vkrJXH5ZsoHmtXfvYkEQjYpPukp2NujWsDIurr0NzGSsXpzImRonJQI4J
+2023-10-11 20:27:15,032|22|DEBUG:get|get func menu datesite
+2023-10-11 20:27:15,033|22|DEBUG:getfromDate|for debug
+2023-10-11 20:27:27,117|22|DEBUG:start|start func begin
+2023-10-11 20:27:27,122|22|DEBUG:start|start func reforge completed
+2023-10-11 20:27:56,222|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 20:27:56,223|22|DEBUG:getAll|Computer : 689대
+2023-10-11 20:27:56,223|22|DEBUG:getAll|Error Computer : 1대
+2023-10-11 20:27:56,260|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 20:27:56,283|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 20:27:56,303|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 20:27:56,455|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 20:27:56,737|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 20:27:56,906|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 20:27:56,945|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 20:27:56,961|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:27:56,970|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:27:56,981|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:27:56,999|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 20:29:23,817|22|DEBUG:__init__|start report tool
+2023-10-11 20:29:23,818|18|DEBUG:############program Start
+2023-10-11 20:29:26,887|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 20:29:41,979|22|DEBUG:bar_start|4bar start
+2023-10-11 20:29:41,980|22|DEBUG:run|run thread
+2023-10-11 20:29:41,981|22|DEBUG:setInfo|site current text1. User
+2023-10-11 20:29:41,981|22|DEBUG:run|start progress bar
+2023-10-11 20:29:41,981|22|DEBUG:setInfo|idTxt
+2023-10-11 20:29:41,981|22|DEBUG:setInfo|idTxt
+2023-10-11 20:29:42,009|22|DEBUG:__init__|for debug
+2023-10-11 20:29:42,009|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netq4hZMic95AJF3z16kLdFfU9vkrJXH5ZsoHmtXfvYkEQjYpPukp2NujWsDIurr0NzGSsXpzImRonJQI4J
+2023-10-11 20:29:42,010|22|DEBUG:get|get func menu datesite
+2023-10-11 20:29:42,010|22|DEBUG:getfromDate|for debug
+2023-10-11 20:29:51,436|22|DEBUG:__del__|end progress bar
+2023-10-11 20:29:51,437|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 20:29:53,962|22|DEBUG:start|start func begin
+2023-10-11 20:29:53,963|22|DEBUG:start|start func reforge completed
+2023-10-11 20:30:24,110|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 20:30:24,111|22|DEBUG:getAll|Computer : 689대
+2023-10-11 20:30:24,111|22|DEBUG:getAll|Error Computer : 1대
+2023-10-11 20:30:24,135|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 20:30:24,157|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 20:30:24,177|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 20:30:24,330|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 20:30:24,608|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 20:30:24,769|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 20:30:24,808|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 20:30:24,826|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:30:24,836|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:30:24,847|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:30:24,868|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 20:33:07,515|22|DEBUG:__init__|start report tool
+2023-10-11 20:33:07,516|18|DEBUG:############program Start
+2023-10-11 20:33:19,194|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 20:33:30,395|22|DEBUG:bar_start|1bar start
+2023-10-11 20:33:30,396|22|DEBUG:run|run thread
+2023-10-11 20:33:30,397|22|DEBUG:setInfo|site current text2. Server
+2023-10-11 20:33:30,397|22|DEBUG:run|start progress bar
+2023-10-11 20:33:30,397|22|DEBUG:setInfo|idTxt
+2023-10-11 20:33:30,397|22|DEBUG:setInfo|idTxt
+2023-10-11 20:33:30,424|22|DEBUG:__init__|for debug
+2023-10-11 20:33:30,425|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netq4hZMic95AJF3z16kLdFfU9vkrJXH5ZsoHmtXfvYkEQjYpPukp2NujWsDIurr0NzGSsXpzImRonJQI4J
+2023-10-11 20:33:30,425|22|DEBUG:get|get func menu datesite
+2023-10-11 20:33:30,426|22|DEBUG:getfromDate|for debug
+2023-10-11 20:33:33,706|22|DEBUG:start|start func begin
+2023-10-11 20:33:33,707|22|DEBUG:start|start func reforge completed
+2023-10-11 20:33:36,377|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTY4NTg5ODEzOTc2NDcyMTQ4NiwgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTY4NTg5ODEzOTc2NDcyMTQ4NiwgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 20:33:36,377|22|DEBUG:getAll|Computer : 60대
+2023-10-11 20:33:36,377|22|DEBUG:getAll|Error Computer : 0대
+2023-10-11 20:33:36,400|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 20:33:36,419|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 20:33:36,442|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 20:33:36,474|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 20:33:36,710|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 20:33:36,837|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 20:33:36,861|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 20:33:36,879|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:33:36,888|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:33:36,906|22|DEBUG:__del__|end mkreportInfo thread
+2023-10-11 20:34:12,718|22|DEBUG:connectAPI|connection success. session start
+2023-10-11 20:34:18,860|22|DEBUG:bar_start|4bar start
+2023-10-11 20:34:18,861|22|DEBUG:run|run thread
+2023-10-11 20:34:18,862|22|DEBUG:setInfo|site current text1. User
+2023-10-11 20:34:18,862|22|DEBUG:run|start progress bar
+2023-10-11 20:34:18,862|22|DEBUG:setInfo|idTxt
+2023-10-11 20:34:18,863|22|DEBUG:setInfo|idTxt
+2023-10-11 20:34:18,879|22|DEBUG:__init__|for debug
+2023-10-11 20:34:18,880|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netq4hZMic95AJF3z16kLdFfU9vkrJXH5ZsoHmtXfvYkEQjYpPukp2NujWsDIurr0NzGSsXpzImRonJQI4J
+2023-10-11 20:34:18,881|22|DEBUG:get|get func menu datesite
+2023-10-11 20:34:18,881|22|DEBUG:getfromDate|for debug
+2023-10-11 20:34:30,394|22|DEBUG:start|start func begin
+2023-10-11 20:34:30,394|22|DEBUG:start|start func reforge completed
+2023-10-11 20:34:58,665|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTc4MTYzOTE5MTgyNTM3NTQ0NywgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-10-11 20:34:58,666|22|DEBUG:getAll|Computer : 689대
+2023-10-11 20:34:58,666|22|DEBUG:getAll|Error Computer : 1대
+2023-10-11 20:34:58,698|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-10-11 20:34:58,720|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-10-11 20:34:58,745|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-10-11 20:34:58,895|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-10-11 20:34:59,228|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-10-11 20:34:59,395|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-10-11 20:34:59,447|22|DEBUG:getSolved|7. 해결된 위협
+2023-10-11 20:34:59,472|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:34:59,487|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:34:59,495|22|DEBUG:getInfectedDetail|상세내역 
+2023-10-11 20:34:59,517|22|DEBUG:__del__|end mkreportInfo thread

@@ -151,11 +151,11 @@ QComboBox:!editable:on, QComboBox::drop-down:editable:on {
 }</string>
       </property>
       <property name="currentText">
-       <string>https://apne1-1110-mssp.sentinelone.net</string>
+       <string>https://apne1-1001.sentinelone.net</string>
       </property>
       <item>
        <property name="text">
-        <string>https://apne1-1110-mssp.sentinelone.net</string>
+        <string>https://apne1-1001.sentinelone.net</string>
        </property>
       </item>
      </widget>
@@ -890,7 +890,7 @@ color: rgb(64, 64, 64);
          <date>
           <year>2111</year>
           <month>1</month>
-          <day>5</day>
+          <day>7</day>
          </date>
         </property>
         <property name="minimumDate">

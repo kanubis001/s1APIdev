@@ -276,8 +276,9 @@ class mainWinClass( QDialog, QWidget, form_class):
         if daylong <= 7:
             QMessageBox.warning(self, "날짜 오류", "기간이 너무 짧습니다.")
             daterr=False
-        elif daylong > 200:
-            QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 6개월(200일)까지 지정할 수 있습니다.")
+        elif daylong > 365:
+            # QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 6개월(200일)까지 지정할 수 있습니다.")
+            QMessageBox.warning(self, "날짜 오류", "기간이 너무 깁니다. 최대 12개월(365일)까지 지정할 수 있습니다.")
             daterr=False
 
         if grperr==False or siterr==False or accerr==False or daterr==False:

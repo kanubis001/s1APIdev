@@ -395,3 +395,29 @@
 2023-05-29 22:43:08,533|22|DEBUG:__del__|end mkreportInfo thread
 2023-08-15 08:44:37,303|22|DEBUG:__init__|start report tool
 2023-08-15 08:44:37,304|18|DEBUG:############program Start
+2023-09-15 13:21:23,728|22|DEBUG:__init__|start report tool
+2023-09-15 13:21:23,730|18|DEBUG:############program Start
+2023-09-15 13:24:36,839|22|DEBUG:connectAPI|connection success. session start
+2023-09-15 13:27:28,790|22|DEBUG:bar_start|10bar start
+2023-09-15 13:27:28,790|22|DEBUG:run|run thread
+2023-09-15 13:27:28,791|22|DEBUG:setInfo|site current textDefault site
+2023-09-15 13:27:28,791|22|DEBUG:run|start progress bar
+2023-09-15 13:27:28,791|22|DEBUG:setInfo|idTxt
+2023-09-15 13:27:28,792|22|DEBUG:setInfo|idTxt
+2023-09-15 13:27:28,815|22|DEBUG:__init__|for debug
+2023-09-15 13:27:28,815|22|DEBUG:__init__|mainReporting inithttps://apne1-1002.sentinelone.netga73ErqVE88bPAb83NfjaRxU0awGcIiXVR2ZmTEnHDUyBBCSAldcnLimLVWRwikH346sAQDgjpHM30s0
+2023-09-15 13:27:28,815|22|DEBUG:get|get func menu datesite
+2023-09-15 13:27:28,815|22|DEBUG:getfromDate|for debug
+2023-09-15 13:27:32,377|22|DEBUG:start|start func begin
+2023-09-15 13:27:32,377|22|DEBUG:start|start func reforge completed
+2023-09-15 13:27:34,456|22|DEBUG:getAll|log; noneCursor: eyJpZF9jb2x1bW4iOiAiQWdlbnRWaWV3LmlkIiwgImlkX3ZhbHVlIjogMTc0Njc1NjYyMzE5MzE5MzA1NiwgImlkX3NvcnRfb3JkZXIiOiAiYXNjIiwgInNvcnRfYnlfY29sdW1uIjogIkFnZW50Vmlldy5pZCIsICJzb3J0X2J5X3ZhbHVlIjogMTc0Njc1NjYyMzE5MzE5MzA1NiwgInNvcnRfb3JkZXIiOiAiYXNjIn0%3D
+2023-09-15 13:27:34,456|22|DEBUG:getAll|Computer : 50대
+2023-09-15 13:27:34,456|22|DEBUG:getAll|Error Computer : 0대
+2023-09-15 13:27:34,476|22|DEBUG:getEndpoints|1. OS별 엔드포인트 생성
+2023-09-15 13:27:34,497|22|DEBUG:getEndpoints|2. 버전별 엔드포인트 생성
+2023-09-15 13:27:34,516|22|DEBUG:getEndpoints|3. 보호되고 있는 엔드포인트 생성
+2023-09-15 13:27:34,564|22|DEBUG:getTop20|4. 기간내 Top20 탐지 Endpoints 생성
+2023-09-15 13:27:34,775|22|DEBUG:gatherThreatscnt|5. 위협별 탐지
+2023-09-15 13:27:34,890|22|DEBUG:gatherByEngine|6. 엔진별 탐지
+2023-09-15 13:27:34,915|22|DEBUG:getSolved|7. 해결된 위협
+2023-09-15 13:27:34,936|22|DEBUG:__del__|end mkreportInfo thread

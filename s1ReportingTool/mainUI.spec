@@ -42,5 +42,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['icon\\comsys_S1.ico'],
+    icon=['C:\\Users\\fireb\\OneDrive\\Develop_private\\Python_git\\s1APIdev\\s1ReportingTool\\icon\\comsys_S1.ico'],
 )

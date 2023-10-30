@@ -11,7 +11,7 @@ class getThreats:
         self.sess = sess
         self.ids = ids
         self.cnt = 0
-        self.limit = 50
+        self.limit = 1000
         self.uri = s1Site+"/web/api/v2.1/threats?limit="+str(self.limit)+"&"
         self.token = token
         self.totItems = 10
@@ -61,7 +61,6 @@ class getThreats:
                     log_write2(sys,"for debug")
                     break
         except:
-            # print(type(self.cursor))
             print("err")
         # self.makeReport.saveDoc()
         # print(self.dataArr)

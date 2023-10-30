@@ -1,0 +1,212 @@
+2023-10-25 11:26:36,391|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 11:26:38,037|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:47:39,978|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 12:47:40,078|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 12:47:40,092|22|DEBUG:chkToken|token is same.
+2023-10-25 12:47:42,088|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:47:42,089|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 12:47:42,092|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 12:47:42,183|22|DEBUG:loginChk|login available
+2023-10-25 12:47:42,452|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 12:53:06,351|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 12:53:06,479|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 12:53:06,480|22|DEBUG:chkToken|token is same.
+2023-10-25 12:53:08,023|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:53:08,024|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 12:53:08,025|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 12:53:08,149|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 12:53:08,149|22|DEBUG:loginChk|login available
+2023-10-25 12:53:08,455|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 12:53:30,229|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 12:53:30,415|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 12:53:30,416|22|DEBUG:chkToken|token is same.
+2023-10-25 12:53:31,803|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:53:31,803|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 12:53:31,804|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 12:53:31,898|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 12:53:31,899|22|DEBUG:loginChk|login available
+2023-10-25 12:53:32,145|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 12:55:05,199|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 12:55:05,315|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 12:55:05,315|22|DEBUG:chkToken|token is same.
+2023-10-25 12:55:06,419|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:55:06,419|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 12:55:06,420|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 12:55:06,515|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 12:55:06,515|22|DEBUG:loginChk|login available
+2023-10-25 12:55:06,798|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 12:55:50,213|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 12:55:50,323|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 12:55:50,324|22|DEBUG:chkToken|token is same.
+2023-10-25 12:55:51,634|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:55:51,635|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 12:55:51,636|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 12:55:51,736|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 12:55:51,737|22|DEBUG:loginChk|login available
+2023-10-25 12:55:51,981|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 12:56:14,802|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 12:56:14,908|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 12:56:14,909|22|DEBUG:chkToken|token is same.
+2023-10-25 12:56:16,408|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 12:56:16,408|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 12:56:16,409|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 12:56:16,535|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 12:56:16,535|22|DEBUG:loginChk|login available
+2023-10-25 12:56:16,848|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:00:36,556|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:00:36,669|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:00:36,670|22|DEBUG:chkToken|token is same.
+2023-10-25 13:00:37,930|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:00:37,931|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:00:37,932|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:00:38,065|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 13:00:38,065|22|DEBUG:loginChk|login available
+2023-10-25 13:00:38,469|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:01:16,083|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:01:16,183|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:01:16,183|22|DEBUG:chkToken|token is same.
+2023-10-25 13:01:17,404|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:01:17,405|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:01:17,406|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:01:17,499|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 13:01:17,499|22|DEBUG:loginChk|login available
+2023-10-25 13:01:17,759|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:02:21,633|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:02:21,728|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:02:21,729|22|DEBUG:chkToken|token is same.
+2023-10-25 13:02:23,155|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:02:23,156|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:02:23,157|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:02:23,266|22|DEBUG:chkAPItokenValid|158remained
+2023-10-25 13:02:23,266|22|DEBUG:loginChk|login available
+2023-10-25 13:02:23,566|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:08:07,816|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:08:07,998|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:08:07,999|22|DEBUG:chkToken|token is same.
+2023-10-25 13:08:10,274|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:08:10,275|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:08:10,276|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:08:10,374|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:08:10,374|22|DEBUG:loginChk|login available
+2023-10-25 13:08:10,692|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:08:33,078|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:09:03,417|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:09:03,503|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:09:03,504|22|DEBUG:chkToken|token is same.
+2023-10-25 13:09:05,936|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:09:05,937|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:09:05,938|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:09:06,036|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:09:06,036|22|DEBUG:loginChk|login available
+2023-10-25 13:09:06,291|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:09:27,213|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:09:56,309|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:09:56,406|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:09:56,407|22|DEBUG:chkToken|token is same.
+2023-10-25 13:09:57,962|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:09:57,963|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:09:57,964|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:09:58,060|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:09:58,060|22|DEBUG:loginChk|login available
+2023-10-25 13:09:58,314|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:10:15,396|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:11:57,294|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:11:57,391|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:11:57,391|22|DEBUG:chkToken|token is same.
+2023-10-25 13:11:58,713|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:11:58,714|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:11:58,715|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:11:58,816|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:11:58,817|22|DEBUG:loginChk|login available
+2023-10-25 13:11:59,114|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:12:03,670|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:13:32,781|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:13:32,886|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:13:32,887|22|DEBUG:chkToken|token is same.
+2023-10-25 13:13:34,295|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:13:34,296|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:13:34,297|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:13:34,393|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:13:34,393|22|DEBUG:loginChk|login available
+2023-10-25 13:13:34,678|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:13:39,730|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:47:37,948|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:47:38,207|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:47:38,209|22|DEBUG:chkToken|token is same.
+2023-10-25 13:47:40,380|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:47:40,381|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:47:40,383|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:47:40,475|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:47:40,476|22|DEBUG:loginChk|login available
+2023-10-25 13:47:40,802|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:47:44,524|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:48:05,748|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:48:05,838|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:48:05,839|22|DEBUG:chkToken|token is same.
+2023-10-25 13:48:07,160|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:48:07,161|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:48:07,162|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:48:07,253|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:48:07,254|22|DEBUG:loginChk|login available
+2023-10-25 13:48:07,515|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:48:11,487|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:48:53,272|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:48:53,387|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:48:53,388|22|DEBUG:chkToken|token is same.
+2023-10-25 13:48:55,002|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:48:55,002|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:48:55,003|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:48:55,099|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:48:55,100|22|DEBUG:loginChk|login available
+2023-10-25 13:48:55,400|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:49:04,970|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:52:01,222|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:52:01,323|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:52:01,324|22|DEBUG:chkToken|token is same.
+2023-10-25 13:52:02,656|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:52:02,656|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:52:02,657|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:52:02,750|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:52:02,750|22|DEBUG:loginChk|login available
+2023-10-25 13:52:03,007|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:52:25,636|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 13:52:42,152|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:52:42,256|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:52:42,257|22|DEBUG:chkToken|token is same.
+2023-10-25 13:52:43,526|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:52:43,527|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:52:43,528|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:52:43,653|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:52:43,653|22|DEBUG:loginChk|login available
+2023-10-25 13:52:44,126|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:54:34,706|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:54:34,811|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:54:34,812|22|DEBUG:chkToken|token is same.
+2023-10-25 13:54:36,283|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:54:36,283|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:54:36,284|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:54:36,391|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:54:36,391|22|DEBUG:loginChk|login available
+2023-10-25 13:54:36,691|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:55:12,645|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 13:55:12,727|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 13:55:12,728|22|DEBUG:chkToken|token is same.
+2023-10-25 13:55:13,970|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 13:55:13,971|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 13:55:13,972|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 13:55:14,072|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 13:55:14,073|22|DEBUG:loginChk|login available
+2023-10-25 13:55:14,388|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 13:55:38,216|22|DEBUG:exportfile|done with the csv file making
+2023-10-25 14:01:59,139|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 14:01:59,334|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 14:01:59,335|22|DEBUG:chkToken|token is same.
+2023-10-25 14:02:01,204|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 14:02:01,205|22|DEBUG:init_conn|API ÅäÅ« Á¤»ó
+2023-10-25 14:02:01,206|22|DEBUG:chkTokenfile|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported\tk.jsonfile already existed
+2023-10-25 14:02:01,310|22|DEBUG:chkAPItokenValid|158days remained
+2023-10-25 14:02:01,310|22|DEBUG:loginChk|login available
+2023-10-25 14:02:01,828|22|DEBUG:btn_login|mainWindow¸¦ ¶ç¿ó´Ï´Ù
+2023-10-25 14:04:00,342|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 14:04:00,445|22|DEBUG:__init__|loginmain.ui started
+2023-10-25 14:04:00,446|22|DEBUG:chkToken|token is same.

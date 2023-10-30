@@ -1,0 +1,218 @@
+2023-10-04 15:02:41,415|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:03:38,560|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:05:18,513|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:05:26,158|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:05:41,020|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:05:55,901|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:06:18,503|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:07:23,447|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:07:34,258|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:07:41,836|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:08:45,673|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:09:17,518|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:12:32,005|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:15:23,801|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:19:17,607|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:19:32,635|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:19:42,830|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:20:32,375|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:20:38,018|22|DEBUG:connectAPI|401 connection error
+2023-10-04 15:23:32,208|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:28:50,534|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:30:07,069|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:30:28,060|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:31:30,030|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:31:46,627|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:31:54,947|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:32:47,634|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:33:12,174|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:33:47,552|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:37:01,555|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:38:15,864|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:38:25,523|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:40:18,009|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:40:35,886|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:40:52,538|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:42:00,757|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:42:24,198|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:42:52,761|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:44:14,089|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:46:04,851|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 15:47:39,963|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:01:54,513|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:03:09,911|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:06:46,718|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:08:13,600|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:08:28,776|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:18:30,102|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:18:59,031|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:19:20,554|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:21:00,791|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:22:14,242|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:22:53,885|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:24:12,381|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:25:03,472|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:25:35,033|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:26:52,373|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:26:58,839|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:28:02,970|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:29:20,356|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:30:25,876|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:31:04,628|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:31:59,179|22|DEBUG:connectAPI|401 connection error
+2023-10-04 16:32:18,897|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:33:33,818|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:34:43,492|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:35:38,836|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:35:59,233|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:36:12,806|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:36:44,780|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 16:45:40,681|22|DEBUG:connectAPI|connection success. session start
+2023-10-04 17:00:56,776|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:31:58,705|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:32:29,268|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:32:39,731|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:33:12,337|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:34:31,718|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:34:56,447|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 10:52:49,341|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:00:40,839|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:00:58,310|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:04:24,418|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:09:39,379|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:10:15,336|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:10:30,815|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:11:09,732|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:13:02,521|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:24:55,387|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:25:07,172|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:25:47,337|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:27:18,936|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 11:28:07,674|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 12:10:17,587|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 12:12:06,179|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 12:13:01,409|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 12:37:56,453|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 12:39:30,241|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 12:59:52,520|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:00:06,239|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:01:02,506|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:01:50,712|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:02:02,381|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:02:12,822|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:02:56,745|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:03:31,292|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:04:28,056|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:05:20,031|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:06:03,002|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:08:34,604|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:10:09,185|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:11:09,905|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:13:43,701|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:14:18,174|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:15:02,131|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:15:09,775|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:16:29,120|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:16:51,125|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:19:39,039|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:20:08,305|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:21:01,591|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:22:05,295|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:23:02,944|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:23:51,409|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:24:36,371|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:25:39,494|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:28:17,211|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:29:09,824|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:29:51,613|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:30:44,385|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:32:21,017|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:32:59,697|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:33:23,142|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:34:07,291|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:34:42,035|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:37:32,486|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:37:57,506|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:40:29,420|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:41:08,653|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:43:25,673|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:44:28,562|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:44:51,782|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:45:22,099|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:45:53,049|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:46:34,975|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:46:59,884|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:47:26,524|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:56:04,395|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:56:35,388|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:57:18,950|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 13:59:04,945|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 14:03:05,356|22|DEBUG:connectAPI|connection success. session start
+2023-10-06 14:05:56,035|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:36:17,229|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:36:44,758|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:47:22,726|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:47:52,423|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:48:04,168|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:50:03,096|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:50:10,683|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:50:35,564|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:54:30,039|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:54:36,153|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:55:11,846|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 10:56:42,808|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:02:20,458|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:03:21,406|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:03:48,937|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:05:14,202|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:05:59,736|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:06:40,139|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:09:37,790|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:09:56,823|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 11:10:46,692|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:25:26,934|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:25:59,731|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:32:29,258|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:33:11,279|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:34:25,960|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:35:23,756|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:38:43,392|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:46:01,821|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:46:59,447|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:47:24,825|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:48:34,008|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:53:47,775|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:54:12,317|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:57:49,314|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:59:13,766|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 12:59:56,619|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 13:05:53,256|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 13:07:47,933|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 13:09:51,322|22|DEBUG:connectAPI|connection success. session start
+2023-10-10 13:10:10,610|22|DEBUG:connectAPI|connection success. session start
+2023-10-19 10:29:21,185|22|DEBUG:connectAPI|connection success. session start
+2023-10-19 20:27:43,791|22|DEBUG:connectAPI|connection success. session start
+2023-10-23 15:55:45,406|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 10:29:06,409|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 10:46:59,596|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 10:49:54,030|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:05:00,245|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:06:58,634|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:08:19,298|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:09:33,660|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:10:13,680|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:10:51,849|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:11:58,457|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:13:34,865|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:15:16,958|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:17:27,598|22|DEBUG:connectAPI|connection success. session start
+2023-10-24 11:20:54,485|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 10:01:25,950|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 10:24:01,598|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 10:25:43,470|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 10:29:31,666|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 10:31:53,605|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 11:22:15,562|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 11:22:17,750|22|DEBUG:connectAPI|connection success. session start
+2023-10-25 11:23:00,256|22|DEBUG:<module>|C:\Users\fireb\OneDrive\Develop_private\Python_git\s1APIdev\s1Appexport\s1_exported
+2023-10-25 11:23:01,858|22|DEBUG:connectAPI|connection success. session start

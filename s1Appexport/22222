@@ -1,0 +1,252 @@
+{'data': [
+        {'accountType': 'Trial', 'activeAgents': 31, 'agentsInCompleteSku': 31, 'agentsInControlSku': 0, 'agentsInCoreSku': 0, 'billingMode': 'subscription', 'completeSites': 14, 'controlSites': 0, 'coreSites': 0, 
+'createdAt': '2020-01-31T04: 53: 11.422895Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2023-12-31T23: 59: 59Z', 'externalId': 'a56552af-d4a1-9187-5321-24d42a5d9d5a', 'id': '815520265151718893', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Complete', 'majorVersion': 1, 'minorVersion': 8, 'name': 'complete', 'surfaces': [
+                            {'count': 350, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 350
+                    }
+                ], 'modules': [
+                    {'displayName': 'STAR', 'majorVersion': 1, 'name': 'star'
+                    },
+                    {'displayName': 'Ranger', 'majorVersion': 1, 'name': 'ranger'
+                    },
+                    {'displayName': 'Rogues', 'majorVersion': 1, 'name': 'rogues'
+                    }
+                ], 'settings': [
+                    {'displayName': '90 Days', 'groupName': 'dv_retention', 'setting': '90 Days', 'settingGroup': 'dv_retention', 'settingGroupDisplayName': 'Deep Visibility Data Retention'
+                    },
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    },
+                    {'displayName': 'Account', 'groupName': 'account_level_ranger', 'setting': 'Account', 'settingGroup': 'account_level_ranger', 'settingGroupDisplayName': 'Ranger Consolidation Level'
+                    }
+                ]
+            }, 'name': '[Partner
+            ] Comsys', 'numberOfSites': 9, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 350, 'type': 'Complete', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 350, 'totalControl': 0, 'totalCore': 0, 'totalLicenses': 350, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 819, 'agentsInCompleteSku': 0, 'agentsInControlSku': 819, 'agentsInCoreSku': 0, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 4, 'coreSites': 0, 'createdAt': '2020-02-25T08: 29: 52.698760Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2024-03-31T04: 49: 26.257525Z', 'externalId': '97152843-64f3-1276-b223-053a592eeea9', 'id': '833748721039713299', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Control', 'majorVersion': 1, 'minorVersion': 4, 'name': 'control', 
+'surfaces': [
+                            {'count': 1200, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 1200
+                    }
+                ], 'modules': [], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 
+'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': 'KohYoung', 'numberOfSites': 4, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 1200, 'type': 'Control', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 1200, 'totalCore': 0, 'totalLicenses': 1200, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 4248, 'agentsInCompleteSku': 0, 'agentsInControlSku': 0, 'agentsInCoreSku': 4248, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 0, 'coreSites': 7, 'createdAt': '2020-04-01T04: 31: 54.586758Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2024-09-30T23: 59: 59Z', 'externalId': '9d6dce7f-7a47-9865-debb-0a0332fc0bd0', 'id': '859720873879830827', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Core', 'majorVersion': 1, 'minorVersion': 4, 'name': 'core', 'surfaces': [
+                            {'count': 3245, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 3245
+                    }
+                ], 'modules': [], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': 'Wonik', 'numberOfSites': 7, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 3245, 'type': 'Core', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 0, 'totalCore': 3245, 'totalLicenses': 3245, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-10-03T23: 04: 20.531154Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 887, 'agentsInCompleteSku': 0, 'agentsInControlSku': 0, 'agentsInCoreSku': 887, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 0, 'coreSites': 24, 'createdAt': '2020-07-02T12: 03: 34.243241Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2023-12-31T23: 59: 59Z', 'externalId': '8290ebcf-0d40-a010-1857-59dffb6228a7', 'id': 
+'926627569543769282', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Core', 'majorVersion': 1, 'minorVersion': 4, 'name': 'core', 'surfaces': [
+                            {'count': 800, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 800
+                    }
+                ], 'modules': [], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': 'SSDelta', 'numberOfSites': 22, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 800, 'type': 'Core', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 0, 'totalCore': 800, 'totalLicenses': 800, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 1371, 'agentsInCompleteSku': 1371, 'agentsInControlSku': 0, 'agentsInCoreSku': 0, 'billingMode': 'subscription', 'completeSites': 2, 'controlSites': 0, 'coreSites': 0, 'createdAt': '2020-12-09T01: 04: 52.439774Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2023-12-31T23: 59: 59Z', 'externalId': '69781061-c880-d033-0a56-afe857d2b2da', 'id': '1042260153621828302', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Complete', 'majorVersion': 1, 'minorVersion': 8, 'name': 'complete', 'surfaces': [
+                            {'count': 1500, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 1500
+                    }
+                ], 'modules': [
+                    {'displayName': 'STAR', 'majorVersion': 1, 'name': 'star'
+                    },
+                    {'displayName': 'Rogues', 'majorVersion': 1, 'name': 'rogues'
+                    }
+                ], 'settings': [
+                    {'displayName': '90 Days', 'groupName': 'dv_retention', 'setting': '90 Days', 'settingGroup': 'dv_retention', 'settingGroupDisplayName': 'Deep Visibility Data Retention'
+                    },
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    },
+                    {'displayName': 'Account', 'groupName': 'account_level_ranger', 'setting': 'Account', 'settingGroup': 'account_level_ranger', 'settingGroupDisplayName': 'Ranger Consolidation Level'
+                    }
+                ]
+            }, 'name': 'Interpark', 'numberOfSites': 2, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 1500, 'type': 'Complete', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 1500, 'totalControl': 0, 'totalCore': 0, 'totalLicenses': 1500, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 79, 'agentsInCompleteSku': 0, 'agentsInControlSku': 70, 'agentsInCoreSku': 9, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 2, 'coreSites': 1, 'createdAt': '2020-12-21T05: 05: 43.561952Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2023-12-31T23: 59: 59Z', 'externalId': '9020e4b2-e009-2504-c154-e74448fd6a8b', 'id': '1051078687194584732', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Core', 'majorVersion': 1, 'minorVersion': 4, 'name': 'core', 'surfaces': [
+                            {'count': 14, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 14
+                    },
+                    {'displayName': 'Control', 'majorVersion': 1, 'minorVersion': 4, 'name': 'control', 'surfaces': [
+                            {'count': 100, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 100
+                    }
+                ], 'modules': [], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': 'Saedong', 'numberOfSites': 3, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 14, 'type': 'Core', 'unlimited': False
+                },
+                {'agentsInSku': 0, 'totalLicenses': 100, 'type': 'Control', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 100, 'totalCore': 14, 'totalLicenses': 114, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 195, 'agentsInCompleteSku': 13, 'agentsInControlSku': 0, 'agentsInCoreSku': 182, 'billingMode': 'subscription', 'completeSites': 1, 'controlSites': 0, 'coreSites': 1, 'createdAt': '2021-06-17T08: 17: 40.847006Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2023-10-30T18: 00: 26Z', 'externalId': '54cfb02d-7b0a-374b-da44-e35283b0ecc8', 'id': '1180185381334777744', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Core', 'majorVersion': 1, 'minorVersion': 4, 'name': 'core', 'surfaces': [
+                            {'count': 100, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 100
+                    },
+                    {'displayName': 'Complete', 'majorVersion': 1, 
+'minorVersion': 8, 'name': 'complete', 'surfaces': [
+                            {'count': 10, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 10
+                    }
+                ], 'modules': [
+                    {'displayName': 'STAR', 'majorVersion': 1, 'name': 'star'
+                    }
+                ], 'settings': [
+                    {'displayName': '90 Days', 'groupName': 'dv_retention', 'setting': '90 Days', 'settingGroup': 'dv_retention', 'settingGroupDisplayName': 'Deep Visibility Data Retention'
+                    },
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': 'DWPharm', 'numberOfSites': 2, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 100, 'type': 'Core', 
+'unlimited': False
+                },
+                {'agentsInSku': 0, 'totalLicenses': 10, 'type': 'Complete', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 10, 'totalControl': 0, 'totalCore': 100, 'totalLicenses': 110, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 97, 'agentsInCompleteSku': 0, 'agentsInControlSku': 97, 'agentsInCoreSku': 0, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 1, 'coreSites': 0, 'createdAt': '2021-07-12T02: 08: 03.499404Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2024-09-30T23: 59: 59Z', 'externalId': '9b4282eb-46b8-a070-ce05-433708ae77a8', 'id': '1198118737535098639', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Control', 'majorVersion': 1, 'minorVersion': 4, 'name': 'control', 'surfaces': [
+                            {'count': 113, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 113
+                    }
+                ], 'modules': [], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': 'MSE', 'numberOfSites': 1, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 113, 'type': 'Control', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 113, 'totalCore': 0, 'totalLicenses': 113, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-10-03T23: 07: 59.084180Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Paid', 'activeAgents': 86, 'agentsInCompleteSku': 0, 'agentsInControlSku': 86, 'agentsInCoreSku': 0, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 2, 'coreSites': 0, 'createdAt': '2022-10-06T02: 13: 39.007998Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': 
+'2023-10-30T18: 00: 00Z', 'externalId': 'a430fbf5-875f-99a2-459b-60965a90f7ef', 'id': '1524995406763678638', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Control', 'majorVersion': 1, 'minorVersion': 4, 'name': 'control', 'surfaces': [
+                            {'count': 91, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 91
+                    }
+                ], 'modules': [], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 
+'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    }
+                ]
+            }, 'name': '[VG
+            ] Haem', 'numberOfSites': 2, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 91, 'type': 'Control', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 91, 'totalCore': 0, 'totalLicenses': 91, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        },
+        {'accountType': 'Trial', 'activeAgents': 779, 'agentsInCompleteSku': 0, 'agentsInControlSku': 1, 'agentsInCoreSku': 778, 'billingMode': 'subscription', 'completeSites': 0, 'controlSites': 1, 'coreSites': 1, 'createdAt': '2022-10-20T06: 09: 30.795222Z', 'creator': 'ChiYoung Lee', 'creatorId': '809338601149048246', 'expiration': '2023-10-30T18: 00: 00Z', 'externalId': '90c4542f-fd93-459d-76b0-8c39d345be40', 'id': '1535260980795260448', 'isDefault': False, 'licenses': {'bundles': [
+                    {'displayName': 'Core', 'majorVersion': 1, 'minorVersion': 4, 'name': 'core', 'surfaces': [
+                            {'count': 600, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 600
+                    },
+                    {'displayName': 'Control', 'majorVersion': 1, 'minorVersion': 4, 'name': 'control', 'surfaces': [
+                            {'count': 16, 'name': 'Total Agents'
+                            }
+                        ], 'totalSurfaces': 16
+                    }
+                ], 'modules': [
+                    {'displayName': 'Rogues', 'majorVersion': 1, 'name': 'rogues'
+                    }
+                ], 'settings': [
+                    {'displayName': '365 Days', 'groupName': 'malicious_data_retention', 'setting': '365 Days', 'settingGroup': 'malicious_data_retention', 'settingGroupDisplayName': 'Malicious Data Retention'
+                    },
+                    {'displayName': 'Enabled', 'groupName': 'remote_shell_availability', 'setting': 'Enabled', 'settingGroup': 'remote_shell_availability', 'settingGroupDisplayName': 'Remote Shell'
+                    },
+                    {'displayName': 'Available', 'groupName': 'marketplace_access_status', 'setting': 'Available', 'settingGroup': 'marketplace_access_status', 'settingGroupDisplayName': 'Marketplace Access'
+                    },
+                    {'displayName': 'Account', 'groupName': 'account_level_ranger', 'setting': 'Account', 'settingGroup': 'account_level_ranger', 'settingGroupDisplayName': 'Ranger Consolidation Level'
+                    }
+                ]
+            }, 'name': '[VG
+            ] FST', 'numberOfSites': 2, 'salesforceId': '0011r00001znIC9AAM', 'skus': [
+                {'agentsInSku': 0, 'totalLicenses': 600, 'type': 'Core', 'unlimited': False
+                },
+                {'agentsInSku': 0, 'totalLicenses': 16, 'type': 'Control', 'unlimited': False
+                }
+            ], 'state': 'active', 'totalComplete': 0, 'totalControl': 16, 'totalCore': 600, 'totalLicenses': 616, 'unlimitedComplete': False, 'unlimitedControl': False, 'unlimitedCore': False, 'unlimitedExpiration': False, 'updatedAt': '2023-09-03T11: 53: 31.619219Z', 'usageType': 'customer'
+        }
+    ], 'pagination': {'nextCursor': 'eyJpZF9jb2x1bW4iOiAiQWNjb3VudFZpZXcuaWQiLCAiaWRfdmFsdWUiOiAxNTM1MjYwOTgwNzk1MjYwNDQ4LCAiaWRfc29ydF9vcmRlciI6ICJhc2MiLCAic29ydF9ieV9jb2x1bW4iOiAiQWNjb3VudFZpZXcuaWQiLCAic29ydF9ieV92YWx1ZSI6IDE1MzUyNjA5ODA3OTUyNjA0NDgsICJzb3J0X29yZGVyIjogImFzYyJ9', 'totalItems': 12
+    }
+}
