@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>558</width>
+    <height>190</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>COMSYS Tool Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="comboConsole">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>400</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>400</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>500</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;
+}
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                 stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 rgb(255, 255, 255), stop: 0.4 rgb(255, 255, 255),
+                                stop: 0.5 rgb(255, 255, 255), stop: 1.0 rgb(255, 255, 255));
+}</string>
+    </property>
+    <property name="currentText">
+     <string>https://apne1-samsungsds.sentinelone.net</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>https://apne1-samsungsds.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://apne1-1101-nfr.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://apne1-1001.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://euce1-104.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://apne1-1002.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://apse1-dfir.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://apse1-2001.sentinelone.net</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>https://apne1-1110-mssp.sentinelone.net</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="lineApitk">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>455</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+	background-color: white;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 20px;</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>API Token 값을 발급받아 붙여넣기 하세요</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnConfirm">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>120</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>70</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: white;
+background-color: black;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::pressed{
+color: black;
+background-color: white;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>로그인</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExit">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>120</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>70</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>70</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: white;
+background-color: black;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::pressed{
+color: black;
+background-color: white;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 5px;
+}
+QPushButton::disabled{
+color: rgb(229, 229, 229);
+background-color: rgb(204, 204, 204);
+border: 2px solid rgb(204, 204, 204);
+border-radius: 5px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>닫기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>COMSYS Tool Login</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

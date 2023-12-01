@@ -421,3 +421,5 @@
 2023-09-15 13:27:34,890|22|DEBUG:gatherByEngine|6. 엔진별 탐지
 2023-09-15 13:27:34,915|22|DEBUG:getSolved|7. 해결된 위협
 2023-09-15 13:27:34,936|22|DEBUG:__del__|end mkreportInfo thread
+2023-11-16 13:51:05,476|22|DEBUG:__init__|start report tool
+2023-11-16 13:51:05,489|18|DEBUG:############program Start
